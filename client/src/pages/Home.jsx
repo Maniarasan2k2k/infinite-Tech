@@ -6,9 +6,12 @@ import { FaFlask } from "react-icons/fa";
 import { FaCode } from "react-icons/fa";
 import { FaChartLine } from "react-icons/fa";
 import { FaRocket } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
+import About from './About';
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const navigate = useNavigate();
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   return (
     <>
       {/* Top Assistance Banner */}
@@ -20,22 +23,69 @@ const Home = () => {
 
       {/* Header */}
       <header className="container mx-auto mt-4 flex items-center justify-between bg-white px-4 sm:px-6 py-4 shadow-sm transition-all duration-500">
-        <h1 className="text-xl sm:text-2xl font-bold">TeastLeaf</h1>
+        <h1 className="text-xl sm:text-2xl font-bold">PLAYWRIGHT ACADEMY</h1>
 
         {/* Desktop Menu */}
-        <nav className="hidden sm:flex items-center gap-6 text-lg">
-          <ul className="flex items-center gap-6">
-            <li className="cursor-pointer hover:text-green-600 transition-all duration-300">Home</li>
-            <li className="cursor-pointer hover:text-green-600 transition-all duration-300">Course</li>
-            <li className="cursor-pointer hover:text-green-600 transition-all duration-300">Conduct us</li>
-            <li className="cursor-pointer hover:text-green-600 transition-all duration-300">Q&A</li>
-            <li>
-              <button className="bg-green-600 text-white px-5 py-2 rounded-lg transition-all duration-300 hover:bg-green-700 hover:shadow-lg">
-                Login
-              </button>
-            </li>
-          </ul>
-        </nav>
+        <nav className="hidden sm:flex items-center gap-6 text-lg relative">
+      <ul className="flex items-center gap-6">
+        <li
+          className="cursor-pointer hover:text-green-600 transition-all duration-300"
+          onClick={() => navigate("/")}
+        >
+          Home
+        </li>
+
+        {/* Course Dropdown */}
+        <li
+          className="relative cursor-pointer hover:text-green-600 transition-all duration-300"
+          onMouseEnter={() => setDropdownOpen(true)}
+          onMouseLeave={() => setDropdownOpen(false)}
+        >
+          Course
+          {dropdownOpen && (
+            <ul className="absolute top-full left-0 mt-1 w-28 bg-white shadow-lg rounded border border-gray-200 z-50">
+              <li
+                className="px-4 py-2 hover:bg-green-100 cursor-pointer"
+                onClick={() => navigate("/html")}
+              >
+                HTML
+              </li>
+              <li
+                className="px-4 py-2 hover:bg-green-100 cursor-pointer"
+                onClick={() => navigate("/css")}
+              >
+                CSS
+              </li>
+              <li
+                className="px-4 py-2 hover:bg-green-100 cursor-pointer"
+                onClick={() => navigate("/js")}
+              >
+                JS
+              </li>
+            </ul>
+          )}
+        </li>
+
+        <li
+          className="cursor-pointer hover:text-green-600 transition-all duration-300"
+          onClick={() => navigate("/contact")}
+        >
+          Conduct us
+        </li>
+        <li
+          className="cursor-pointer hover:text-green-600 transition-all duration-300"
+          onClick={() => navigate("/qa")}
+        >
+          Q&A
+        </li>
+
+        <li>
+          <button className="bg-green-600 text-white px-5 py-2 rounded-lg transition-all duration-300 hover:bg-green-700 hover:shadow-lg">
+            Login
+          </button>
+        </li>
+      </ul>
+    </nav>
 
         {/* Mobile Hamburger Button */}
         <div className="sm:hidden">
@@ -105,54 +155,60 @@ const Home = () => {
           </div>
 
           {/* Grid Section */}
-          <div className="grid grid-cols-3 sm:grid-cols-3 gap-4 mt-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mt-4">
 
-  <div className="bg-green-200 p-4 sm:p-5 rounded-lg text-center text-black">
-    <h1 className="text-lg sm:text-xl font-bold flex items-center justify-center gap-2">
-      <FaGraduationCap className="text-green-700" />
-      Fresh
+  {/* 1 - Fresh */}
+  <div className="bg-green-200 p-3 sm:p-5 rounded-lg text-center text-black min-w-0 break-words">
+    <h1 className="flex items-center justify-center gap-2 text-base sm:text-xl font-bold">
+      <FaGraduationCap className="text-green-700 text-lg sm:text-xl" />
+      <span className="break-words">Fresh</span>
     </h1>
-    <span className="text-gray-700 text-sm sm:text-base">Education</span>
+    <span className="text-gray-700 text-xs sm:text-sm block">Education</span>
   </div>
 
-  <div className="bg-blue-200 p-4 sm:p-5 rounded-lg text-center text-black">
-    <h1 className="text-lg sm:text-xl font-bold flex items-center justify-center gap-2">
-      <FaBriefcase className="text-blue-700" />
-      Career
+  {/* 2 - Career */}
+  <div className="bg-blue-200 p-3 sm:p-5 rounded-lg text-center text-black min-w-0 break-words">
+    <h1 className="flex items-center justify-center gap-2 text-base sm:text-xl font-bold">
+      <FaBriefcase className="text-blue-700 text-lg sm:text-xl" />
+      <span className="break-words">Career</span>
     </h1>
-    <span className="text-gray-700 text-sm sm:text-base">Break</span>
+    <span className="text-gray-700 text-xs sm:text-sm block">Break</span>
   </div>
 
-  <div className="bg-yellow-200 p-4 sm:p-5 rounded-lg text-center text-black">
-    <h1 className="text-lg sm:text-xl font-bold flex items-center justify-center gap-2">
-      <FaFlask className="text-yellow-700" />
-      QA
+  {/* 3 - QA */}
+  <div className="bg-yellow-200 p-3 sm:p-5 rounded-lg text-center text-black min-w-0 break-words">
+    <h1 className="flex items-center justify-center gap-2 text-base sm:text-xl font-bold">
+      <FaFlask className="text-yellow-700 text-lg sm:text-xl" />
+      <span className="break-words">QA</span>
     </h1>
-    <span className="text-gray-700 text-sm sm:text-base">Professionals</span>
+    <span className="text-gray-700 text-xs sm:text-sm block">Professionals</span>
   </div>
 
-  <div className="bg-red-200 p-4 sm:p-5 rounded-lg text-center text-black">
-    <h1 className="text-lg sm:text-xl font-bold flex items-center justify-center gap-2">
-      <FaCode className="text-red-700" />
-      Dev
+  {/* 4 - Dev */}
+  <div className="bg-red-200 p-3 sm:p-5 rounded-lg text-center text-black min-w-0 break-words">
+    <h1 className="flex items-center justify-center gap-2 text-base sm:text-xl font-bold">
+      <FaCode className="text-red-700 text-lg sm:text-xl" />
+      <span className="break-words">Dev</span>
     </h1>
-    <span className="text-gray-700 text-sm sm:text-base">Professionals</span>
+    <span className="text-gray-700 text-xs sm:text-sm block">Professionals</span>
   </div>
 
-  <div className="bg-purple-200 p-4 sm:p-5 rounded-lg text-center text-black">
-    <h1 className="text-lg sm:text-xl font-bold flex items-center justify-center gap-2">
-      <FaChartLine className="text-purple-700" />
-      BA
+  {/* 5 - BA */}
+  <div className="bg-purple-200 p-3 sm:p-5 rounded-lg text-center text-black min-w-0 break-words">
+    <h1 className="flex items-center justify-center gap-2 text-base sm:text-xl font-bold">
+      <FaChartLine className="text-purple-700 text-lg sm:text-xl" />
+      <span className="break-words">BA</span>
     </h1>
-    <span className="text-gray-700 text-sm sm:text-base">Professionals</span>
+    <span className="text-gray-700 text-xs sm:text-sm block">Professionals</span>
   </div>
 
-  <div className="bg-pink-200 p-4 sm:p-5 rounded-lg text-center text-black">
-    <h1 className="text-lg sm:text-xl font-bold flex items-center justify-center gap-2">
-      <FaRocket className="text-pink-700" />
-      IT
+  {/* 6 - IT */}
+  <div className="bg-pink-200 p-3 sm:p-5 rounded-lg text-center text-black min-w-0 break-words">
+    <h1 className="flex items-center justify-center gap-2 text-base sm:text-xl font-bold">
+      <FaRocket className="text-pink-700 text-lg sm:text-xl" />
+      <span className="break-words">IT</span>
     </h1>
-    <span className="text-gray-700 text-sm sm:text-base">Professionals</span>
+    <span className="text-gray-700 text-xs sm:text-sm block">Professionals</span>
   </div>
 
 </div>
@@ -205,6 +261,8 @@ const Home = () => {
 </div>
 
       </div>
+
+      <About />
     </>
   )
 }
