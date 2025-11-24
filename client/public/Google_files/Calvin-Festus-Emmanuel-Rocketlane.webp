@@ -1,0 +1,2719 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Testleaf : Online Software Testing Course | Learn Software Testing</title>
+  <meta name="description"
+    content="Learn Software Testing Course Online from the best Software testing training institute in Chennai with 100% placement assistance and Certification. 50,000+ QA professionals trained.Learn Selenium, appium, Java, playwright testings and more" />
+  <meta name="google-site-verification" content="-2w0QKd2-Lw2msPRjXCXDy6PaW-pGlyhS3FUOSP9VEM" />
+  <meta name="google-site-verification" content="vB8-TFkP5cOa11jqLpf4NWvBD0a4zbGdNrG2k41CsTo" />
+  <meta name="google-site-verification" content="n1vdv-DWuYuHs2Cgdfw_ynCwJZEPQAc2X_8EebDKDaQ" />
+  <meta name="facebook-domain-verification" content="7klcaovhp4iajukfy6q37b5mstiqml" />
+  <link rel=icon href="https://assets.testleaf.com/assets/img/favicon.png" sizes="20x20" type="image/png">
+  <link rel="canonical" href="https://www.testleaf.com/" />
+
+
+  <!-- Facebook Pixel Code -->
+
+  <script>
+    ! function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1450413219207312');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1450413219207312&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet">
+  <!-- MDB -->
+  <link rel="stylesheet" href="https://assets.testleaf.com/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://assets.testleaf.com/assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://assets.testleaf.com/assets/css/animation.css">
+  <link rel="stylesheet" href="https://assets.testleaf.com/assets/css/common.css">
+  <link rel="stylesheet" href="https://assets.testleaf.com/assets/css/main.css">
+  <link rel="stylesheet" href="https://assets.testleaf.com/assets/css/new.css">
+   <!-- <link rel="stylesheet" href="assets/css/new.css"> -->
+    <link rel="stylesheet" href="assets/css/index.css">
+
+  <!-- Global site tag (gtag.js) - Google Ads: 719359309 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-719359309"></script>
+  <script type="text/javascript" src='https://forms.zoho.com/js/zf_gclid.js'></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'AW-719359309');
+  </script>
+
+  <!-- Ms clarity   -->
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "dogej7od4n");
+  </script>
+  <script type="text/javascript">
+    _linkedin_partner_id = "4330052";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/javascript">
+    (function (l) {
+      if (!l) {
+        window.lintrk = function (a, b) { window.lintrk.q.push([a, b]) };
+        window.lintrk.q = []
+      }
+      var s = document.getElementsByTagName("script")[0];
+      var b = document.createElement("script");
+      b.type = "text/javascript"; b.async = true;
+      b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+      s.parentNode.insertBefore(b, s);
+    })(window.lintrk);
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none;" alt=""
+      src="https://px.ads.linkedin.com/collect/?pid=4330052&fmt=gif" />
+  </noscript>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WHCV79W4M2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-WHCV79W4M2');
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TJ8BDCX');</script>
+  <!-- End Google Tag Manager -->
+  <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "EducationalOrganization",
+          "name": "TestLeaf Software Solutions Private Limited",
+          "url": "https://www.testleaf.com",
+          "logo": "https://assets.testleaf.com/assets/img/logo.svg",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+918925411172",
+            "contactType": "customer service"
+          },
+          "sameAs": [
+            "https://www.facebook.com/Testleaf",
+            "https://x.com/Testleaf1",
+            "https://www.linkedin.com/company/testleaf",
+            "https://www.youtube.com/@TestLeaf",
+            "https://www.linkedin.com/company/testleaf"
+          ]
+        }
+        </script>
+
+  <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "TestLeaf Software Solutions Private Limited",
+          "image": "https://assets.testleaf.com/assets/img/logo.svg",
+          "@id": "",
+          "url": "https://www.testleaf.com",
+          "telephone": "+91 8925411172",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Tower C, 2nd floor, TEK MEADOWS, 51, Rajiv Gandhi Salai, Parameshwaran Nagar, Elcot Sez, Sholinganallur, Chennai, Tamil Nadu 600119",
+            "addressLocality": "Chennai",
+            "postalCode": "600119",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 12.9165,
+            "longitude": 80.2472
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+              ],
+              "opens": "09:00",
+              "closes": "19:30"
+            }
+          ]
+        }
+        </script>
+
+
+
+
+  <script src="https://cdn.brevo.com/js/sdk-loader.js" async></script>
+  <script>
+    // Version: 2.0
+    window.Brevo = window.Brevo || [];
+    Brevo.push([
+      "init",
+      {
+        client_key: "gh6llnfqotjc6dkj7d6kch5z",
+        // Optional: Add other initialization options, see documentation
+      }
+    ]);
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* body {
+      height: 2000px; 
+      background: #f4f4f4;
+    } */
+
+    /* banner - hero text */
+
+    .reach-us {
+      margin-top: 80px;
+    }
+
+    /* ends */
+
+
+    /* video player */
+/* Container for the video section */
+.video-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Title Style */
+.video-container h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    color: #273F52;
+    margin-bottom: 20px;
+}
+
+/* Video Wrapper */
+.video-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+/* Responsiveness */
+.video {
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+}
+
+/* Video Description */
+.video-description {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    color: #fff;
+}
+
+.video-description h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.video-description p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .video-wrapper {
+        max-width: 100%;
+    }
+
+    .video {
+        height: 250px;
+    }
+
+    .video-description h3 {
+        font-size: 16px;
+    }
+}
+
+
+    /* ends */
+
+   
+  </style>
+
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJ8BDCX" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div id="loader">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <!-- Header & Hero Section -->
+ <!-- menu starts -->
+
+   <input type="checkbox" id="mobile-menu-toggle" class="mobile-toggle">
+
+    <!-- Sticky Header -->
+    <header class="sticky-header" id="main-header">
+        <!-- Top ribbon -->
+        <div class="ribbon">
+            📞 Need assistance? Call us @ <a href="tel:+918925411172"><strong>(+91) 89 2541 1172</strong></a>
+            or <a href="contact.html#enq"><strong>Request Call Back</strong></a>
+        </div>
+
+        <!-- Main header content -->
+        <div class="header-content">
+            <a href="/" class="logo">
+                <img src="https://assets.testleaf.com/assets/img/logo.svg" alt="Testleaf" />
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    
+                    <li class="dropdown">
+                        <button class="dropdown-toggle">
+                            Courses
+                            <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l4 4 4-4"/>
+                            </svg>
+                        </button>
+                        
+                        <div class="dropdown-menu">
+                            <div class="dropdown-grid">
+                                <div class="dropdown-column">
+                                    <h4>Automation & QA</h4>
+                                    <a href="https://www.testleaf.com/course/selenium-automation-certification-training-course.html" class="course-cardss">
+                                        <span class="popular-badge">Popular</span>
+                                        <div class="course-title">Selenium Training</div>
+                                        <div class="course-desc">90+ hrs hands-on • AI-powered</div>
+                                    </a>
+                                    <a href="https://www.testleaf.com/course/playwright.html" class="course-cardss">
+                                        <div class="course-title">Playwright Automation</div>
+                                        <div class="course-desc">Modern E2E testing</div>
+                                    </a>
+                                    <a href="https://www.testleaf.com/course/appium-automation-testing-course.html" class="course-cardss">
+                                        <div class="course-title">Appium Automation</div>
+                                        <div class="course-desc">Mobile test automation</div>
+                                    </a>
+                                </div>
+                                
+                                <div class="dropdown-column">
+                                    <h4>API & Cloud</h4>
+                                    <a href="https://www.testleaf.com/course/rest-api-testing-certification-training-course.html" class="course-cardss">
+                                        <div class="course-title">REST API Testing</div>
+                                        <div class="course-desc">Requests, auth, automation</div>
+                                    </a>
+                                    <a href="https://www.testleaf.com/course/aws-cloud-architect-certification-training-course.html" class="course-cardss">
+                                        <div class="course-title">AWS Cloud Course</div>
+                                        <div class="course-desc">Architect & practitioner</div>
+                                    </a>
+                                   
+                                    <a href="https://www.testleaf.com/course/full-stack-automation-certification-training-course.html" class="course-cardss">
+                                        <div class="course-title">Full Stack Automation</div>
+                                        <div class="course-desc">24 weekends • 3 projects</div>
+                                    </a>
+                                </div>
+                                
+                                <div class="dropdown-column">
+                                    <h4>Career Programs</h4>
+                                    <a href="https://www.testleaf.com/course/fresher-software-testing-bootcamp-training-course.html" class="course-cardss">
+                                        <div class="course-title">Freshers Training</div>
+                                        <div class="course-desc">Job-ready foundations</div>
+                                    </a>
+                                    <a href="https://www.testleaf.com/course/non-it-to-it-transformation-training-course.html" class="course-cardss">
+                                        <div class="course-title">IT Gateway Program</div>
+                                        <div class="course-desc">Non-IT to IT transition</div>
+                                    </a>
+                                    <a href="https://www.testleaf.com/corporate-training.html" class="course-cardss">
+                                        <div class="course-title">Corporate Training</div>
+                                        <div class="course-desc">Team upskilling solutions</div>
+                                    </a>
+                                </div>
+                                
+                            </div>
+                            <div class="dropdown-footer">
+                                <a href="https://www.testleaf.com/all-courses.html" class="view-all-link">View all courses →</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!-- <li><a href="corporate-training.html" class="nav-link">Corporate Training</a></li> -->
+                     <!-- <li><a href="corporate-training.html" class="nav-link">Success Stories</a></li> -->
+                    <li><a href="https://www.testleaf.com/blog/" class="nav-link" target="_blank">Blog</a></li>
+                    <li><a href="about-us.html" class="nav-link">About</a></li>
+                    <li><a href="webinar.html" class="nav-link">Webinars</a></li>
+                </ul>
+
+                <div class="header-actions">
+                    <a href="https://platform.testleaf.com/#/" class="btn" target="_blank">
+                        <img src="https://assets.testleaf.com/assets/img/sign-in.svg" alt="Sign In">
+                        Sign In
+                    </a>
+                    <a href="all-courses.html">
+                  <button class="ml-sm-2 ml-lg-0 btn header-btn green">
+                    <img src="https://assets.testleaf.com/assets/img/start-course.svg" alt="Start Courses">
+                    <span class="ml-2">Start Course</span>
+                  </button>
+                </a>
+                </div>
+            </nav>
+
+            <!-- Mobile hamburger -->
+            <label for="mobile-menu-toggle" class="mobile-burger">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <line x1="3" y1="12" x2="21" y2="12"/>
+                    <line x1="3" y1="18" x2="21" y2="18"/>
+                </svg>
+            </label>
+        </div>
+    </header>
+
+    <!-- Mobile overlay and drawer -->
+    <div class="mobile-overlay"></div>
+    <aside class="mobile-drawer">
+        <div class="drawer-header">
+            <h3>Menu</h3>
+            <label for="mobile-menu-toggle" class="drawer-close">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </label>
+        </div>
+        
+        <nav class="drawer-nav">
+            <ul class="mobile-nav-list">
+                <li><a href="/">Home</a></li>
+                
+                <li>
+                    <details class="mobile-dropdown">
+                        <summary class="dropdown-toggle">Courses</summary>
+                        <div class="mobile-dropdown-content">
+                            <a href="https://www.testleaf.com/course/selenium-automation-certification-training-course.html">Selenium Training</a>
+                            <a href="https://www.testleaf.com/course/playwright.html">Playwright Automation</a>
+                            <a href="https://www.testleaf.com/course/appium-automation-testing-course.html">Appium Automation</a>
+                            <a href="https://www.testleaf.com/course/rest-api-testing-certification-training-course.html">REST API Testing</a>
+                            <a href="https://www.testleaf.com/course/aws-cloud-architect-certification-training-course.html">AWS Cloud Course</a>
+                            <a href="https://www.testleaf.com/course/full-stack-automation-certification-training-course.html">Full Stack Automation</a>
+                            <a href="https://www.testleaf.com/course/fresher-software-testing-bootcamp-training-course.html">Freshers Training</a>
+                            <a href="https://www.testleaf.com/course/non-it-to-it-transformation-training-course.html">IT Gateway Program</a>
+                            <a href="https://www.testleaf.com/corporate-training.html">Corporate Training</a>
+                            <a href="https://www.testleaf.com/all-courses.html">View all courses →</a>
+                        </div>
+                    </details>
+                </li>
+                <li><a href="corporate-training.html">Corporate Training</a></li>
+                <li><a href="https://www.testleaf.com/blog/" target="_blank">Blog</a></li>
+                <li><a href="about-us.html">About</a></li>
+                <li><a href="webinar.html">Webinars</a></li>
+            </ul>
+            
+            <div class="mobile-actions">
+                <a href="https://platform.testleaf.com/#/" class="btn" target="_blank">
+                    <img src="https://assets.testleaf.com/assets/img/sign-in.svg" alt="Sign In">
+                    Sign In
+                </a>
+                <a href="all-courses.html">
+                  <button class="ml-sm-2 ml-lg-0 btn header-btn green">
+                    <img src="https://assets.testleaf.com/assets/img/start-course.svg" alt="Start Courses">
+                    <span class="ml-2">Start Course</span>
+                  </button>
+                </a>
+            </div>
+        </nav>
+    </aside>
+
+  <!-- menu ends -->
+
+  <!-- Hero section starts -->
+<main class="ds-page">
+    <section class="ds-shell ds-shell--bg" style="background-image: url(assets/index-images/02.webp);">
+
+      <!-- LEFT -->
+      <div class="ds-left">
+        <div class="ds-badge-row">
+          <div class="ds-badge-logo">#1 - Course</div>
+          <div class="ds-badge-logo" style="color:#0f766e;background:#e8fff7">Testleaf</div>
+        </div>
+
+        <h1 class="ds-title">
+          Build your skills & Upgrade your Career
+          <span class="ds-spark">✦</span>
+        </h1>
+        <p class="ds-sub">
+         We were put on this earth to help you squeeze every last shared of value out of your career road-map.
+        </p>
+<!-- Rating Badge -->
+<div class="tl-rating-badge" role="group" aria-label="Rated 4.7 out of 5 from more than 3003+ Google reviews">
+  <img class="g-l-img" src="assets/index-images/google-logo.webp" alt="g-logo">
+  <style>
+    img.g-l-img {
+    width: 35px;
+   
+}
+  </style>
+
+
+  <div class="tl-rating-badge__content">
+    <div class="tl-rating-badge__title">
+      <strong>Rated <span class="tl-rating-badge__score">4.7</span>/<span>5.0</span></strong>
+    </div>
+    <div class="tl-rating-badge__sub">More than 3003+ Google Reviews</div>
+  </div>
+</div>
+
+        <!-- <div class="ds-rating">
+          <span>4.4★</span>
+          <span class="ds-sep"></span>
+          <span>3k+ reviews</span>
+        </div> -->
+
+        <div class="ds-feature-grid">
+          <div class="ds-feature-card tl-has-tooltip">
+            <div class="ds-feature-title"><i class="fas fa-graduation-cap"></i> Fresh</div>
+            <div class="ds-feature-sub">Graduates</div>
+             <div class="tl-tip tl-tip--top" role="tooltip" aria-hidden="true">
+              <div class="tl-card">
+                <div class="tl-card__avatar">🎓</div>
+                <div class="tl-card__content">
+                  <h4 class="tl-card__title">Fresh Graduates</h4>
+                  <p class="tl-card__text">(2023 - 2025)</p>
+                </div>
+              </div>
+              <span class="tl-tip__arrow" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <div class="ds-feature-card tl-has-tooltip">
+            <div class="ds-feature-title"><i class="fas fa-briefcase"></i> Career</div>
+            <div class="ds-feature-sub">Break</div>
+            <div class="tl-tip tl-tip--top" role="tooltip" aria-hidden="true">
+              <div class="tl-card">
+                <div class="tl-card__avatar">💼</div>
+                <div class="tl-card__content">
+                  <h4 class="tl-card__title">Career Comeback</h4>
+                  <p class="tl-card__text">(2yrs to 3yrs)</p>
+                </div>
+              </div>
+              <span class="tl-tip__arrow" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <div class="ds-feature-card tl-has-tooltip">
+            <div class="ds-feature-title"><i class="fas fa-flask"></i> QA</div>
+            <div class="ds-feature-sub">Professionals</div>
+             <div class="tl-tip tl-tip--top" role="tooltip" aria-hidden="true">
+              <div class="tl-card">
+                <div class="tl-card__avatar">🧪</div>
+                <div class="tl-card__content">
+                  <h4 class="tl-card__title">QA Experts</h4>
+                  <p class="tl-card__text">(2 to 10yrs of Experience)</p>
+                </div>
+              </div>
+              <span class="tl-tip__arrow" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <div class="ds-feature-card tl-has-tooltip">
+            <div class="ds-feature-title"><i class="fas fa-code"></i> Dev</div>
+            <div class="ds-feature-sub">Professionals</div>
+              <div class="tl-tip tl-tip--top" role="tooltip" aria-hidden="true">
+              <div class="tl-card">
+                <div class="tl-card__avatar">👨‍💻</div>
+                <div class="tl-card__content">
+                  <h4 class="tl-card__title">Developers</h4>
+                  <p class="tl-card__text">(Full Stack Development)</p>
+                </div>
+              </div>
+              <span class="tl-tip__arrow" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <div class="ds-feature-card tl-has-tooltip">
+            <div class="ds-feature-title"><i class="fas fa-chart-line"></i> BA</div>
+            <div class="ds-feature-sub">Professionals</div>
+            <div class="tl-tip tl-tip--top" role="tooltip" aria-hidden="true">
+              <div class="tl-card">
+                <div class="tl-card__avatar">📊</div>
+                <div class="tl-card__content">
+                  <h4 class="tl-card__title">Business Analysts</h4>
+                  <p class="tl-card__text">Bridge requirements with testable, measurable outcomes.</p>
+                </div>
+              </div>
+              <span class="tl-tip__arrow" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <!-- <div class="ds-feature-card">
+            <div class="ds-feature-title">English, Hindi, Telugu &amp; தமிழ்</div>
+            <div class="ds-feature-sub">Learn in Your Own Language</div>
+          </div> -->
+
+          <div class="ds-feature-card tl-has-tooltip">
+            <div class="ds-feature-title"><i class="fas fa-rocket"></i> IT</div>
+            <div class="ds-feature-sub">Gateway</div>
+             <div class="tl-tip tl-tip--top" role="tooltip" aria-hidden="true">
+              <div class="tl-card">
+                <div class="tl-card__avatar">🚀</div>
+                <div class="tl-card__content">
+                  <h4 class="tl-card__title">IT Gateway</h4>
+                  <p class="tl-card__text">Tech Supports(System Admin, BPO, KPO, etc.)</p>
+                </div>
+              </div>
+              <span class="tl-tip__arrow" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <aside class="ds-right" aria-labelledby="apply-now">
+        <div class="ds-form-title" id="apply-now">Apply now to Unlock Offer!</div>
+
+        <div class="ds-help-pills">
+          <span class="ds-help-pill">Limited seats</span>
+          <span class="ds-help-pill">Takes 30 seconds</span>
+          <span class="ds-help-pill">No spam</span>
+        </div>
+
+<form action="https://forms.zohopublic.com/TestLeaf/form/tlenquirylanding/formperma/iDO5OdQqIDFZpI7BlqxkVYrpNwbpDyoiqr_sQY09WA4/htmlRecords/submit"
+  method="POST"
+  accept-charset="UTF-8"
+  enctype="multipart/form-data"
+  id="trialForm"
+  name="form"
+  style="display:flex; flex-direction: column; height: 100%;">
+  <!-- Zoho hidden fields (your originals) -->
+  <input type="hidden" name="zf_referrer_name" value="">
+  <input type="hidden" name="zf_redirect_url" value="">
+  <input type="hidden" name="zc_gad" value="">
+  <input type="hidden" name="utm_source" value="">
+  <input type="hidden" name="utm_medium" value="">
+  <input type="hidden" name="utm_campaign" value="">
+  <input type="hidden" name="utm_term" value="">
+  <input type="hidden" name="utm_content" value="">
+  <input type="hidden" name="id" value="">
+  <input type="hidden" name="gclid" value="">
+  <input type="hidden" name="referrername" value="">
+  <!-- optional tracker: shows that we passed captcha before posting -->
+  <input type="hidden" name="captcha_verified" id="captcha_verified" value="0">
+
+            <div class="ds-field">
+            <select class="ds-input ds-select" id="Dropdown" name="Dropdown" aria-label="Program Interested" required>
+              <option value="" selected disabled>Program Interested</option>
+        <option value="AWS">AWS</option>
+        <option value="Appium">Appium</option>
+        <option value="Cloud Fundamentals">Cloud Fundamentals</option>
+        <option value="Cybersecurity">Cybersecurity</option>
+        <option value="Data Structures and Algorithms">Data Structures and Algorithms</option>
+        <option value="DevOps">DevOps</option>
+        <option value="Freshers">Freshers</option>
+        <option value="Full Stack Automation">Full Stack Automation</option>
+        <option value="Full Stack Development">Full Stack Development</option>
+        <option value="Gen AI Course for QA Engineers">Gen AI Course for QA Engineers</option>
+        <option value="JMeter">JMeter</option>
+        <option value="Jmeter BootCamp">Jmeter BootCamp</option>
+        <option value="Kubernetes Certification">Kubernetes Certification</option>
+        <option value="Non-IT">Non-IT</option>
+        <option value="Playwright">Playwright</option>
+        <option value="ReactJS Development">ReactJS Development</option>
+        <option value="Rest API">Rest API</option>
+        <option value="RestAPI BootCamp">RestAPI BootCamp</option>
+        <option value="SDET BootCamp">SDET BootCamp</option>
+        <option value="Selenium">Selenium</option>
+        <option value="Selenium-Bootcamp">Selenium-Bootcamp</option>
+            </select>
+          </div>
+
+
+            <div class="ds-row">
+          <div class="ds-field">
+            <input class="ds-input" type="text" id="name" name="SingleLine" maxlength="255" placeholder="Name" aria-label="Name" required />
+          </div>
+
+          <div class="ds-field">
+              <input class="ds-input" type="email" id="email" name="Email" maxlength="255" placeholder="Email" aria-label="Email" required />
+          </div>
+</div>
+          <div class="ds-field">
+            <!-- <select class="ds-input ds-select" name="country_code" aria-label="Country code">
+              <option value="+91" selected>IN +91</option>
+              <option value="+1">US +1</option>
+              <option value="+971">AE +971</option>
+            </select> -->
+            <input class="ds-input" type="tel" id="PhoneNumber_countrycode" name="PhoneNumber_countrycode" maxlength="20" placeholder="Mobile Number" aria-label="Mobile Number" pattern="[0-9]*" required />
+          </div>
+
+          <div class="form-field form-full">
+                <label for="captcha">Security Verification</label>
+                <div class="captcha-row" style="display:flex; align-items:center; gap:10px; margin:10px 0;">
+                  <img src="captcha.php" alt="CAPTCHA" id="captcha-img" style="border: 1px solid #ddd; border-radius: 4px;">
+                  <button type="button" onclick="refreshCaptcha()" style="padding: 8px 12px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">↻</button>
+                  <input type="text" name="captcha" id="captcha" placeholder="Enter CAPTCHA code" maxlength="6" required style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                </div>
+              </div>
+          <!-- ends -->
+          <!-- <div class="ds-coupon">Have a Coupon code? <a href="#">Redeem</a></div> -->
+
+          <button type="submit" class="ds-apply">Apply Now</button>
+
+          <p class="ds-note">
+            By registering, I agree to be contacted via phone, SMS, or email for offers &amp; products, even if I am on a DNC/NDNC list.
+          </p>
+        </form>
+      </aside>
+
+    </section>
+  </main>
+
+  <!-- ends -->
+
+  <!-- ends -->
+
+<!-- video section -->
+<!-- <div class="video-container"> -->
+  <section class="course-section" style="background: #f1fcf8;">
+<h2 class="section-heading" style="margin-bottom: 35px;">
+      <span class="pulse-dot"></span><span class="ag-h5-gradient" style="font-size: 2rem;font-weight:600;">Testleaf</span>
+        "16th" Anniversary <span class="pulse-dot"></span>
+    </h2>
+  
+    <div class="video-wrapper">
+        <iframe class="video" src="https://www.youtube.com/embed/eEnJkF5hHR0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- <div class="video-description">
+            <h3>From Testleaf C</h3>
+            <p>Thilak | Motion Graphic Artist</p>
+        </div> -->
+        <h2 style="text-align: left;color:#000000;margin-top: 10px;" class="tl-title">
+          Celebrating <span>16 Years of Testleaf</span>
+        </h2>
+        <p style="text-align: left;font-weight: 500;">For 16 years, we’ve been shaping the careers of QA professionals across the globe. What started with just one person has grown into a 130+ member team, presence in 32 countries, and 50,000+ learners. From classroom sessions to building a global EdTech platform and creating a dedicated placement team — this journey has been possible only because of you.</p>
+        
+        <p style="text-align: left;font-weight: 500;"><span style="font-weight: 600;">💚 Thank You for Being With Us</span><br>
+  <br>Your trust and support made this milestone possible. Together, let’s continue to inspire, learn, and grow for many more years ahead.</p><!-- <h3 style="text-align: left;">  </h3> -->
+    </div>
+    
+    </section>
+<!-- </div> -->
+<!-- ends -->
+
+<!-- moving text -->
+<!-- <link rel="preconnect" href="." />
+
+<div class="tl16-banner">
+  <div class="tl16-track" aria-label="We are celebrating 16th anniversary">
+
+    <span class="tl16-item">🎉 We Are Celebrating 16th Anniversary</span>
+    <span class="tl16-item">🎉 We Are Celebrating 16th Anniversary</span>
+    <span class="tl16-item">🎉 We Are Celebrating 16th Anniversary</span>
+    <span class="tl16-item">🎉 We Are Celebrating 16th Anniversary</span>
+    <span class="tl16-item">🎉 We Are Celebrating 16th Anniversary</span>
+  </div>
+</div> -->
+
+<!-- ends -->
+  <!-- logo slider starts -->
+
+  <section class="tl-partners">
+    <div class="tl-wrap">
+      <div class="tl-head">
+        <h2 class="tl-title">
+          Trained <span>50,000+ professionals</span> across 12 countries
+        </h2>
+        <div class="tl-rating">
+          <div class="tl-stars" aria-hidden="true">
+            <!-- 5 SVG stars -->
+            <svg viewBox="0 0 24 24" class="tl-star">
+              <path d="M12 2l2.9 6.6 7.1.6-5.3 4.6 1.7 6.9L12 17l-6.4 3.7 1.7-6.9L2 9.2l7.1-.6L12 2z" />
+            </svg>
+            <svg viewBox="0 0 24 24" class="tl-star">
+              <path d="M12 2l2.9 6.6 7.1.6-5.3 4.6 1.7 6.9L12 17l-6.4 3.7 1.7-6.9L2 9.2l7.1-.6L12 2z" />
+            </svg>
+            <svg viewBox="0 0 24 24" class="tl-star">
+              <path d="M12 2l2.9 6.6 7.1.6-5.3 4.6 1.7 6.9L12 17l-6.4 3.7 1.7-6.9L2 9.2l7.1-.6L12 2z" />
+            </svg>
+            <svg viewBox="0 0 24 24" class="tl-star">
+              <path d="M12 2l2.9 6.6 7.1.6-5.3 4.6 1.7 6.9L12 17l-6.4 3.7 1.7-6.9L2 9.2l7.1-.6L12 2z" />
+            </svg>
+            <svg viewBox="0 0 24 24" class="tl-star tl-star--half">
+              <path d="M12 2l2.9 6.6 7.1.6-5.3 4.6 1.7 6.9L12 17l-6.4 3.7 1.7-6.9L2 9.2l7.1-.6L12 2z" />
+            </svg>
+          </div>
+          <p class="tl-score"><strong>4.7/5</strong> from <strong>3,003+</strong> verified students</p>
+        </div>
+      </div>
+
+      <div class="tl-marquee" aria-label="Companies our learners come from">
+        <div class="tl-track">
+          <!-- ===== Set A (cl1..cl12) ===== -->
+          <a class="tl-logo" href="#" aria-label="cl1">
+            <img src="https://assets.testleaf.com/assets/new/home/cl1.webp" alt="Client 1" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl2">
+            <img src="https://assets.testleaf.com/assets/new/home/cl2.webp" alt="Client 2" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl3">
+            <img src="https://assets.testleaf.com/assets/new/home/cl3.webp" alt="Client 3" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl4">
+            <img src="https://assets.testleaf.com/assets/new/home/cl4.webp" alt="Client 4" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl5">
+            <img src="https://assets.testleaf.com/assets/new/home/cl5.webp" alt="Client 5" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl6">
+            <img src="https://assets.testleaf.com/assets/new/home/cl6.webp" alt="Client 6" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl7">
+            <img src="https://assets.testleaf.com/assets/new/home/cl7.webp" alt="Client 7" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl8">
+            <img src="https://assets.testleaf.com/assets/new/home/cl8.webp" alt="Client 8" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl9">
+            <img src="https://assets.testleaf.com/assets/new/home/cl9.webp" alt="Client 9" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl10">
+            <img src="https://assets.testleaf.com/assets/new/home/cl10.webp" alt="Client 10" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl11">
+            <img src="https://assets.testleaf.com/assets/new/home/cl11.webp" alt="Client 11" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl12">
+            <img src="https://assets.testleaf.com/assets/new/home/cl12.webp" alt="Client 12" />
+          </a>
+
+          <!-- ===== Duplicate Set A again (identical order) for seamless loop ===== -->
+          <a class="tl-logo" href="#" aria-label="cl1-dup">
+            <img src="https://assets.testleaf.com/assets/new/home/cl1.webp" alt="Client 1" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl2-dup">
+            <img src="https://assets.testleaf.com/assets/new/home/cl2.webp" alt="Client 2" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl3-dup">
+            <img src="https://assets.testleaf.com/assets/new/home/cl3.webp" alt="Client 3" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl4-dup">
+            <img src="https://assets.testleaf.com/assets/new/home/cl4.webp" alt="Client 4" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl5-dup">
+            <img src="https://assets.testleaf.com/assets/new/home/cl5.webp" alt="Client 5" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl6-dup">
+            <img src="https://assets.testleaf.com/assets/new/home/cl6.webp" alt="Client 6" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl7-dup">
+            <img src="https://assets.testleaf.com/assets/new/home/cl7.webp" alt="Client 7" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl8-dup">
+            <img src="https://assets.testleaf.com/assets/new/home/cl8.webp" alt="Client 8" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl9-dup">
+            <img src="https://assets.testleaf.com/assets/new/home/cl9.webp" alt="Client 9" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl10-dup">
+            <img src="https://assets.testleaf.com/assets/new/home/cl10.webp" alt="Client 10" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl11-dup">
+            <img src="https://assets.testleaf.com/assets/new/home/cl11.webp" alt="Client 11" />
+          </a>
+          <a class="tl-logo" href="#" aria-label="cl12-dup">
+            <img src="https://assets.testleaf.com/assets/new/home/cl12.webp" alt="Client 12" />
+          </a>
+        </div>
+
+        <span class="tl-fade tl-fade--left" aria-hidden="true"></span>
+        <span class="tl-fade tl-fade--right" aria-hidden="true"></span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- logo slider ends -->
+
+  <!-- course section -->
+
+  <section class="course-section">
+    <h1 class="section-heading">
+      <span class="pulse-dot"></span>Live Online Classes + <span class="tlw-accent">Trending Tech Program </span>
+    </h1>
+    <p class="section-subtitle">
+      Testleaf provides a premier, project-based career program that guarantees placement guidance upon completion.
+    </p>
+
+    <!-- Filter bar -->
+<div class="tlfilt-bar" role="region" aria-label="Filter courses">
+  <label class="tlfilt-label" for="tlfilt-select">        </label>
+  <div class="tlfilt-selectWrap">
+    <select id="tlfilt-select" class="tlfilt-select" aria-label="Course category">
+      <option value="Trending">Trending ✨</option>
+      <option value="AI">AI</option>
+      <option value="Automation">Automation</option>
+      <option value="Datascience">Data Science</option>
+    </select>
+  </div>
+  <span class="tlfilt-count" aria-live="polite"></span>
+</div>
+
+
+    <div class="course-grids" >
+      <!-- Card 1 -->
+      <div class="course-cards" data-tags="Trending Datascience">
+        <img class="w-100" src="https://assets.testleaf.com/assets/new/home/Datascience.webp"
+          alt="Cybersecurity Course img">
+        <div class="course-content">
+          <h3>Data Science</h3>
+          <p class="lang"><span>🌐</span> Tamil, English</p>
+          <div class="course-meta">
+            <div class="rating-box">
+              <div class="stars">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+              </div>
+              <div class="meta-label">HIGHLY RATED</div>
+            </div>
+            <div class="duration"><strong>80+</strong> hrs</div>
+          </div>
+          <div class="course-buttons">
+            <button class="syllabus-btn" data-course="Data Science">Syllabus</button>
+            <button class="know-btn"><a style="color:#fff;" href="course/datascience-course.html">Know More</a></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="course-cards" data-tags="Trending AI">
+        <img class="w-100" src="https://assets.testleaf.com/assets/new/home/Genai-course.webp" alt="Gen AI Course img">
+        <div class="course-content">
+          <h3>Gen AI for QA Engineers</h3>
+          <p class="lang"><span>🌐</span> Tamil, English</p>
+          <div class="course-meta">
+            <div class="rating-box">
+              <div class="stars">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+              </div>
+              <div class="meta-label">HIGHLY RATED</div>
+            </div>
+            <div class="duration"><strong>40+</strong> hrs</div>
+          </div>
+          <div class="course-buttons">
+            <button class="syllabus-btn" data-course="Gen%20AI%20for%20QA%20Engineers">Syllabus</button>
+            <button class="know-btn"><a style="color:#fff;"
+                href="https://www.testleaf.com/course/genai-qa-engineers-training-course.html">Know More</a></button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Card 3 -->
+      <div class="course-cards" data-tags="Trending Automation">
+        <img class="w-100" src="https://assets.testleaf.com/assets/new/home/Playwrite-course.webp" alt="Playwright Course img">
+        <div class="course-content">
+          <h3>Playwright JS / TS</h3>
+          <p class="lang"><span>🌐</span> Tamil, English</p>
+          <div class="course-meta">
+            <div class="rating-box">
+              <div class="stars">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+              </div>
+              <div class="meta-label">HIGHLY RATED</div>
+            </div>
+            <div class="duration"><strong>100+</strong> hrs</div>
+          </div>
+          <div class="course-buttons">
+            <button class="syllabus-btn" data-course="Playwright">Syllabus</button>
+            <button class="know-btn"><a style="color:#fff;" href="https://www.testleaf.com/course/playwright.html">Know
+                More</a></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="course-cards" data-tags="Automation">
+        <img class="w-100" src="https://assets.testleaf.com/assets/new/home/Selenium-course.webp" alt="Selenium Course img">
+        <div class="course-content">
+          <h3>Selenium Webdriver</h3>
+          <p class="lang"><span>🌐</span> Tamil, English</p>
+          <div class="course-meta">
+            <div class="rating-box">
+              <div class="stars">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+              </div>
+              <div class="meta-label">HIGHLY RATED</div>
+            </div>
+            <div class="duration"><strong>100+</strong> hrs</div>
+          </div>
+          <div class="course-buttons">
+            <button class="syllabus-btn" data-course="Selenium%20Webdriver">Syllabus</button>
+            <button class="know-btn"><a style="color:#fff;"
+                href="https://www.testleaf.com/course/selenium-automation-certification-training-course.html">Know
+                More</a></button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- Explore All Programs Button -->
+    <div class="explore-wrapper">
+      <button class="explore-btn"><a style="color:#000;" href="https://www.testleaf.com/all-courses.html">Explore All
+          Programs</a></button>
+    </div>
+  </section>
+
+  <!-- course secction ends -->
+
+  <!-- 4 cards starts -->
+
+  <section class="advisorys-sec" style="background: #ffffff;">
+    <!-- <h2 class="section-heading">
+  <span class="pulse-dot"></span>Why Embrace AI Now
+</h2> -->
+    <div class="tlw-headbox">
+      <div class="tlw-title">Why Embrace <span class="tlw-accent">AI Now? </span></div>
+      <div class="tlw-sub">Driving innovation in every industry</div>
+
+
+    </div>
+    <!-- <p class="section-subtitle">
+    Testleaf provides a premier, project-based career program that guarantees placement guidance upon completion.
+  </p> -->
+
+    <div class="course-grid">
+      <!-- Card 1 -->
+      <div class="course-card">
+        <img class="w-100" src="assets/index-images/Ai-01.webp" alt="Software Testing Course Online">
+        <div class="course-contents">
+          <h3>The State of AI: Global Survey 2025</h3>
+          <ul class="lp-lists">
+            <li>◈ Organizational Changes to Harness Generative AI</li>
+            <li>◈ Redesigning Workflows for AI Integration</li>
+            <li>◈ Senior Leadership Roles in AI Governance</li>
+            <li>◈ Driving Bottom-Line Impact Through AI</li>
+          </ul>
+          <div class="mentor-profile-ts">
+            <img src="https://assets.testleaf.com/assets/index-images/i1.webp" alt="i1 img">
+
+            <div>
+              <h5 style="font-size: 12px;"><strong>Publisher:</strong> McKinsey & Company</h5>
+              <p style="font-size: 12px;"><a
+                  href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai?utm_source=chatgpt.com"><strong>Name:</strong>
+                  State Of AI Report 2025</a></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="course-card">
+        <div class="stat-box ts">
+          <!-- <div class="stat-number" data-target="65">0 <span style="color: #fff;">%</span></div> -->
+          <h4 style="font-size: 50px;
+    font-weight: 700;color: #ffffff;">65%</h4>
+          <p style="font-size: 12px;color:#ffffff;">Organizations are taking steps to boost bottom-line impact
+          </p>
+          <!-- <div class="stat-label">of senior executives identify AI and predictive analytics as primary contributors to growth in 2025</div> -->
+        </div>
+        <div class="course-contents">
+          <h3>Adobe 2025 AI and Digital Trends Report</h3>
+          <ul class="lp-lists">
+            <li>◈ AI as a Catalyst for Business Growth</li>
+            <li>◈ Personalized Customer Engagement Through AI</li>
+            <li>◈ Generative AI Enhancing Operational Efficiency</li>
+            <li>◈ Navigating Privacy and AI Adoption Complexities</li>
+
+          </ul>
+
+          <div class="mentor-profile-ts">
+            <img src="https://assets.testleaf.com/assets/index-images/i2.png" alt="i2 img">
+
+            <div>
+              <h5 style="font-size: 12px;"><strong>Publisher:</strong> Adobe</h5>
+              <p style="font-size: 12px;"><a
+                  href="https://business.adobe.com/resources/digital-trends-report.html"><strong>Name:</strong> Adobe
+                  Digital Trends Report</a></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="course-card">
+        <img class="w-100" src="assets/index-images/Ai-2.webp" alt="Software Testing Course Online">
+        <div class="course-contents">
+          <h3>Artificial Intelligence Index Report 2025</h3>
+          <ul class="lp-lists">
+            <li>◈ AI's Societal Impact Deepens Across Sectors</li>
+            <li>◈ Inference Costs Decline, Democratizing AI Access</li>
+            <li>◈ Global Surge in AI Research and Patents</li>
+            <li>◈ Corporate Emphasis on Responsible AI Practices</li>
+
+          </ul>
+          <div class="mentor-profile-ts">
+            <img src="https://assets.testleaf.com/assets/index-images/i3.png" alt="i3 img">
+
+            <div>
+              <h5 style="font-size: 12px;"><strong>Publisher:</strong> Stanford University's Human-Centered AI Institute
+                (HAI)</h5>
+              <p style="font-size: 12px;"><a
+                  href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai?utm_source=chatgpt.com"><strong>Name:</strong>
+                  Artificial Intelligence Index Report 2025</a></p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="course-card" >
+        <div class="stat-box ts">
+          <!-- <div class="stat-number" data-target="65">0 <span style="color: #fff;">%</span></div> -->
+          <h4 style="font-size: 50px;
+    font-weight: 700;color: #ffffff;">35.9%</h4>
+          <p style="font-size: 12px;color:#ffffff;">Global Market CAGR
+            2025 -2030 (Market Size and Forecast)
+          </p>
+          <!-- <div class="stat-label">of senior executives identify AI and predictive analytics as primary contributors to growth in 2025</div> -->
+        </div>
+        <div class="course-contents">
+          <h3>Artificial Intelligence Market Size and Forecast</h3>
+          <ul class="lp-lists">
+            <li>◈ AI Market Valued at $279.22 Billion in 2024</li>
+            <li>◈ Projected CAGR of 35.9% from 2025 to 2030</li>
+            <li>◈ AI Integration Across Diverse Industry Verticals</li>
+            <li>◈ Innovations Driving AI Adoption</li>
+            <li>◈ Innovations Driving AI Adoption</li>
+
+          </ul>
+          <div class="mentor-profile-ts">
+            <img src="https://assets.testleaf.com/assets/index-images/i4.png" alt="i4 img">
+
+            <div>
+              <h5 style="font-size: 12px;"><strong>Publisher:</strong> Grand View Research</h5>
+              <p style="font-size: 12px;"><a
+                  href="https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-ai-market"><strong>Name:</strong>
+                  Grand View Research AI Market Analysis</a></p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Explore All Programs Button -->
+      <!-- <div class="explore-wrapper">
+    <button class="explore-btn"><a style="color:#000;" href="https://www.testleaf.com/all-courses.html">Explore All Programs</a></button>
+  </div> -->
+  </section>
+
+  <!-- 4 cards ends -->
+
+  <!-- AI section starts -->
+  <section class="course-section" style="background: #f1fcf8;">
+    <h2 class="section-heading">
+      <span class="pulse-dot"></span><span class="ag-h5-gradient"
+        style="font-size: 2rem;font-weight:600;">AI Engineers </span>
+        Accelerated Programs
+    </h2>
+    <!-- <p class="section-subtitle">
+    Testleaf provides a premier, project-based career program that guarantees placement guidance upon completion.
+  </p> -->
+
+    <div class="course-grid">
+      <!-- Card 1 -->
+      <div class="course-card">
+        <img class="w-100" src="https://assets.testleaf.com/assets/new/home/Ai-course-01.webp" alt="Software Testing Course Online">
+        <div class="course-content">
+          <h3 class="ai-agentic-title">GenAI Foundation for QA Engineers &#8594;</h3>
+          <p style="font-size: 12px;">Master Generative AI and Large Language Models for software testing. From GPT-4 to
+            prompt engineering, transform your QA career with hands-on AI integration.</p>
+
+          <div class="course-buttons">
+            <!-- <button class="syllabus-btn">Syllabus</button> -->
+            <a class="know-btn ys" target="_blank" href="https://genai-foundation-course.testleaf.com/" style="color:#fff;">Know More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="course-card">
+        <img class="w-100" src="https://assets.testleaf.com/assets/new/home/Ai-course-02.webp" alt="Software Testing Course Online">
+        <div class="course-content">
+          <h3 class="ai-agentic-title">AI Test Tool <br>Developer &#8594;</h3>
+          <p style="font-size: 12px;">Build sophisticated AI-powered testing tools and become a leader in AI Agentic
+            Test. Master fine-tuning, reinforcement learning, and autonomous testing agents.</p>
+          
+          <div class="course-buttons">
+            <!-- <button class="syllabus-btn">Syllabus</button> -->
+            <a class="know-btn ys" target="_blank" style="color:#fff;" href="https://ai-agentic-testing-course.testleaf.com/">Know More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="course-card">
+        <img class="w-100" src="https://assets.testleaf.com/assets/new/home/Ai-course-03.webp" alt="Software Testing Course Online">
+        <div class="course-content">
+          <h3 class="ai-agentic-title">AI Agentic Testing Specialist &#8594;</h3>
+          <p style="font-size: 12px;">Master cutting-edge AI testing techniques with hands-on projects, industry mentorship, and guaranteed placement support. Gain practical experience and 100% job assistance.</p>
+        
+          <div class="course-buttons">
+            <!-- <button class="syllabus-btn">Syllabus</button> -->
+            <a class="know-btn ys" target="_blank" style="color:#fff;" href="https://ai-testing-course.testleaf.com/">Know More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="course-card">
+        <img class="w-100" src="https://assets.testleaf.com/assets/new/home/Ai-course-04.webp" alt="Software Testing Course Online">
+        <div class="course-content">
+          <h3 class="ai-agentic-title">Gen AI Engineering <br> program &#8594;</h3>
+          <p style="font-size: 12px;">Transform your career with hands-on experience in LLMs, RAG pipelines, and GenAI
+            applications. From programming foundations to real-time AI deployment.</p>
+          
+          <div class="course-buttons">
+            <!-- <button class="syllabus-btn">Syllabus</button> -->
+            <a class="know-btn ys" target="_blank" style="color:#fff;" href="https://ai.testleaf.com/">Know More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Explore All Programs Button -->
+    <!-- <div class="explore-wrapper">
+    <button class="explore-btn"><a style="color:#000;" href="https://www.testleaf.com/all-courses.html">Explore All Programs</a></button>
+  </div> -->
+  </section>
+
+  <!-- ends -->
+
+
+  <!-- after testleaf palced section -->
+
+  <section class="learner-slider-section">
+    <div class="tlw-headbox">
+      <div class="tlw-title">Journey Of Our <span class="tlw-accent">Learners</span></div>
+      <div class="tlw-sub">Meet the learners who transformed goals into success</div>
+
+
+    </div>
+
+    <div class="learner-slider-container">
+      <div class="learner-slider-track" id="learnerSliderTrack">
+
+        <!-- Slide 1 -->
+        <div class="learner-card">
+          <img src="https://assets.testleaf.com/assets/new/home/Aadhithya.webp" alt="Aadhitya img" class="learner-img" />
+          <h3 class="learner-name">Aadhithya</h3>
+          <img src="assets/index-images/Aadhithya-freeshworks.webp" alt="Freshworks logo" class="company-logo" />
+          <ul class="learner-journey">
+            <li>Gen AI And Other 6 Programs</li>
+            <!-- <li><b>After Testleaf</b></li> -->
+            <li class="highlighted-role">Lead SET, Freshworks</li>
+          </ul>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="learner-card">
+          <img src="assets/index-images/Anirudho-Sengupta.webp" alt="Anirudho img" class="learner-img" />
+          <h3 class="learner-name">Anirudho</h3>
+          <img src="assets/index-images/Anirudhu-Comcast.webp" alt="Comcast logo" class="company-logo" />
+          <ul class="learner-journey">
+            <li>Gen AI And Other 2 Programs</li>
+            <!-- <li><b>After Testleaf</b></li> -->
+            <li class="highlighted-role">SDET III, Comcast</li>
+          </ul>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="learner-card">
+          <img src="assets/index-images/Arun.webp" alt="Arun img" class="learner-img" />
+          <h3 class="learner-name">Arun Charles</h3>
+          <img src="assets/index-images/Arun-Venzo.webp" alt="Venzo logo" class="company-logo" />
+          <ul class="learner-journey">
+            <li>Gen AI And other 5 Programs</li>
+            <!-- <li><b>After Testleaf</b></li> -->
+            <li class="highlighted-role">practice Head, Venzo</li>
+          </ul>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="learner-card">
+          <img src="assets/index-images/Calvin-Festus-Emmanuel.webp" alt="Calvin Festus Emmanuel img"
+            class="learner-img" />
+          <h3 class="learner-name">Calvin Festus Emmanuel</h3>
+          <img src="assets/index-images/Calvin-Festus-Emmanuel-Rocketlane.webp" alt="Rocketlane logo"
+            class="company-logo" />
+          <ul class="learner-journey">
+            <li>Gen AI And other 5 Programs</li>
+            <!-- <li>After Testleaf</li> -->
+            <li class="highlighted-role">AvP, Rocketlane</li>
+          </ul>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="learner-card">
+          <img src="https://assets.testleaf.com/assets/new/home/Jayaraman.webp" alt="Jayaraman img" class="learner-img" />
+          <h3 class="learner-name">Jayaram</h3>
+          <img src="https://assets.testleaf.com/assets/new/home/Jayaram-Hexaware.webp" alt="Hexaware logo" class="company-logo" />
+          <ul class="learner-journey">
+            <li>Selenium + 6 Programs</li>
+            <!-- <li><b>After Testleaf</b></li> -->
+            <li class="highlighted-role">Architect, Hexaware</li>
+          </ul>
+        </div>
+
+
+        <!-- Slide 6 -->
+        <div class="learner-card">
+          <img src="https://assets.testleaf.com/assets/new/home/Lakshminarayanan.webp" alt="Lakshminarayanan img" class="learner-img" />
+          <h3 class="learner-name">Lakshminarayanan</h3>
+          <img src="assets/index-images/Lakshminarayanan-freeshworkspng.webp" alt="freeshworks logo"
+            class="company-logo" />
+          <ul class="learner-journey">
+            <li>Gen AI And Other 6 Programs</li>
+            <!-- <li><b>After Testleaf</b></li> -->
+            <li class="highlighted-role">Lead SET, Freshworks</li>
+          </ul>
+        </div>
+
+
+        <!-- Slide 7 -->
+        <div class="learner-card">
+          <img src="https://assets.testleaf.com/assets/new/home/Maheshwaran.webp" alt="Maheshwaran img" class="learner-img" />
+          <h3 class="learner-name">Maheshwaran</h3>
+          <img src="assets/index-images/Maheshwaran-Elixr-Labs.webp" alt="Elixr Labs logo"
+            class="company-logo" />
+          <ul class="learner-journey">
+            <li>Selenium + 4 Programs</li>
+            <!-- <li><b>After Testleaf</b></li> -->
+            <li class="highlighted-role">Lead Engineer, Elixr Labs</li>
+          </ul>
+        </div>
+
+
+        <!-- Slide 8 -->
+        <div class="learner-card">
+          <img src="https://assets.testleaf.com/assets/new/home/Muraleedaran.webp" alt="Muraleedaran img" class="learner-img" />
+          <h3 class="learner-name">Muraleedaran</h3>
+          <img src="https://assets.testleaf.com/assets/new/home/Muraleedaran-Rocketlane.webp" alt="Rocketlane logo"
+            class="company-logo" />
+          <ul class="learner-journey">
+            <li>Selenium + 5 Programs</li>
+            <!-- <li><b>After Testleaf</b></li> -->
+            <li class="highlighted-role">Lead SDET, Rocketlane</li>
+          </ul>
+        </div>
+
+        <!-- Slide 9 -->
+        <div class="learner-card">
+          <img src="https://assets.testleaf.com/assets/new/home/Padmavathy.webp" alt="Padmavathy img" class="learner-img" />
+          <h3 class="learner-name">Padmavathy</h3>
+          <img src="https://assets.testleaf.com/assets/new/home/Padmavathy-ciklum.webp" alt="ciklum logo" class="company-logo" />
+          <ul class="learner-journey">
+            <li>Gen AI And Other 3 Programs</li>
+            <!-- <li><b>After Testleaf</b></li> -->
+            <li class="highlighted-role">Senior QA, Ciklum</li>
+          </ul>
+        </div>
+
+        <!-- Slide 10 -->
+        <div class="learner-card">
+          <img src="assets/index-images/Sunil-Kumar-Sukesan.webp" alt="Sunil Kumar Sukesan img"
+            class="learner-img" />
+          <h3 class="learner-name">Sunil Kumar</h3>
+          <img src="assets/index-images/Sunil-Kumar-pwc.webp" alt="pwc logo" class="company-logo" />
+          <ul class="learner-journey">
+            <li>Gen AI And Other 3 Programs</li>
+            <!-- <li><b>After Testleaf</b></li> -->
+            <li class="highlighted-role">Test Manager, PwC</li>
+          </ul>
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="learner-card">
+          <img src="assets/index-images/Govindaraj-M.webp" alt="Govindaraj M img" class="learner-img" />
+          <h3 class="learner-name">Govindaraj M</h3>
+          <img src="assets/index-images/Govindaraj-M-blackberry.webp" alt="blackberry logo"
+            class="company-logo" />
+          <ul class="learner-journey">
+            <li>Gen AI And Other 3 Programs</li>
+            <!-- <li><b>After Testleaf</b></li> -->
+            <li class="highlighted-role">Test Manager, Blackberry</li>
+          </ul>
+        </div>
+
+        <!-- Slide 12 -->
+        <div class="learner-card">
+          <img src="https://assets.testleaf.com/assets/new/home/Gangadaran.webp" alt="Gangadaran img" class="learner-img" />
+          <h3 class="learner-name">Gangadaran</h3>
+          <img src="https://assets.testleaf.com/assets/new/home/Gangadaran-publicis-sapient.webp" alt="publicis sapient logo"
+            class="company-logo" />
+          <ul class="learner-journey">
+            <li>Gen AI And Other 4 Programs</li>
+            <!-- <li><b>After Testleaf</b></li> -->
+            <li class="highlighted-role">Test Manager, PS</li>
+          </ul>
+        </div>
+
+
+      </div>
+
+      <!-- Navigation Arrows -->
+      <div class="learner-slider-nav">
+        <!-- <button onclick="scrollSlider(-1)">&#8592;</button>
+        <button onclick="scrollSlider(1)">&#8594;</button> -->
+        <button id="learnerPrev" aria-label="Previous">&#8592;</button>
+        <button id="learnerNext" aria-label="Next">&#8594;</button>
+      </div>
+
+      <!-- Dots -->
+      <div class="learner-dots" id="learnerDots"></div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+
+
+  <!-- ends -->
+
+
+
+  <!-- AI Programs — 5 Cards: Static on Desktop, Auto Slider on Mobile -->
+<section class="tl-ai-wrap">
+    <div class="advisory-heading">
+
+      <h2 class="advisory-title">We’re Guided by <span class="tlw-accent">Top Leaders</span></h2>
+
+    </div>
+
+  <div class="tl-ai-track" role="region" aria-label="Programs">
+    <!-- Card 1 -->
+    <article class="tl-ai-card">
+      <div class="tl-img">
+        <img src="https://assets.testleaf.com/assets/new/home/leaders-01.webp" alt="babu sir">
+      </div>
+
+      <p class="tl-ai-card-text">
+        26+ years in software engineering. Delivered automation for global giants and trained 50K+ professionals.
+      </p>
+            <h3 class="tl-ai-card-title">Babu Manickam</h3>
+      <p style="font-size: 12px;color: #414141">CEO - Testleaf</p>
+      <!-- <a class="tl-ai-btn" href="#qa-foundation" aria-label="Know more about GenAI Foundation for QA Engineers">Know More</a> -->
+    </article>
+
+    <!-- Card 2 -->
+     <article class="tl-ai-card">
+      <div class="tl-img">
+        <img src="https://assets.testleaf.com/assets/new/home/leaders-02.webp" alt="">
+      </div>
+
+      <p class="tl-ai-card-text">
+        20 years in software testing. Designed practical, industry-focused programs and mentored globally.
+      </p>
+            <h3 class="tl-ai-card-title">Hari Prasad Radhakrishnan</h3>
+      <p style="font-size: 12px;color: #414141">VP - Testleaf</p>
+    </article>
+
+    <!-- Card 3 -->
+     <article class="tl-ai-card">
+      <div class="tl-img">
+        <img src="https://assets.testleaf.com/assets/new/home/leaders-04.webp" alt="">
+      </div>
+
+      <p class="tl-ai-card-text">
+        Leads placements at Testleaf. Connects learners with top employers, fostering growth and career success.
+      </p>
+           <h3 class="tl-ai-card-title">Saravanan Loganathan</h3>
+      <p style="font-size: 12px;color: #414141">HR Manager</p>
+      <!-- <a class="tl-ai-btn" href="#agentic">Know More</a> -->
+    </article>
+
+    <!-- Card 4 -->
+     <article class="tl-ai-card">
+      <div class="tl-img">
+        <img src="https://assets.testleaf.com/assets/new/home/leaders-03.webp" alt="">
+      </div>
+   
+      <p class="tl-ai-card-text">
+        Expert in test automation, RPA, and cybersecurity. Passionate mentor driving innovation and learner success.
+      </p>
+           <h3 class="tl-ai-card-title">Sudarshan R</h3>
+      <p style="font-size: 12px;color: #414141">Senior Project Manager</p>
+      <!-- <a class="tl-ai-btn" href="#master-expert">Know More</a> -->
+    </article>
+
+    <!-- Card 5 -->
+    <article class="tl-ai-card">
+      <div class="tl-img">
+        <img src="https://assets.testleaf.com/assets/new/home/leaders-05.webp" alt="">
+      </div>
+      
+      <p class="tl-ai-card-text">
+        10+ years in cloud & DevOps. Skilled in AWS, Azure. Trainer and mentor for scalable cloud solutions.
+      </p>
+    <h3 class="tl-ai-card-title">Mohan Balakrishnan</h3>
+      <p style="font-size: 12px;color: #414141">AWS & DevOps Lead</p>
+    </article>
+  </div>
+
+  <!-- Optional: tiny pagination dots shown only on mobile -->
+  <!-- <div class="tl-ai-dots" aria-hidden="true">
+    <button class="tl-ai-dot is-active"></button>
+    <button class="tl-ai-dot"></button>
+    <button class="tl-ai-dot"></button>
+    <button class="tl-ai-dot"></button>
+    <button class="tl-ai-dot"></button>
+  </div> -->
+</section>
+
+
+  <!-- ends -->
+
+  <!-- webinar section -->
+
+  <section class="testimonial-section">
+    <!-- <div class="testimonial-header">
+    <p class="testimonial-subtitle"> </p>
+    <h2 class="testimonial-title">Empowering Minds, One Webinar at a Time</h2>
+  </div> -->
+
+    <div class="tlw-headbox">
+      <div style="color:#f7f7f7;" class="tlw-sub">Expert insights meet future-ready learners</div>
+      <div style="color:#fff;margin-bottom: 15px;" class="tlw-title">Where industry wisdom meets <span
+          class="tlw-accent">learner ambition</span></div>
+
+
+
+    </div>
+
+    <div class="testimonial-grid">
+
+      <!-- card 1 - video -->
+
+      <div class="testimonial-card quote-card">
+  <div class="ag-wrap">
+    <h5 class="ag-h5-gradient">Upcoming Webinar</h5>
+  </div>
+
+  <!-- Webinar Info -->
+  <div id="webinar-content">
+    <h6 style="color:#fff;font-size: 0.9rem;">Master Selenium in 2 Hours</h6>
+    <ul style="color: #fff;font-size:12px;">
+      <li><span style="color:#15c872;">◈ Mentor</span> : Saranya Shanmugam</li>
+      <li><span style="color:#15c872;">◈ Date</span> : 12th September 2025</li>
+      <li><span style="color:#15c872;">◈ Time</span> : 7:00 to 9:00 PM IST</li>
+    </ul>
+    <p style="font-size: 11px; line-height: 1.6; color: #ddd;">
+      Join <strong>Testleaf’s Selenium Masterclass</strong> to master automation testing, building scalable Selenium frameworks, and creating robust, maintainable test scripts for real-world applications.
+    </p>
+    <button class="explore-btn">
+      <a style="color:#000;" href="https://selenium-webinar.testleaf.com/?utm_source=tlweb">Register Now</a>
+    </button>
+  </div>
+</div>
+      <!-- Card 2 - Video -->
+      <div class="testimonial-card video-card">
+        <div class="video-thumbnail">
+          <img src="https://assets.testleaf.com/assets/new/home/babu-2.webp" alt="Babu img">
+          <div class="play-icon"><a href="https://platform.testleaf.com/#/signIn">&#9658;</a></div>
+        </div>
+        <div class="testimonial-info">
+          <h4>Babu Manickam</h4>
+          <p>CEO - Testleaf</p>
+        </div>
+      </div>
+
+      <!-- Card 3 - Video -->
+      <div class="testimonial-card video-card">
+        <div class="video-thumbnail">
+          <img src="https://assets.testleaf.com/assets/new/home/george.webp" alt="George img">
+          <div class="play-icon"><a href="https://platform.testleaf.com/#/signIn">&#9658;</a></div>
+        </div>
+        <div class="testimonial-info">
+          <h4>George</h4>
+          <p>Sr. Software Engineer - Wall Street</p>
+        </div>
+      </div>
+
+      <!-- Card 4 - Quote -->
+      <div class="testimonial-card video-card">
+        <div class="video-thumbnail">
+          <img src="https://assets.testleaf.com/assets/new/home/Ratna-K7.webp" alt="Ratna img">
+          <div class="play-icon"><a href="https://platform.testleaf.com/#/signIn">&#9658;</a></div>
+        </div>
+        <div class="testimonial-info">
+          <h4>Ratna</h4>
+          <p>Sr.Product Manager - K7</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ends -->
+
+  <!-- partner sec -->
+  <section class="partner-strip" aria-labelledby="partners-title">
+    <div class="partner-card">
+      <div class="tlw-headbox">
+        <div class="tlw-title">We <span class="tlw-accent">Partnered With</span></div>
+        <div class="tlw-sub">Together with our partners, we turned visions into milestones</div>
+      </div>
+
+
+      <!-- Grid: [logo] [×] [logo] [×] [logo] -->
+      <div class="partner-grid">
+        <a class="partner" href="https://www.qeagle.com" target="_blank" aria-label="Partner 1">
+          <img src="https://assets.testleaf.com/assets/new/home/qeagle-logo.webp" alt="Partner 1 logo" class="partner-logo">
+        </a>
+
+        <span class="sep" aria-hidden="true">×</span>
+
+        <a class="partner" href="https://www.qualitestgroup.com/" target="_blank" aria-label="Partner 2">
+          <img src="https://assets.testleaf.com/assets/new/home/qualitest-logo.webp" alt="Partner 2 logo" class="partner-logo">
+        </a>
+
+        <span class="sep" aria-hidden="true">×</span>
+
+        <a class="partner" href="https://www.k7computing.com/" target="_blank" aria-label="Partner 3">
+          <img src="https://assets.testleaf.com/assets/new/home/k7-logo.webp" alt="Partner 3 logo" class="partner-logo">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ends -->
+
+  <!-- tab sections starts -->
+
+  <main class="lp-container">
+    <div class="advisory-heading">
+
+      <!-- <p class="advisory-subtitle">Advisory Committee</p> -->
+      <h2 class="advisory-title">Your Journey from Knowledge to <span class="tlw-accent">Success</span></h2>
+
+    </div>
+
+    <!-- Tabs -->
+    <div class="lp-tabsWrap" role="navigation" aria-label="Practice Areas">
+      <div class="lp-tabs" role="tablist" aria-orientation="horizontal">
+        <button class="lp-tab lp-isActive" role="tab" aria-selected="false" aria-controls="panel-EdTech" id="tab-EdTech"
+          data-lp-tab="EdTech">EdTech</button>
+        <button class="lp-tab" role="tab" aria-selected="true" aria-controls="panel-Leafground" id="tab-Leafground"
+          data-lp-tab="Leafground">Leafground</button>
+        <button class="lp-tab" role="tab" aria-selected="false" aria-controls="panel-Leaftaps" id="tab-Leaftaps"
+          data-lp-tab="Leaftaps">Leaftaps</button>
+        <button class="lp-tab" role="tab" aria-selected="false" aria-controls="panel-Skilingo" id="tab-Skilingo"
+          data-lp-tab="Skilingo">Skilingo</button>
+        <button class="lp-tab" role="tab" aria-selected="false" aria-controls="panel-TestronAi" id="tab-TestronAi"
+          data-lp-tab="TestronAi">TestronAI</button>
+        <button class="lp-tab" role="tab" aria-selected="false" aria-controls="panel-Testreport" id="tab-Testreport"
+          data-lp-tab="Testreport">Testreport</button>
+
+      </div>
+    </div>
+
+    <!-- Panels -->
+    <section class="lp-panels">
+
+      <!-- Leafground -->
+      <div class="lp-panel" role="tabpanel" id="panel-Leafground" aria-labelledby="tab-Leafground">
+        <div class="lp-content">
+          <div class="lp-screen">
+            <!-- Replace src with your actual screenshot if needed -->
+            <img class="lp-screenImg" src="assets/index-images/Leafground.webp" alt="Leafground screen">
+          </div>
+          <div>
+            <h2 class="lp-blockTitle">Leafground</h2>
+            <ul class="lp-list">
+              <li>◈ LeafGround is a hands-on platform for practicing automation testing.</li>
+              <li>◈ Offers a wide range of real-time UI components for automation practice.</li>
+              <!-- <li>◈ Helps sharpen your Selenium, Playwright, and Cypress skills.</li>
+              <li>◈ Enhances your ability to handle real-world testing scenarios.</li>
+              <li>◈ Provides a safe environment to learn through trial and error.</li>
+              <li>◈ Encourages collaboration and knowledge sharing among peers.</li> -->
+            </ul>
+            <button class="lp-cta" type="button"><a style="color: #fff;font-weight: 400;" target="_blank"
+                href="https://www.leafground.com/">Explore Leafground →</a></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Leaftaps -->
+      <div class="lp-panel" role="tabpanel" id="panel-Leaftaps" aria-labelledby="tab-Leaftaps">
+        <div class="lp-content">
+          <div class="lp-screen">
+            <img class="lp-screenImg" src="assets/index-images/Leaftaps.webp" alt="Leaftaps screen">
+          </div>
+          <div>
+            <h2 class="lp-blockTitle">Leaftaps</h2>
+            <ul class="lp-list">
+              <li>◈ Leaftaps is a real-time CRM web application for automation testing.</li>
+              <li>◈ Offers end-to-end business workflows like Lead, Contact, and Opportunity management.</li>
+             <!--  <li>◈ Helps practice automation on dynamic, data-driven web applications.</li>
+              <li>◈ Enhances your skills in handling form submissions, table data, and validations.</li>
+              <li>◈ Provides realistic enterprise-level scenarios for test automation.</li>
+              <li>◈ Integrates seamlessly with Testleaf’s courses to simulate real project experience.</li> -->
+            </ul>
+            <button class="lp-cta" type="button"><a style="color: #fff;font-weight: 400;" target="_blank"
+                href="http://leaftaps.com/opentaps/control/main">Explore Leaftaps →</a></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- EdTech -->
+      <div class="lp-panel lp-isActive" role="tabpanel" id="panel-EdTech" aria-labelledby="tab-EdTech">
+        <div class="lp-content">
+          <div class="lp-screen">
+            <img class="lp-screenImg" src="https://assets.testleaf.com/assets/new/home/EdTech.webp" alt="EdTech screen">
+          </div>
+          <div>
+            <h2 class="lp-blockTitle">EdTech</h2>
+            <ul class="lp-list">
+              <li>◈ EdTech is an all-in-one platform for tech learning and career growth.</li>
+              <li>◈ Access live, self-paced, and hands-on practice environments with mentor guidance.</li>
+             <!--  <li>◈ Stay motivated through leaderboards, dashboards, and team activities.</li>
+             <li>◈ Sharpen your skills with daily quizzes, weekly tests, and coding reviews.</li>
+              <li>◈ Explore videos, webinars, and a rich resource center for continuous learning.</li>
+              <li>◈ Earn certificates, prepare for placements, and unlock referral opportunities.</li> -->
+            </ul>
+            <button class="lp-cta" type="button"><a style="color: #fff;font-weight: 400;" target="_blank"
+                href="https://platform.testleaf.com/#/signIn">Explore EdTech →</a></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skilingo -->
+      <div class="lp-panel" role="tabpanel" id="panel-Skilingo" aria-labelledby="tab-Skilingo">
+        <div class="lp-content">
+          <div class="lp-screen">
+            <img class="lp-screenImg" src="https://assets.testleaf.com/assets/new/home/Skilingo.webp" alt="Skilingo screen">
+          </div>
+          <div>
+            <h2 class="lp-blockTitle">Skilingo</h2>
+            <ul class="lp-list">
+              <li>◈ Skilingo is an interactive platform for mock interviews and skill assessment.</li>
+              <li>◈ Offers domain-specific interview simulations with industry experts.</li>
+            <!--   <li>◈ Helps boost confidence and communication for real job interviews.</li>
+              <li>◈ Enhances problem-solving, technical, and behavioral skills.</li>
+              <li>◈ Provides instant feedback with actionable improvement tips.</li>
+              <li>◈ Bridges the gap between learning and real-world interview performance.</li> -->
+            </ul>
+            <button class="lp-cta" type="button"><a href="https://www.skilingo.com/" target="_blank"
+                style="color: #fff;font-weight: 400;">Explore Skilingo →</a></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TestronAI -->
+        <div class="lp-panel" role="tabpanel" id="panel-TestronAi" aria-labelledby="tab-TestronAi">
+        <div class="lp-content">
+          <div class="lp-screen">
+            <img class="lp-screenImg" src="https://assets.testleaf.com/assets/new/home/Testron.webp" alt="TestronAI screen">
+          </div>
+          <div>
+            <h2 class="lp-blockTitle">TestronAI</h2>
+            <ul class="lp-list">
+              <li>◈ AI-powered test automation platform delivering end-to-end quality assurance at scale.</li>
+              <li>◈ Intelligent agents for test creation, regression selection, migration, and self-healing.</li>
+              <!-- <li>◈ Helps boost confidence and communication for real job interviews.</li> -->
+              <!-- <li>◈ Enhances problem-solving, technical, and behavioral skills.</li>
+              <li>◈ Provides instant feedback with actionable improvement tips.</li>
+              <li>◈ Bridges the gap between learning and real-world interview performance.</li> -->
+            </ul>
+            <button class="lp-cta" type="button"><a href="https://testron.ai/landing" target="_blank"
+                style="color: #fff;font-weight: 400;">Explore TestronAI →</a></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TestReport -->
+
+      <div class="lp-panel" role="tabpanel" id="panel-Testreport" aria-labelledby="tab-Testreport">
+        <div class="lp-content">
+          <div class="lp-screen">
+            <img class="lp-screenImg" src="https://assets.testleaf.com/assets/new/home/Testreport.webp" alt="TestReport screen">
+          </div>
+          <div>
+            <h2 class="lp-blockTitle">TestReport</h2>
+            <ul class="lp-list">
+              <li>◈ Real-time stream of UI + API runs (Selenium, Playwright, Cypress) across multiple projects. </li>
+              <li>◈ One failure thread: screenshots, videos, traces, logs—stitched</li>
+              <!-- <li>◈ Model-ready JSON events for your LLM/RAG/feature store</li>
+              <li>◈ Helps boost confidence and communication for real job interviews.</li> -->
+              <!-- <li>◈ Enhances problem-solving, technical, and behavioral skills.</li>
+              <li>◈ Provides instant feedback with actionable improvement tips.</li>
+              <li>◈ Bridges the gap between learning and real-world interview performance.</li> -->
+            </ul>
+            <button class="lp-cta" type="button"><a href="https://testreport.dev/" target="_blank"
+                style="color: #fff;font-weight: 400;">Explore TestReport →</a></button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ends -->
+
+
+  <!-- video section starts -->
+  <section class="alv-wrap">
+    <!-- <h2 class="alv-head"></h2> -->
+    <div class="advisory-heading">
+
+      <!-- <p class="advisory-subtitle">Advisory Committee</p> -->
+      <h2 class="advisory-title">Alumni Spotlight: <span class="tlw-accent">Journeys to Success </span></h2>
+
+    </div>
+    <div class="alv-card">
+      <div class="alv-shell" role="region" aria-label="Video player with playlist">
+        <article class="alv-player" aria-label="Current video">
+          <div class="alv-media">
+            <iframe id="alv-iframe" title="Video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <div class="alv-meta">
+            <div id="alv-title" class="alv-title">—</div>
+            <div class="alv-sub" id="alv-sub"></div>
+          </div>
+        </article>
+        <aside class="alv-side">
+          <div class="alv-listCard">
+            <div class="alv-listHead">
+              <div class="alv-listTitle">Our Success Stories</div>
+              <span class="alv-chip">Testleaf</span>
+            </div>
+            <ul class="alv-list" id="alv-list"></ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ends -->
+
+  <!-- proud of section end -->
+
+
+  <section class="w-100 common-section has-main career">
+    <div class="main-container">
+      <div class="container px-3 p-sm-0 mx-auto">
+        <div class="row m-0 align-items-center">
+          <div class="col-lg-6 p-0 pr-lg-3 mb-sm-5 pb-sm-5 mb-lg-0 pb-lg-0">
+            <div class="row m-0 has-card">
+              <div class="col-sm-6 p-0 pr-sm-3">
+                <div class="mb-4 shadow text-center common-card">
+                  <figure class="p-0 m-0 mx-auto">
+                    <img src="https://assets.testleaf.com/assets/img/it-emp.svg" alt="IT Employees Icon" class="w-100">
+                  </figure>
+                  <h4 class="m-0 mb-4 pb-2">IT Employed</h4>
+                  <p class="m-0">Advance your skills to close talent gaps and switch careers.</p>
+                </div>
+                <div class="mb-4 mb-sm-0 shadow text-center common-card">
+                  <figure class="p-0 m-0 mx-auto">
+                    <img src="https://assets.testleaf.com/assets/img/rfw.svg" alt="Return from Work Break Icon"
+                      class="w-100">
+                  </figure>
+                  <h4 class="m-0 mb-4 pb-2">Return from Work Break</h4>
+                  <p class="m-0">Re-skill yourself to stay ahead of competitions and in trend.</p>
+                </div>
+              </div>
+              <div class="col-sm-6 p-0 pl-sm-3">
+                <div class="mb-4 shadow text-center common-card">
+                  <figure class="p-0 m-0 mx-auto">
+                    <img src="https://assets.testleaf.com/assets/img/fresh.svg" alt="Fresh Graduates Icon"
+                      class="w-100">
+                  </figure>
+                  <h4 class="m-0 mb-4 pb-2">Fresh Graduates</h4>
+                  <p class="m-0">Get your hands-on in real-time projects and start your IT career.</p>
+                </div>
+                <div class="mb-4 mb-sm-0 shadow text-center common-card">
+                  <figure class="p-0 m-0 mx-auto">
+                    <img src="https://assets.testleaf.com/assets/img/it.svg" alt="Non IT to IT Icon" class="w-100">
+                  </figure>
+                  <h4 class="m-0 mb-4 pb-2">Non IT to IT</h4>
+                  <p class="m-0">Learn, Get Certified with new demanding skills and Switch.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 p-0 pt-4 pt-lg-0 pl-lg-3 content">
+            <h6 class="m-0 mb-2 mb-md-3 sub-title">How it helps ?</h6>
+            <h3 class="m-0 mb-4 mb-md-5 overflow-hidden d-flex flex-wrap common-title xl-text">
+              <span>Career Path Guidance</span>
+            </h3>
+            <p class="m-0 mb-4">Early in your career, it is essential to chase skills than salary. At
+              TestLeaf, we make you gain practical experiences through visualised learning, hands-on at
+              projects, create growth mindset, and build a problem-solver in you.</p>
+            <p class="m-0">Later with your career, TestLeaf helps you to align your passions and the work
+              that you do. We skill you up vertically and horizontally to stay ahead of others by
+              knowledge and money. We work with you to grow your brand and network
+              to have continued success.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- testimonial section -->
+  <!-- ========== Wall of Love (Light Version) ========== -->
+  <div class="tlw-wrap" id="tlw-wall">
+    <div class="tlw-headbox">
+      <div class="tlw-title">Stories That <span class="tlw-accent">Inspire</span></div>
+      <div class="tlw-sub">Hear from our learners who turned ambition into achievement</div>
+
+      <div class="tlw-proof">
+        <div class="tlw-pp-stack">
+          <img src="https://assets.testleaf.com/assets/new/home/Aadhithya.webp" alt="">
+          <img src="https://assets.testleaf.com/assets/new/home/Muraleedaran.webp" alt="">
+          <img src="assets/index-images/Sunil-Kumar-Sukesan.webp" alt="">
+          <img src="https://assets.testleaf.com/assets/new/home/Jayaraman.webp" alt="">
+          <img src="https://assets.testleaf.com/assets/new/home/Maheshwaran.webp" alt="">
+        </div>
+        <div class="tlw-stars-line">
+          ★★★★★
+        </div>
+        <div class="tlw-mini">Loved by <b>3003+</b> students</div>
+      </div>
+    </div>
+
+
+
+    <!-- Masonry container -->
+    <div class="tlw-masonrybox" data-tlw-expanded="false">
+      <div class="tlw-masonry" id="tlw-grid">
+        <!-- Card -->
+        <div class="tlw-card">
+          <div class="tlw-cardtop">
+            <span class="tlw-five">★★★★★</span>
+            <span class="tlw-badge">✔ Verified</span>
+          </div>
+          <div class="tlw-text">I’m truly grateful to Testleaf Institute for shaping my career in software testing. The
+            hands-on, industry-focused training in <span class="highlight-ylws">Manual Testing</span> (Deepika Ma’am), <span class="highlight-ylws">Automation Testing</span> (Vinod Sir), and
+            Communication Skills (Sindhu Ma’am) gave me the clarity, confidence, and skills to land a job quickly.
+
+            <b>Thank you once again, Deepika Ma’am, Vinod Sir, and Sindhu Ma’am.</b>
+          </div>
+          <div class="tlw-users-ts">
+            <img src="assets/index-images/Ajay-Sunder.webp" alt="testimonial img 1">
+            <div class="tlw-user-meta"><span class="tlw-name">Ajay Sunder</span><span class="tlw-role">Apr - 2025 | Playwright</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tlw-card">
+          <div class="tlw-cardtop">
+            <span class="tlw-five">★★★★★</span>
+            <span class="tlw-badge">✔ Verified</span>
+          </div>
+          <div class="tlw-text">“I'm exited to share my experience at Test leaf, where I completed the <span class="highlight-ylws">Non-IT to IT
+            certification program.</span> The course was incredibly informative, and the faculty were knowledgeable and
+            supportive. The program's structure and hands-on approach helped me transition from a non-IT background to a
+            career in IT. I'm grateful for the opportunities I've gained since completing the program. Highly recommend
+            Test leaf to anyone looking to make a career switch! 5/5 stars.”</div>
+          <div class="tlw-users-ts">
+            <img src="https://assets.testleaf.com/assets/new/home/Gokul.webp" alt="testimonial img 2">
+            <div class="tlw-user-meta"><span class="tlw-name">Gokul</span><span class="tlw-role">May - 2025 | Non - IT</span></div>
+          </div>
+        </div>
+
+        <div class="tlw-card">
+          <div class="tlw-cardtop">
+            <span class="tlw-five">★★★★★</span>
+            <span class="tlw-badge">✔ Verified</span>
+          </div>
+          <div class="tlw-text">“I had a wonderful experience at Testleaf while completing Automation Testing with
+            <span class="highlight-ylws">Selenium WebDriver</span> and <span class="highlight-ylws">Java</span>. Special thanks to Saranya for her excellent teaching and patience, and to Anbu
+            Raj and Harrish for their constant support in clearing doubts and guiding me through assignments and
+            marathon sessions.
+
+            The daily quizzes, weekly quizzes, and coding reviews on the EdTech platform were engaging and helped me
+            learn new things. I now feel more confident in automation testing thanks to the entire team’s guidance.”
+          </div>
+          <div class="tlw-users-ts">
+            <img src="https://assets.testleaf.com/assets/new/home/Neshma.webp" alt="testimonial img 3">
+            <div class="tlw-user-meta"><span class="tlw-name">Neshma</span><span class="tlw-role">Apr - 2025 | Selenium</span></div>
+          </div>
+        </div>
+
+        <div class="tlw-card">
+          <div class="tlw-cardtop">
+            <span class="tlw-five">★★★★★</span>
+            <span class="tlw-badge">✔ Verified</span>
+          </div>
+          <div class="tlw-text">“Joining TestLeaf was one of the best decisions in my career. With guidance from
+            Vineeth, Udhay, and Saranya, I bridged my skill gaps, upskilled effectively, and now hold three job offers
+            to choose from. Grateful to the entire team for their constant support.”</div>
+          <div class="tlw-users-ts">
+            <img src="https://assets.testleaf.com/assets/new/home/Preeti.webp" alt="testimonial img 4">
+            <div class="tlw-user-meta"><span class="tlw-name">Preeti</span><span class="tlw-role">Apr - 2025 | Playwright</span></div>
+          </div>
+        </div>
+
+        <div class="tlw-card">
+          <div class="tlw-cardtop">
+            <span class="tlw-five">★★★★★</span>
+            <span class="tlw-badge">✔ Verified</span>
+          </div>
+          <div class="tlw-text">“I have completed <span class="highlight-ylws">Selenium with Java</span> Testing course. It was a great learning experience
+            and which was very useful. The course structure was well-organized and our mentor, bhuvanesh Covered all the
+            topics from scratch to advanced concepts. Overall, I would highly recommend this course to join who
+            interested in selenium.”</div>
+          <div class="tlw-users-ts">
+            <img src="https://assets.testleaf.com/assets/new/home/Sharan.webp" alt="testimonial img 5">
+            <div class="tlw-user-meta"><span class="tlw-name">Sharan</span><span class="tlw-role">June - 2025 | Selenium & Java</span></div>
+          </div>
+        </div>
+
+        <div class="tlw-card">
+          <div class="tlw-cardtop">
+            <span class="tlw-five">★★★★★</span>
+            <span class="tlw-badge">✔ Verified</span>
+          </div>
+          <div class="tlw-text">“The course covered all the important aspects of <span class="highlight-ylws">Selenium</span>, including WebDriver basics,
+            TestNG, Maven, Page Object Model, and framework design.
+            After completing the course, I feel confident to work on <span class="highlight-ylws">Selenium automation and manual testing projects</span> and
+            attend interviews.This course definitely enhanced my career prospects.
+            I would highly recommend Testleaf to anyone looking to learn Selenium and start a career in automation
+            testing,manual testing. It’s the best place to build strong foundations and practical skills.”</div>
+          <div class="tlw-users-ts">
+            <img src="https://assets.testleaf.com/assets/new/home/Sundar.webp" alt="testimonial img 6">
+            <div class="tlw-user-meta"><span class="tlw-name">Sundar</span><span class="tlw-role">Aug - 2025 | Selenium & GenAI</span></div>
+          </div>
+        </div>
+
+        <div class="tlw-card">
+          <div class="tlw-cardtop">
+            <span class="tlw-five">★★★★★</span>
+            <span class="tlw-badge">✔ Verified</span>
+          </div>
+          <div class="tlw-text">“I recently completed the <span class="highlight-ylws">Selenium WebDriver</span> course in the weekend batch at TestLeaf.
+            The trainer, Saranya, explained both basic and advanced concepts very clearly and covered framework-level
+            techniques in great detail.
+
+            Additionally, the mentor support during weekdays was excellent, as they helped clarify doubts whenever
+            needed. The interview session was also very useful, providing valuable insights and ideas. The course also
+            includes lifetime access to recorded sessions, which is useful for revisiting topics.”</div>
+          <div class="tlw-users-ts">
+            <img src="https://assets.testleaf.com/assets/new/home/Preeti.webp" alt="testimonial img 7">
+            <div class="tlw-user-meta"><span class="tlw-name">Preethi</span><span class="tlw-role">Apr - 2025 | Playwright & Selenium</span></div>
+          </div>
+        </div>
+
+        <div class="tlw-card">
+          <div class="tlw-cardtop">
+            <span class="tlw-five">★★★★★</span>
+            <span class="tlw-badge">✔ Verified</span>
+          </div>
+          <div class="tlw-text">“Great experience with <span class="highlight-ylws">Selenium</span> and <span class="highlight-ylws">GenAI</span> training at TestLeaf!
+            Thanks to Mr. Bhuvanesh for clear, practical teaching and real-time examples, and to Ms. Saranya for
+            patient, thorough doubt clarification. The support team ensured a smooth, collaborative learning journey.
+            Highly recommended for anyone starting in automation!</div>
+          <div class="tlw-users-ts">
+            <img src="https://assets.testleaf.com/assets/new/home/Thavamani.webp" alt="testimonial img 8">
+            <div class="tlw-user-meta"><span class="tlw-name">Thavamani</span><span class="tlw-role">Feb - 2025 | Selenium & GenAI</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tlw-card">
+          <div class="tlw-cardtop">
+            <span class="tlw-five">★★★★★</span>
+            <span class="tlw-badge">✔ Verified</span>
+          </div>
+          <div class="tlw-text">“I would like to say thank you too all Test leaf staff, trainers and technical
+            assistance for their dedication on coaching and for hands on or practice session helping to clear the doubt
+            and blocker's. I am now confident to handle not only <span class="highlight-ylws">Java</span> but also <span class="highlight-ylws">Selenium</span>, <span class="highlight-ylws">Bdd</span>, and not forgetting <span class="highlight-ylws">TestNg</span>.
+          </div>
+          <div class="tlw-users-ts">
+            <img src="https://assets.testleaf.com/assets/new/home/Srinivas.webp" alt="testimonial img 9">
+            <div class="tlw-user-meta"><span class="tlw-name">Srinivas</span><span class="tlw-role">Mar - 2025 | Playwright</span></div>
+          </div>
+        </div>
+
+        <div class="tlw-card">
+          <div class="tlw-cardtop">
+            <span class="tlw-five">★★★★★</span>
+            <span class="tlw-badge">✔ Verified</span>
+          </div>
+          <div class="tlw-text">“One of the finest institute for testing course.
+            I joined weekend batch for <span class="highlight-ylws">automation testing selenium web driver</span> course in testLeaf under Mar - April
+            batch.
+
+            My trainer Saranya covered almost all required topics for testing from scratch to advance concepts and
+            framework as well in slow and steady pace. Easily understandable for even beginner too ..
+
+            The mentor suport is good, when ever we have doubts we can schedule a mentor connect in ed tech platform
+            which is really usefull. Mentors are always ready to clarify the doubts.</div>
+          <div class="tlw-users-ts">
+            <img src="assets/index-images/Prabhu-Arumugam.webp" alt="testimonial img 10">
+            <div class="tlw-user-meta"><span class="tlw-name">Prabhu</span><span class="tlw-role">Apr - 2025 | GenAi & Selenium</span></div>
+          </div>
+        </div>
+
+        <div class="tlw-card">
+          <div class="tlw-cardtop">
+            <span class="tlw-five">★★★★★</span>
+            <span class="tlw-badge">✔ Verified</span>
+          </div>
+          <div class="tlw-text">“I completed the <span class="highlight-ylws">Selenium</span> Automation course and <span class="highlight-ylws">GenAi</span> at this centre and found the training to be
+            highly professional and well-structured. The instructor demonstrated strong command over the subject and
+            focused on practical implementation. The course materials, assignments, and guidance provided were
+            instrumental in enhancing my skills. I highly recommend this course to aspiring automation testers."</div>
+          <div class="tlw-users-ts">
+            <img src="assets/index-images/Shankar-Gnanamurthy.webp" alt="testimonial img 11">
+            <div class="tlw-user-meta"><span class="tlw-name">Shankar</span><span class="tlw-role">Jan - 2025 | Playwright</span></div>
+          </div>
+        </div>
+
+        <!-- Add all other testimonial cards here -->
+      </div>
+      <div class="tlw-mask"></div>
+    </div>
+
+    <div class="tlw-actions">
+      <button class="tlw-more" id="tlw-more" aria-expanded="false" aria-controls="tlw-grid">
+        Show more <span class="tlw-chevron">▾</span>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- ends -->
+
+
+
+
+  <section class="course-section ts">
+
+    <div class="compare-section">
+      <div class="advisory-heading">
+        <!-- <p class="advisory-subtitle">Advisory Committee</p> -->
+        <h2 class="advisory-title ts"> Why Learners Choose Us <span class="tlw-accent">First</span></h2>
+        <div class="tlw-sub" style="margin-bottom: 40px;">From industry-recognized credentials to end-to-end career
+          guidance, discover how we go beyond to shape your success</div>
+
+        <style>
+          .advisory-title.ts {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0px;
+            text-align: center;
+            color: #111;
+          }
+
+          .course-section.ts {
+            background-color: #fff;
+            ;
+          }
+        </style>
+
+      </div>
+
+      <div class="compare-table">
+        <div class="compare-header">
+          <div class="compare-col">Features</div>
+          <div class="compare-col highlight">Testleaf</div>
+          <div class="compare-col">Others</div>
+        </div>
+
+        <div class="compare-row">
+          <div class="compare-col">Structured Learning + Hands-on Experience</div>
+          <div class="cn-cell cn-center"><span class="cn-badge cn-ok">✓</span></div>
+          <div class="cn-cell cn-center"><span class="cn-badge cn-no">✕</span></div>
+        </div>
+
+        <div class="compare-row">
+          <div class="compare-col">AI-Powered Development Training</div>
+          <div class="cn-cell cn-center"><span class="cn-badge cn-ok">✓</span></div>
+          <div class="cn-cell cn-center"><span class="cn-badge cn-no">✕</span></div>
+        </div>
+
+        <div class="compare-row">
+          <div class="compare-col">Integrated Learning Platform</div>
+          <div class="cn-cell cn-center"><span class="cn-badge cn-ok">✓</span></div>
+          <div class="cn-cell cn-center"><span class="cn-badge cn-no">✕</span></div>
+        </div>
+
+
+
+        <div class="compare-row">
+          <div class="compare-col">Job-Ready Portfolio Building</div>
+          <div class="cn-cell cn-center"><span class="cn-badge cn-ok">✓</span></div>
+          <div class="cn-cell cn-center"><span class="cn-badge cn-no">✕</span></div>
+        </div>
+
+        <div class="compare-row">
+          <div class="compare-col">Interview Preparation Assistance</div>
+          <div class="cn-cell cn-center"><span class="cn-badge cn-ok">✓</span></div>
+          <div class="cn-cell cn-center"><span class="cn-badge cn-no">✕</span></div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-col">Lifetime Access to Course Materials</div>
+          <div class="cn-cell cn-center"><span class="cn-badge cn-ok">✓</span></div>
+          <div class="cn-cell cn-center"><span class="cn-badge cn-no">✕</span></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- course count section starts -->
+
+  <Section class="course-section">
+
+
+    <div class="tlw-headbox">
+      <div class="tlw-title">Our Learners, <span class="tlw-accent">Our Pride</span></div>
+      <div class="tlw-sub">We are proud of the milestones our learners have reached</div>
+    </div>
+    </div>
+    <div class="stats-container">
+      <div class="stat-box">
+        <div class="stat-number" data-target="50000">0</div>
+        <div class="stat-label">Learners</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="100">0</div>
+        <div class="stat-label">Mentors</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="1000">0</div>
+        <div class="stat-label">Companies Placed</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="400">0</div>
+        <div class="stat-label">Webinar Videos</div>
+      </div>
+    </div>
+
+    <div class="circle-container">
+      <div class="circle-box">
+        <div class="progress-ring" data-percent="94">
+          <div class="progress-value">0%</div>
+        </div>
+        <div class="circle-text">Learners fast-track their success, completing courses in as little as 3 months</div>
+      </div>
+      <div class="circle-box">
+        <div class="progress-ring" data-percent="96">
+          <div class="progress-value">0%</div>
+        </div>
+        <div class="circle-text">Most learners recall key concepts with improved speed</div>
+      </div>
+      <div class="circle-box">
+        <div class="progress-ring" data-percent="90">
+          <div class="progress-value">0%</div>
+        </div>
+        <div class="circle-text">Learners develop the skills to confidently navigate complex topics</div>
+      </div>
+    </div>
+
+    <!-- <script>
+
+  </script> -->
+
+  </Section>
+
+
+  <!-- ends -->
+
+  <section class="w-100 common-section offer">
+    <div class="container px-3 p-sm-0 mx-auto">
+      <div class="row m-0">
+        <div class="col-12 col-md-6 p-0 text-center text-md-left">
+          <h4 class="m-0 common-title">Ready to get started?</h4>
+          <h6 class="m-0 mt-2 mt-md-0">Sign up, get early bird offer.</h6>
+        </div>
+        <div class="col-12 col-md-3 p-0 mt-4 mt-md-0 ml-auto btn-block">
+          <div class="d-flex align-items-center flex-wrap justify-content-center justify-content-md-end">
+            <button class="btn page-btn" onclick="window.location.href = 'all-courses.html'">
+              <span>Start Course</span>
+              <img src="https://assets.testleaf.com/assets/img/arrow-right.svg" alt="Arrow Right" class="ml-auto w-100">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- whatsapp button -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <div class="floating_btn">
+    <a target="_blank" href="https://wa.me/+918925848161" target="_blank" onclick="gtag('event', 'whatsapp_click', {
+     event_category: 'engagement',
+     event_label: 'WhatsApp Button',
+     value: 1
+   });">
+      <div class="contact_icon">
+        <i class="fa fa-whatsapp my-float"></i>
+      </div>
+    </a>
+    <!-- <p class="text_icon">Talk to us?</p> -->
+  </div>
+
+  <style>
+    /* whatsapp floating button */
+    .floating_btn {
+      position: fixed;
+      bottom: 0px;
+      left: 10px;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    @keyframes pulsing {
+      to {
+        box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+      }
+    }
+
+    .contact_icon {
+      background-color: #003719;
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+      border-radius: 50px;
+      text-align: center;
+      box-shadow: 2px 2px 3px #999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translatey(0px);
+      animation: pulse 1.5s infinite;
+      box-shadow: 0 0 0 0 #42db87;
+      /* -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1); */
+      font-weight: normal;
+      font-family: sans-serif;
+      text-decoration: none !important;
+      /* transition: all 300ms ease-in-out; */
+    }
+
+
+    /* .text_icon {
+  margin-top: 8px;
+  color: #000000;
+  font-size: 13px;
+} */
+  </style>
+
+ <footer id="tfw-footer" aria-label="TestLeaf footer">
+  <div class="tfw-wrap">
+
+    <!-- ===== Top link grid (5 columns) ===== -->
+    <div class="tfw-grid">
+      <!-- Col 1 -->
+      <div class="tfw-col">
+        <h6 class="tfw-head">
+          Trending Courses
+          <span class="tfw-chip tfw-chip--live"><i></i> LIVE</span>
+        </h6>
+        <ul class="tfw-list">
+          <li><a href="https://www.testleaf.com/course/genai-qa-engineers-training-course.html">Gen AI for QA Engineers</a></li>
+          <li><a href="https://www.testleaf.com/course/selenium-automation-certification-training-course.html">Selenium Automation</a></li>
+          <li><a href="https://www.testleaf.com/course/playwright.html">Playwright Automation</a></li>
+          <li><a href="https://www.testleaf.com/course/datascience-course.html">Data Science</a></li>
+          <li><a href="https://www.testleaf.com/course/fresher-software-testing-bootcamp-training-course.html">Fresher’s Program</a></li>
+          <li><a href="https://www.testleaf.com/course/cybersecurity-course.html">Cybersecurity</a></li>
+          <li><a href="https://www.testleaf.com/course/it-gateway-program.html">IT Gateway Program</a></li>
+          <li><a href="https://www.testleaf.com/all-courses.html">All Programs <span class="tfw-badge tfw-badge--new ts">◈ UNLOCKED</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Col 2 -->
+      <div class="tfw-col">
+        <h6 class="tfw-head">Resources</h6>
+        <ul class="tfw-list">
+          <li><a href="https://www.testleaf.com/webinar.html">Webinars</a></li>
+          <li><a href="https://www.testleaf.com/blog">Blog</a></li>
+          <!-- <li><a href="#">Interview Questions</a></li> -->
+          <li><a href="https://www.testleaf.com/blog/web-stories/">Web Stories</a></li>
+          <!-- <li><a href="#">Free Resources</a></li> -->
+          <li><a href="https://www.testleaf.com/glossary.html">Glossary</a></li>
+          
+        </ul>
+      </div>
+
+      <!-- Col 3 -->
+      <div class="tfw-col">
+        <h6 class="tfw-head">Company</h6>
+        <ul class="tfw-list">
+          <li><a href="https://www.testleaf.com/">Home</a></li>
+          <li><a href="https://www.testleaf.com/about-us.html">About Us</a></li>
+          <li><a href="https://www.testleaf.com/contact.html">Contact Us</a></li>
+          <li><a href="https://www.testleaf.com/corporate-training.html">Corporate Training</a></li>
+          <li><a href="https://www.testleaf.com/faqs.html">FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4 -->
+      <div class="tfw-col">
+        <h6 class="tfw-head">Learning Platforms</h6>
+        <ul class="tfw-list">
+          <li><a href="https://platform.testleaf.com/#/signIn">Edtech</a></li>
+          <li><a href="https://www.leafground.com/">Leafground</a></li>
+          <li><a href="http://leaftaps.com/opentaps/control/main">Leaftaps</a></li>
+          <li><a href="https://www.skilingo.com/">Skilingo</a></li>
+          <li><a href="https://testron.ai/landing">Testron AI <span class="tfw-badge tfw-badge--new">◈ NEW</span></a></li>
+          <li><a href="https://testreport.dev/login">Testreport <span class="tfw-badge tfw-badge--new">◈ NEW</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Col 5 -->
+      <div class="tfw-col">
+        <h6 class="tfw-head">Our Address<span class="tfw-chip tfw-chip--live tz"><i></i> We're Here</span></h6>
+        <ul class="tfw-list">
+          <li>
+            <a href="https://maps.app.goo.gl/NKTAa1691DgPnv7j7" target="_blank">
+             ◈ Tower C, 2nd Floor,<br> TEK Meadows,
+              No.51, <br>Rajiv Gandhi Salai, Sholinganallur,<br>
+               Chennai – 119
+            </a>
+          </li>
+          <li><a href="tel:+918925411172">→ (+91) 89 2541 1172</a></li>
+          <li><a href="mailto:hello@testleaf.com">→ hello@testleaf.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="tfw-hr">
+
+    <!-- ===== Middle band ===== -->
+    <div class="tfw-mid">
+      <div class="tfw-brand">
+        <div class="tfw-brandline">
+          <img src="https://assets.testleaf.com/assets/img/logo.svg" alt="TestLeaf" class="tfw-logo">
+          <span class="tfw-badge tfw-badge--new tt">◈ Leading Online | Offline Learning Platform ◈</span>
+        </div>
+        <p class="tfw-about">
+          TestLeaf is a leading online | offline learning platform focused on skill transformation. We empower learners to become job-ready through hands-on, mentor-led training.
+        </p>
+      </div>
+
+      <div class="tfw-social-block">
+        <p class="tfw-follow">Follow us</p>
+        <!--
+        <ul class="tfw-social">
+          <li><a href="https://www.facebook.com/Testleaf" target="_blank" aria-label="Facebook"><img src="https://assets.testleaf.com/assets/img/fb.png" alt="Facebook"></a></li>
+          <li><a href="https://x.com/Testleaf1" target="_blank" aria-label="X"><img src="https://assets.testleaf.com/assets/img/twitter.png" alt="X"></a></li>
+          <li><a href="https://www.linkedin.com/company/testleaf" target="_blank" aria-label="LinkedIn"><img src="https://assets.testleaf.com/assets/img/linked-in.png" alt="LinkedIn"></a></li>
+          <li><a href="https://www.instagram.com/testleaf_education" target="_blank" aria-label="Instagram"><img src="https://assets.testleaf.com/assets/img/instagram.png" alt="Instagram"></a></li>
+          <li><a href="https://www.youtube.com/@TestLeaf" target="_blank" aria-label="YouTube"><img src="https://assets.testleaf.com/assets/img/youtube.png" alt="YouTube"></a></li>
+        </ul>
+        -->
+
+        <ul class="tfw-social tfw-social--brand">
+          <li>
+            <a class="tfw-social-btn tfw-social-btn--facebook" href="https://www.facebook.com/Testleaf" target="_blank" aria-label="Facebook">
+              <span class="tfw-sr-only">Facebook</span>
+              <svg class="tfw-social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13 10.5h2.2l.4-2.5H13V6.8c0-.8.4-1.3 1.4-1.3h1.3V3.2c-.7-.1-1.6-.2-2.5-.2-2.4 0-3.7 1.4-3.7 3.8v1.2H7.5v2.5h1.9v7.9h3.6v-7.9z" fill="currentColor"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="tfw-social-btn tfw-social-btn--x" href="https://x.com/Testleaf1" target="_blank" aria-label="X">
+              <span class="tfw-sr-only">X (formerly Twitter)</span>
+              <svg class="tfw-social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5.2 4.5L10.7 12 5 19.5h3l4.4-5.5 3.9 5.5H19L13.4 12l5.5-7.5h-3l-4 5.1-3.6-5.1z" fill="currentColor"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="tfw-social-btn tfw-social-btn--linkedin" href="https://www.linkedin.com/company/testleaf" target="_blank" aria-label="LinkedIn">
+              <span class="tfw-sr-only">LinkedIn</span>
+              <svg class="tfw-social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5.2 4.4c0 1 .8 1.8 1.8 1.8s1.9-.8 1.9-1.8-.9-1.9-1.9-1.9S5.2 3.4 5.2 4.4zM12.1 10.1c1.4 0 2 .8 2 .8v-1h3.5V19h-3.6v-4.6c0-1.1-.6-1.7-1.5-1.7-.9 0-1.5.6-1.5 1.7V19H7.4v-7.2h3.4v1.3s.8-1 1.3-1zM5.4 7.8H8.9V19H5.4z" fill="currentColor"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="tfw-social-btn tfw-social-btn--instagram" href="https://www.instagram.com/testleaf_education" target="_blank" aria-label="Instagram">
+              <span class="tfw-sr-only">Instagram</span>
+              <svg class="tfw-social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4.5" y="4.5" width="15" height="15" rx="4" ry="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="16.5" cy="7.5" r="1.2" fill="currentColor"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="tfw-social-btn tfw-social-btn--youtube" href="https://www.youtube.com/@TestLeaf" target="_blank" aria-label="YouTube">
+              <span class="tfw-sr-only">YouTube</span>
+              <svg class="tfw-social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 8.2s-.2-1.5-.8-2.1c-.8-.8-1.7-.8-2.1-.9C15.4 5 12 5 12 5h0s-3.4 0-6.1.2c-.4 0-1.3.1-2.1.9-.6.6-.8 2.1-.8 2.1S3 9.9 3 11.6v.8c0 1.7.2 3.4.2 3.4s.2 1.5.8 2.1c.8.8 1.9.7 2.4.8 1.7.2 5.6.2 5.6.2s3.4 0 6.1-.2c.4 0 1.3-.1 2.1-.9.6-.6.8-2.1.8-2.1s.2-1.7.2-3.4v-.8c0-1.7-.2-3.4-.2-3.4zM10.5 14.8V9.2l4.7 2.8-4.7 2.8z" fill="currentColor"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <div class="tfw-apps">
+          <div class="tl-rating-badge" role="group" aria-label="Rated 4.7 out of 5 from more than 3003+ Google reviews">
+            <img class="g-l-img" src="assets/index-images/google-logo.webp" alt="g-logo" style="width:35px;">
+            <div class="tl-rating-badge__content">
+              <div class="tl-rating-badge__title">
+                <strong>Rated <span class="tl-rating-badge__score">4.7</span>/<span>5.0</span></strong>
+              </div>
+              <div class="tl-rating-badge__sub">More than 3003+ Google Reviews</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="tfw-hr tfw-hr--thin">
+
+    <div class="tfw-bottom">
+      <ul class="tfw-legal">
+        <li><a href="https://www.testleaf.com/terms-and-conditions.html">Terms & Conditions</a></li>
+        <li><a href="https://www.testleaf.com/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="https://www.testleaf.com/return-refund-policy.html">Return & Refund policy</a></li>
+        <li><a href="https://www.testleaf.com/sitemap.html">Sitemap</a></li>
+      </ul>
+      <p class="tfw-copy">© 2025 - Testleaf. All Rights Reserved</p>
+    </div>
+
+  </div>
+</footer>
+
+  <script type="text/javascript">
+    window.ga = window.ga || function () {
+      (ga.q = ga.q || []).push(arguments)
+    };
+    ga.l = +new Date;
+    ga('create', 'UA-106902946-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+  <script type="text/javascript" src="assets/js/chat.js"></script>
+  <script type="text/javascript" src="https://assets.testleaf.com/assets/js/jquery.min.js"></script>
+  <script type="text/javascript" src="https://assets.testleaf.com/assets/js/popper.min.js"></script>
+  <script type="text/javascript" src="https://assets.testleaf.com/assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://assets.testleaf.com/assets/js/owl.carousel.js"></script>
+  <!-- <script type="text/javascript" src="https://assets.testleaf.com/assets/js/jquery.onscreen.min.js"></script> -->
+  <script type="text/javascript" src="https://assets.testleaf.com/assets/js/snap.svg.js"></script>
+  <script type="text/javascript" src="https://assets.testleaf.com/assets/js/main.js"></script>
+  <!-- <script type="text/javascript" src="assets/js/new.js"></script> -->
+  <script type="text/javascript" src="https://assets.testleaf.com/assets/js/new.js" defer></script>
+
+  <!-- captcha -->
+
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+
+  <script type="text/javascript">
+    _linkedin_partner_id = "4330052";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/javascript">
+    (function (l) {
+      if (!l) {
+        window.lintrk = function (a, b) { window.lintrk.q.push([a, b]) };
+        window.lintrk.q = []
+      }
+      var s = document.getElementsByTagName("script")[0];
+      var b = document.createElement("script");
+      b.type = "text/javascript"; b.async = true;
+      b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+      s.parentNode.insertBefore(b, s);
+    })(window.lintrk);
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none;" alt=""
+      src="https://px.ads.linkedin.com/collect/?pid=4330052&fmt=gif" />
+  </noscript>
+  <script>
+    const popup = document.getElementById('popup');
+    const overlay = document.getElementById('popup-overlay');
+
+    // Show popup after 40 seconds
+    setTimeout(() => {
+      popup.classList.add('open');
+      overlay.classList.add('active');
+    }, 5000); // 40000ms = 40 seconds
+
+    // Close popup and overlay
+    function closePopup() {
+      popup.classList.remove('open');
+      overlay.classList.remove('active');
+    }
+  </script>
+
+<!-- script for webinar content changes -->
+
+<script>
+  // Define all webinar contents
+  const webinars = [
+    {
+      title: "AI Master Class for QA Professionals - Master AI Agents",
+      mentor: "Babu Manickam",
+      date: "22nd November 2025",
+      time: "04:00 to 05:30 PM IST",
+      description: "<strong>Babu Manickam</strong> , 25+ years, 4 continents, 50,000 professionals mentored—leading the future of QA with GenAI.",
+      link: "https://ai-master-class.testleaf.com/?utm_source=tlweb"
+    },
+    {
+      title: "Playwright + AI Master Classin 90 Minutes",
+      mentor: "Babu Manickam ",
+      date: "22nd November 2025",
+      time: "10:00 to 11:30 AM IST",
+      description: "Join <strong>Babu Manickam’s</strong> Playwright + AI Master Class to master real-time automation, boost testing efficiency, and become a Certified Playwright Professional. No coding knowledge required – start your automation journey today!",
+      link: "https://playwright-webinar.testleaf.com/?utm_source=tlweb"
+    },
+     {
+      title: "From Manual to Automation — in Just 90 Minutes",
+      mentor: "Hari Prasad Radhakrishnan",
+      date: "Coming Saturday November 2025",
+      time: "11:00 AM to 12:30 PM IST",
+      description: "Join <strong>Hari’s</strong> Selenium Masterclass to master real-time web automation, build powerful test frameworks, and become a Certified Selenium Professional. Learn hands-on with expert-led sessions — no prior coding required! Kickstart your automation journey and level up your QA career today.",
+      link: "https://selenium-webinar.testleaf.com/?utm_source=tlweb"
+    }
+    // Add more webinars here if needed
+  ];
+
+  let currentIndex = 0;
+
+  function updateWebinarContent() {
+    const webinar = webinars[currentIndex];
+    const container = document.getElementById("webinar-content");
+
+    // Animate fade out
+    container.style.opacity = 0;
+
+    setTimeout(() => {
+      container.innerHTML = `
+        <h6 style="color:#fff;font-size: 0.9rem;">${webinar.title}</h6>
+        <ul style="color: #fff;font-size:12px;">
+          <li><span style="color:#15c872;">◈ Mentor</span> : ${webinar.mentor}</li>
+          <li><span style="color:#15c872;">◈ Date</span> : ${webinar.date}</li>
+          <li><span style="color:#15c872;">◈ Time</span> : ${webinar.time}</li>
+        </ul>
+        <p style="font-size: 11px; line-height: 1.6; color: #ddd;">
+          ${webinar.description}
+        </p>
+        <button class="explore-btn">
+          <a style="color:#000;" href="${webinar.link}">Register Now</a>
+        </button>
+      `;
+      // Animate fade in
+      container.style.opacity = 1;
+    }, 500); // matches fade duration
+
+    // Move to next webinar
+    currentIndex = (currentIndex + 1) % webinars.length;
+  }
+
+  // Initial fade-in
+  document.getElementById("webinar-content").style.transition = "opacity 0.5s";
+  document.getElementById("webinar-content").style.opacity = 1;
+
+  // Change webinar every 7 seconds
+  setInterval(updateWebinarContent, 7000);
+</script>
+
+</body>
+
+</html>

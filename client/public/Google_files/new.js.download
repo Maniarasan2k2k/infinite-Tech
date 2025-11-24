@@ -1,0 +1,886 @@
+// Run after DOM is parsed
+document.addEventListener('DOMContentLoaded', () => {
+      // okay to run early
+  initPopup();      // needs DOM
+  initLearnerSlider();
+  initTabs();
+  initVideoSection();
+});
+
+
+
+/* ============================== Popup ============================== */
+function initPopup() {
+  const popup   = document.getElementById('popup');
+  const overlay = document.getElementById('popup-overlay');
+  if (!popup || !overlay) return;
+
+  // show after 40s (change as you like)
+  setTimeout(() => {
+    popup.classList.add('open');
+    overlay.classList.add('active');
+  }, 40000);
+
+  // if your HTML used onclick="closePopup()", expose it:
+  window.closePopup = function () {
+    popup.classList.remove('open');
+    overlay.classList.remove('active');
+  };
+}
+
+/* ========================== Learner slider ========================== */
+function initLearnerSlider() {
+  const track      = document.getElementById("learnerSliderTrack");
+  const dotsContainer = document.getElementById("learnerDots");
+  const container  = document.querySelector(".learner-slider-container");
+  const prevBtn    = document.getElementById("learnerPrev"); // ← add
+  const nextBtn    = document.getElementById("learnerNext"); // ← add
+
+  if (!track || !container) return;
+
+  let cards = Array.from(document.querySelectorAll(".learner-card"));
+  if (!cards.length) return;
+
+  let currentIndex = 0;
+  let itemsPerPage = 1;
+  let totalPages   = 1;
+  let cardWidth    = 0;
+  let auto;
+  let isAnimating  = false; // guard to avoid double-click race
+
+  function updateSizes() {
+    cards = Array.from(document.querySelectorAll(".learner-card"));
+    if (!cards.length) return;
+
+    const rect = cards[0].getBoundingClientRect();
+    cardWidth = rect.width || cards[0].offsetWidth || 1;
+
+    const containerWidth = container.getBoundingClientRect().width || container.offsetWidth;
+    itemsPerPage = Math.max(1, Math.floor(containerWidth / cardWidth));
+    totalPages   = Math.ceil(cards.length / itemsPerPage);
+    currentIndex = 0;
+    generateDots();
+    scrollSlider(0, false);
+  }
+
+  function generateDots() {
+    if (!dotsContainer) return;
+    dotsContainer.innerHTML = "";
+    for (let i = 0; i < totalPages; i++) {
+      const dot = document.createElement("span");
+      dot.classList.add("dot");
+      if (i === 0) dot.classList.add("active");
+      dot.addEventListener("click", (e) => {
+        e.preventDefault();
+        currentIndex = i;
+        scrollSlider(0);
+      });
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function updateDots(index) {
+    if (!dotsContainer) return;
+    dotsContainer.querySelectorAll(".dot").forEach((dot, i) => {
+      dot.classList.toggle("active", i === index);
+    });
+  }
+
+  function scrollSlider(direction, animated = true) {
+    if (isAnimating && animated) return; // prevent spam clicks
+    isAnimating = animated;
+
+    currentIndex = (currentIndex + direction + totalPages) % totalPages;
+    const distance = currentIndex * cardWidth * itemsPerPage;
+
+    track.style.transition = animated ? "transform 0.4s ease-in-out" : "none";
+    track.style.transform  = `translateX(-${distance}px)`;
+    updateDots(currentIndex);
+
+    if (animated) {
+      track.addEventListener(
+        "transitionend",
+        () => { isAnimating = false; },
+        { once: true }
+      );
+    } else {
+      isAnimating = false;
+    }
+  }
+
+  function autoSlide()       { scrollSlider(1); }
+  function startAutoSlide()  { stopAutoSlide(); auto = setInterval(autoSlide, 4000); }
+  function stopAutoSlide()   { if (auto) clearInterval(auto); }
+
+  // NEW: Arrow bindings
+  if (prevBtn) {
+    prevBtn.addEventListener("click", (e) => {
+      e.preventDefault(); // important if button is inside a form or <a>
+      stopAutoSlide();
+      scrollSlider(-1);
+      startAutoSlide();
+    });
+  }
+  if (nextBtn) {
+    nextBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      stopAutoSlide();
+      scrollSlider(1);
+      startAutoSlide();
+    });
+  }
+
+  // Pause on hover
+  window.addEventListener("resize", updateSizes, { passive: true });
+  track.addEventListener("mouseover", stopAutoSlide);
+  track.addEventListener("mouseout", startAutoSlide);
+
+  updateSizes();
+  startAutoSlide();
+
+  // OPTIONAL: if your HTML still uses inline onclick="prev()" / "next()"
+  // expose global helpers so those attributes still work after externalizing:
+  window.learnerPrev = () => { stopAutoSlide(); scrollSlider(-1); startAutoSlide(); };
+  window.learnerNext = () => { stopAutoSlide(); scrollSlider(1);  startAutoSlide(); };
+}
+
+
+/* ============================== Tabs ============================== */
+function initTabs() {
+  const tabs = Array.from(document.querySelectorAll('.lp-tab'));
+  const panels = Array.from(document.querySelectorAll('.lp-panel'));
+  const tabsContainer = document.querySelector('.lp-tabs');
+  if (!tabs.length || !panels.length || !tabsContainer) return;
+
+  function activate(id) {
+    tabs.forEach(t => {
+      const on = t.dataset.lpTab === id;
+      t.classList.toggle('lp-isActive', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+    });
+    panels.forEach(p => {
+      const on = p.id === `panel-${id}`;
+      p.classList.toggle('lp-isActive', on);
+    });
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => activate(tab.dataset.lpTab));
+  });
+
+  tabsContainer.addEventListener('keydown', (e) => {
+    const current = document.activeElement;
+    if (!current.classList.contains('lp-tab')) return;
+    let idx = tabs.indexOf(current);
+    if (e.key === 'ArrowRight') {
+      idx = (idx + 1) % tabs.length;
+      tabs[idx].focus(); tabs[idx].click();
+    }
+    if (e.key === 'ArrowLeft') {
+      idx = (idx - 1 + tabs.length) % tabs.length;
+      tabs[idx].focus(); tabs[idx].click();
+    }
+  });
+
+  // Activate first tab by default if none active
+  const active = tabs.find(t => t.classList.contains('lp-isActive')) || tabs[0];
+  if (active) active.click();
+}
+
+/* ========================= Video Section (ALV) ========================= */
+
+
+function initVideoSection() {
+  const ALV_ITEMS = [
+    { video:'https://www.youtube.com/embed/2HKOa4bMxYA?rel=0&modestbranding=1', thumb:'https://img.youtube.com/vi/2HKOa4bMxYA/hqdefault.jpg', title:"Gangathran's inspiring journey - Secured a 200% Salary Hike with 5 Job Offers in Hand!" },
+    { video:'https://www.youtube.com/embed/adPGVR59ie4?rel=0&modestbranding=1', thumb:'https://img.youtube.com/vi/adPGVR59ie4/hqdefault.jpg', title:"Hariharan’s 5-Year Journey with Testleaf: From Selenium to Lifelong Learning" },
+    { video:'https://www.youtube.com/embed/uKBVuq7gcvs?rel=0&modestbranding=1', thumb:'https://img.youtube.com/vi/uKBVuq7gcvs/hqdefault.jpg', title:"How Testleaf Transformed My 8-Year Testing Career: Karthikeyen’s TCS Success" },
+    { video:'https://www.youtube.com/embed/tL-HTxUmZq8?rel=0&modestbranding=1', thumb:'https://img.youtube.com/vi/tL-HTxUmZq8/hqdefault.jpg', title:"Murali’s Rise: How Testleaf Accelerated His Career During the Pandemic" },
+    { video:'https://www.youtube.com/embed/RVShBhpshlA?rel=0&modestbranding=1', thumb:'https://img.youtube.com/vi/RVShBhpshlA/hqdefault.jpg', title:"Muthuraman's IT Comeback: 21 Years of Experience and a New Beginning" },
+    { video:'https://www.youtube.com/embed/8Nn_d6kT5h4?rel=0&modestbranding=1', thumb:'https://img.youtube.com/vi/8Nn_d6kT5h4/hqdefault.jpg', title:'Nagarajan’s 5-Year Journey: Growing with Testleaf and Gaining Knowledge' },
+    { video:'https://www.youtube.com/embed/pZnC7K5BtpE?rel=0&modestbranding=1', thumb:'https://img.youtube.com/vi/pZnC7K5BtpE/hqdefault.jpg', title:'Pradeep’s Leap: 150% Salary Hike After Upskilling with Testleaf' },
+    { video:'https://www.youtube.com/embed/rO7DaftQukM?rel=0&modestbranding=1', thumb:'https://img.youtube.com/vi/rO7DaftQukM/hqdefault.jpg', title:'From Technical Weakness to QA Manager: Prasanna’s Success with Testleaf' },
+    { video:'https://www.youtube.com/embed/kagrmlUPKDs?rel=0&modestbranding=1', thumb:'https://img.youtube.com/vi/kagrmlUPKDs/hqdefault.jpg', title:'Raghuuthaman’s 7-Year Journey: 3X Salary Growth with Testleaf' },
+    { video:'https://www.youtube.com/embed/2soosHipS6U?rel=0&modestbranding=1', thumb:'https://img.youtube.com/vi/2soosHipS6U/hqdefault.jpg', title:'Shankar’s Breakthrough: Cracking 2 Product-Based Companies with Testleaf' },
+    { video:'https://www.youtube.com/embed/0CD9GPcSnh0?rel=0&modestbranding=1', thumb:'https://img.youtube.com/vi/0CD9GPcSnh0/hqdefault.jpg', title:'Suganthi’s Success: A Decade in the Industry, 5 Years of Growth with Testleaf'}
+  ];
+
+  const $iframe   = document.getElementById('alv-iframe');
+  const $title    = document.getElementById('alv-title');
+  const $sub      = document.getElementById('alv-sub');
+  const $list     = document.getElementById('alv-list');
+  const $player   = document.querySelector('.alv-player');
+  const $listCard = document.querySelector('.alv-listCard');
+  if (!$list || !$iframe || !$player || !$listCard) return;
+
+  const MOBILE_BP = 768;
+  const isMobile = () => window.innerWidth <= MOBILE_BP;
+
+  const state = { index: 0, items: ALV_ITEMS };
+
+  /* ---------------- Render (mobile: active item goes last) ---------------- */
+  function computeOrder() {
+    const n = state.items.length;
+    const ids = Array.from({length:n}, (_,i)=>i);
+    if (!isMobile()) return ids;
+    const a = state.index;
+    return ids.filter(i => i !== a).concat(a);
+  }
+
+  function renderList() {
+    const order = computeOrder();
+    $list.innerHTML = '';
+    for (const idx of order) {
+      const v = state.items[idx];
+      const li = document.createElement('li');
+      li.className = 'alv-item' + (idx === state.index ? ' alv-active' : '');
+      li.setAttribute('role', 'option');
+      li.setAttribute('aria-selected', idx === state.index ? 'true' : 'false');
+      li.tabIndex = 0;
+      li.dataset.videoIndex = String(idx);
+      li.innerHTML = `
+        <div class="alv-thumbWrap">
+          <img class="alv-thumb" src="${v.thumb}" alt="thumbnail" loading="lazy" />
+          <div class="alv-playDot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+        <div>
+          <div class="alv-itemTitle">${v.title}</div>
+          <div class="alv-itemSub">${v.subtitle || ''}</div>
+        </div>`;
+      li.addEventListener('click', () => playAt(+li.dataset.videoIndex, true));
+      li.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); playAt(+li.dataset.videoIndex, true); }
+      });
+      $list.appendChild(li);
+    }
+  }
+
+  function markActiveInDOM() {
+    [...$list.children].forEach(el => {
+      const active = +el.dataset.videoIndex === state.index;
+      el.classList.toggle('alv-active', active);
+      el.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+  }
+
+  function playAt(i, auto=false) {
+    state.index = i;
+    const v = state.items[i];
+    const [base, qs] = v.video.split('?');
+    const params = new URLSearchParams(qs || '');
+    if (auto && !params.get('autoplay')) params.set('autoplay', '1');
+    $iframe.src = `${base}?${params.toString()}`;
+    if ($title) $title.textContent = v.title || '';
+    if ($sub)   $sub.textContent   = v.subtitle || '';
+    if (isMobile()) renderList(); else markActiveInDOM();
+  }
+
+  /* -------- Keep playlist card height aligned with player (desktop) -------- */
+  const ro = new ResizeObserver(() => {
+    const h = $player.offsetHeight;
+    $listCard.style.maxHeight = h + 'px';
+    const head = $listCard.querySelector('.alv-listHead');
+    const headH = head ? head.offsetHeight : 0;
+    $list.style.maxHeight = (h - headH) + 'px';
+  });
+  ro.observe($player);
+
+  /* --------------------- DESKTOP SMOOTH INFINITE LOOP --------------------- */
+  let deskRAF = null;
+  let deskPaused = false;
+  let loopHeight = 0;         // height of original content
+  let loopReady = false;
+  const SPEED_PX_PER_FRAME = 0.6; // tune 0.4–1.0 for slower/faster smoothness
+
+  function teardownDesktopLoop() {
+    loopReady = false;
+    if (deskRAF) cancelAnimationFrame(deskRAF);
+    deskRAF = null;
+    // Re-render restores original (non-cloned) list
+    renderList();
+  }
+
+  function setupDesktopLoop() {
+    teardownDesktopLoop();          // start fresh
+    if (isMobile()) return;         // desktop only
+    // Need vertical overflow to scroll
+    if (!($list.scrollHeight > $list.clientHeight + 1)) return;
+
+    // Clone once to make a seamless loop
+    const originalItems = Array.from($list.children);
+    loopHeight = $list.scrollHeight; // height before cloning
+    const frag = document.createDocumentFragment();
+    originalItems.forEach(li => frag.appendChild(li.cloneNode(true)));
+    $list.appendChild(frag);
+
+    // Start at top
+    $list.scrollTop = 0;
+    loopReady = true;
+    deskRAF = requestAnimationFrame(deskStep);
+  }
+
+  function deskStep() {
+    if (!loopReady) return;
+    const prefersReduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!deskPaused && !prefersReduce) {
+      $list.scrollTop += SPEED_PX_PER_FRAME;
+      // seamless wrap
+      if ($list.scrollTop >= loopHeight) {
+        $list.scrollTop -= loopHeight;
+      }
+    }
+    deskRAF = requestAnimationFrame(deskStep);
+  }
+
+  // Pause/resume
+  ['mouseenter','focusin','pointerdown','wheel'].forEach(ev => {
+    $list.addEventListener(ev, () => { deskPaused = true; }, { passive: true });
+  });
+  ['mouseleave','focusout','pointerup'].forEach(ev => {
+    $list.addEventListener(ev, () => { deskPaused = false; }, { passive: true });
+  });
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) { if (deskRAF) cancelAnimationFrame(deskRAF); deskRAF = null; }
+    else if (!deskRAF) { deskRAF = requestAnimationFrame(deskStep); }
+  });
+
+  /* ------------------------------ INIT ------------------------------------ */
+  renderList();
+  playAt(0, false);
+  setupDesktopLoop();
+
+  // Rebuild on resize/orientation (handles breakpoint changes & heights)
+  let rto;
+  function onResize() {
+    clearTimeout(rto);
+    rto = setTimeout(() => {
+      renderList();        // reset to original items/order
+      playAt(state.index, false);
+      setupDesktopLoop();  // re-clone & restart smooth loop for desktop
+    }, 120);
+  }
+  window.addEventListener('resize', onResize);
+  window.addEventListener('orientationchange', onResize);
+}
+
+// Run it
+if (document.readyState !== 'loading') initVideoSection();
+else document.addEventListener('DOMContentLoaded', initVideoSection);
+
+
+
+
+
+// ends
+
+  // Count-up animation
+  function animateNumber(el, target, duration){
+    let start = 0;
+    let startTime = null;
+    function update(ts){
+      if(!startTime) startTime = ts;
+      let progress = Math.min((ts - startTime) / duration, 1);
+      let value = Math.floor(progress * target);
+      el.textContent = value.toLocaleString();
+      if(progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  }
+  // Progress ring animation
+  function animateRing(ring, percent, duration){
+    let start = 0;
+    let startTime = null;
+    let valueEl = ring.querySelector(".progress-value");
+    function update(ts){
+      if(!startTime) startTime = ts;
+      let progress = Math.min((ts - startTime) / duration, 1);
+      let current = Math.floor(progress * percent);
+      let deg = (current / 100) * 360;
+      ring.style.background = `conic-gradient(var(--green-dark) ${deg}deg, var(--green-light) 0deg)`;
+      valueEl.textContent = current + "%";
+      if(progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  }
+  
+  // Observe and trigger animations when visible
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        if(entry.target.classList.contains("stat-number")){
+          animateNumber(entry.target, +entry.target.dataset.target, 1500);
+        }
+        if(entry.target.classList.contains("progress-ring")){
+          animateRing(entry.target, +entry.target.dataset.percent, 1500);
+        }
+        obs.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.3});
+  
+  document.querySelectorAll(".stat-number").forEach(el => observer.observe(el));
+  document.querySelectorAll(".progress-ring").forEach(el => observer.observe(el));
+
+  // zoho popup form
+
+  (function () {
+            try {
+                if (document.readyState == "complete") {
+                    onloadActions_873194();
+                } else {
+                    window.addEventListener('load', function () {
+                        onloadActions_873194();
+                    }, false);
+                }
+
+                function onloadActions_873194() {
+                    constructDiv_873194();
+                }
+
+                function constructDiv_873194() {
+                    var iframeDiv = document.createElement("div");
+                    iframeDiv.setAttribute('id', 'MOR-FGXKWPoxKcptb_G2qIG3CfxXT9S08jdptfdUjXo_873194');
+                    iframeDiv.setAttribute('class', 'zf_main_id_873194');
+
+                    var closeFormDiv = document.createElement("div");
+                    closeFormDiv.setAttribute('id', 'deleteform_873194');
+                    closeFormDiv.setAttribute('class', 'zf_lb_closeform_873194');
+                    closeFormDiv.setAttribute('tabindex', 0);
+
+                    var containerDiv = document.createElement("div");
+                    containerDiv.setAttribute('id', 'containerDiv_873194');
+                    containerDiv.setAttribute('class', 'zf_lB_Container_873194 fadeIn');
+                    containerDiv.appendChild(iframeDiv);
+                    containerDiv.appendChild(closeFormDiv);
+
+                    var wrapperDiv = document.createElement("div");
+                    wrapperDiv.setAttribute('class', 'zf_lB_Wrapper_873194');
+                    wrapperDiv.appendChild(containerDiv);
+
+                    var dimmerDiv = document.createElement("div");
+                    dimmerDiv.setAttribute('class', 'zf_lB_Dimmer_873194');
+                    dimmerDiv.setAttribute('elname', 'popup_box');
+
+                    var mainDiv = document.createElement("div");
+                    mainDiv.setAttribute('id', 'formsLightBox_873194');
+                    mainDiv.style.display = "none";
+                    mainDiv.appendChild(wrapperDiv);
+                    mainDiv.appendChild(dimmerDiv);
+
+                    document.body.appendChild(mainDiv);
+                }
+
+                function showZForm_873194(courseValue) {
+                    var iframe = document.getElementById("MOR-FGXKWPoxKcptb_G2qIG3CfxXT9S08jdptfdUjXo_873194").getElementsByTagName("iframe")[0];
+                    if (iframe == undefined || iframe.length == 0) {
+                        loadZForm_873194(courseValue);
+                    }
+                    document.getElementById("formsLightBox_873194").style.display = "block";
+                    document.body.style.overflow = "hidden";
+                    setTimeout(function () {
+                        var containerDiv = document.getElementById("containerDiv_873194");
+                        containerDiv.setAttribute('tabindex', '-1');
+                        containerDiv.focus();
+                    }, 100);
+                }
+
+                function deleteZForm_873194() {
+                    var divCont = document.getElementById("formsLightBox_873194");
+                    divCont.style.display = "none";
+                    document.body.style.overflow = "";
+
+                    var iframe = document.getElementById("MOR-FGXKWPoxKcptb_G2qIG3CfxXT9S08jdptfdUjXo_873194").getElementsByTagName("iframe")[0];
+                    if (iframe) iframe.remove();
+                }
+
+                function loadZForm_873194(courseValue) {
+                    var iframe = document.getElementById("MOR-FGXKWPoxKcptb_G2qIG3CfxXT9S08jdptfdUjXo_873194").getElementsByTagName("iframe")[0];
+                    if (iframe == undefined || iframe.length == 0) {
+                        var f = document.createElement("iframe");
+                        var url = 'https://forms.zohopublic.com/TestLeaf/form/tlsitecoursesyllabus/formperma/MOR-FGXKWPoxKcptb_G2qIG3CfxXT9S08jdptfdUjXo?course=' + courseValue;
+                        f.src = url;
+
+                        f.style.border = "none";
+                        f.style.minWidth = "100%";
+                        f.style.overflow = "hidden";
+                        var d = document.getElementById("MOR-FGXKWPoxKcptb_G2qIG3CfxXT9S08jdptfdUjXo_873194");
+                        d.appendChild(f);
+
+                        var deleteForm = document.getElementById("deleteform_873194");
+                        deleteForm.onclick = deleteZForm_873194;
+                        deleteForm.addEventListener("keydown", function (event) {
+                            if (event.key === "Enter" || event.keyCode === 13 || event.key === " " || event.keyCode === 32) {
+                                event.preventDefault();
+                                deleteZForm_873194();
+                            }
+                        });
+                    }
+                }
+
+                // Set up event listeners for all buttons
+                var buttons = document.querySelectorAll('.syllabus-btn');
+                buttons.forEach(function (button) {
+                    button.addEventListener('click', function () {
+                        var courseValue = this.getAttribute('data-course');
+                        showZForm_873194(courseValue);
+                    });
+                });
+
+            } catch (e) { }
+        })();
+
+        // expansion section slider in mobile
+
+  (function () {
+    const section = document.querySelector('.advisory-section.advisory-mobile-init');
+    if (!section) return;
+
+    function toggleMobileSlider() {
+      if (window.innerWidth <= 768) {
+        section.classList.add('advisory-mobile-active');
+      } else {
+        section.classList.remove('advisory-mobile-active');
+      }
+    }
+
+    // initial check + on resize
+    toggleMobileSlider();
+    window.addEventListener('resize', toggleMobileSlider);
+  })();
+
+  // top leaders section
+
+  (function () {
+  const track = document.querySelector('.tl-ai-track');
+  const cards = [...document.querySelectorAll('.tl-ai-card')];
+  const dots  = [...document.querySelectorAll('.tl-ai-dot')];
+  if (!track || !cards.length) return;
+
+  const mobileMQ = window.matchMedia('(max-width: 767px)');
+  let idx = 0, timer = null, isUserScrolling = false, isVisible = true;
+
+  function setDot(i){
+    if (!dots.length) return;
+    dots.forEach(d => d.classList.remove('is-active'));
+    dots[i % dots.length].classList.add('is-active');
+  }
+
+  // 🔧 Don't use scrollIntoView (it moves the page). Scroll the track instead.
+  function toIndex(i){
+    idx = (i + cards.length) % cards.length;
+    const el = cards[idx];
+    if (!el) return;
+
+    const targetLeft = el.offsetLeft - (track.clientWidth - el.clientWidth) / 2;
+    track.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
+    setDot(idx);
+  }
+
+  function start(){
+    stop();
+    if (!mobileMQ.matches || !isVisible) return; // only on mobile & when visible
+    timer = setInterval(() => {
+      if (isUserScrolling) return;
+      toIndex(idx + 1);
+    }, 3200);
+  }
+
+  function stop(){
+    if (timer) { clearInterval(timer); timer = null; }
+  }
+
+  // Pause when user interacts
+  let touchTimer;
+  ['touchstart','mousedown','pointerdown','wheel'].forEach(evt => {
+    track.addEventListener(evt, () => {
+      isUserScrolling = true; stop();
+      clearTimeout(touchTimer);
+      touchTimer = setTimeout(() => { isUserScrolling = false; start(); }, 1800);
+    }, { passive:true });
+  });
+
+  // Update active dot on manual scroll
+  track.addEventListener('scroll', () => {
+    if (!mobileMQ.matches) return;
+    const center = track.scrollLeft + track.clientWidth / 2;
+    let nearest = 0, best = Infinity;
+    cards.forEach((el, i) => {
+      const mid = el.offsetLeft + el.offsetWidth / 2;
+      const dist = Math.abs(mid - center);
+      if (dist < best) { best = dist; nearest = i; }
+    });
+    idx = nearest; setDot(idx);
+  }, { passive:true });
+
+  // Start/stop on viewport visibility so it won't jump when you’re far down the page
+  const io = new IntersectionObserver(([entry]) => {
+    isVisible = entry?.isIntersecting ?? true;
+    isVisible ? start() : stop();
+  }, { threshold: 0.5 });
+  io.observe(track);
+
+  // Resize / visibility handlers
+  mobileMQ.addEventListener('change', () => { start(); });
+  document.addEventListener('visibilitychange', () => {
+    document.hidden ? stop() : start();
+  });
+
+  // Dot navigation
+  dots.forEach((dot, i) => dot.addEventListener('click', () => toIndex(i)));
+
+  // Init
+  setDot(0);
+  start();
+})();
+
+// testimonial masonry style
+document.getElementById('tlw-more').addEventListener('click', function () {
+      const box = document.querySelector('.tlw-masonrybox');
+      const isOpen = box.getAttribute('data-tlw-expanded') === 'true';
+      box.setAttribute('data-tlw-expanded', !isOpen);
+      this.setAttribute('aria-expanded', !isOpen);
+      this.innerHTML = isOpen ? 'Show more <span class="tlw-chevron">▾</span>' : 'Show less <span class="tlw-chevron">▾</span>';
+    });
+
+// ends
+
+// course section tab view
+
+
+(() => {
+  const select = document.getElementById('tlfilt-select');
+  if (!select) return;
+
+  const section = select.closest('[data-scope="course-filter"], .course-section') || document;
+  const grid    = section.querySelector('.course-grids');
+  if (!grid) return;
+
+  const cards   = Array.from(grid.children).filter(el => el.classList.contains('course-cards'));
+  const countEl = section.querySelector('.tlfilt-count');
+
+  const norm    = s => (s || '').trim().toLowerCase();
+  const getTags = el => (el.getAttribute('data-tags') || '').split(/[\s,]+/).filter(Boolean);
+  const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
+  function showAll(){
+    for (const card of cards){ card.style.display = ''; }
+    if (countEl) countEl.textContent = '';
+  }
+
+  function applyFilter(value){
+    // On desktop/tablet: force-show everything and exit
+    if (!isMobile()){
+      showAll();
+      return;
+    }
+
+    const wantAll = value === 'all';
+    let visible = 0;
+
+    for (const card of cards){
+      const match = wantAll || getTags(card).includes(value);
+      card.style.display = match ? '' : 'none';
+      if (match) visible++;
+    }
+
+    if (countEl){
+      countEl.textContent = `Showing ${visible} ${visible === 1 ? 'program' : 'programs'} (${wantAll ? 'All Programs' : value})`;
+    }
+  }
+
+  // Init from URL (?cat=Automation or #cat=Automation) — mobile only
+  (function initFromURL(){
+    const usp  = new URLSearchParams(location.search);
+    const hash = location.hash.startsWith('#cat=') ? location.hash.slice(5) : '';
+    const cat  = usp.get('cat') || hash;
+    if (cat){
+      for (const opt of select.options){
+        if (norm(opt.value) === norm(cat)) { select.value = opt.value; break; }
+      }
+    }
+  })();
+
+  // Initial paint
+  if (isMobile()){
+    applyFilter(select.value);
+  } else {
+    showAll();
+  }
+
+  // Listen to changes (mobile only)
+  select.addEventListener('change', () => applyFilter(select.value), { passive: true });
+
+  // Handle responsive switches dynamically
+  const mq = window.matchMedia('(max-width: 768px)');
+  mq.addEventListener?.('change', () => {
+    if (mq.matches){
+      // just re-apply current mobile filter
+      applyFilter(select.value);
+    } else {
+      // desktop/tablet: ensure all cards are visible
+      showAll();
+    }
+  });
+})();
+
+
+// header code
+
+  // Sticky header behavior
+// Sticky header behavior
+(function () {
+  'use strict';
+
+  const header = document.getElementById('main-header');
+  const toggle = document.getElementById('mobile-menu-toggle');
+
+  if (!header) {
+    console.warn('Header element not found');
+    return;
+  }
+
+  // Mobile menu state
+  if (toggle) {
+    toggle.addEventListener('change', () => {
+      document.body.classList.toggle('menu-open', toggle.checked);
+    });
+  }
+
+  // Scroll behavior
+  let ticking = false;
+  const COMPACT_THRESHOLD = 64;
+  const SHADOW_THRESHOLD = 10;
+
+  function updateHeaderState() {
+    const y = window.scrollY;
+    if (y > SHADOW_THRESHOLD) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+
+    if (y > COMPACT_THRESHOLD) header.classList.add('compact');
+    else header.classList.remove('compact');
+
+    ticking = false;
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      requestAnimationFrame(updateHeaderState);
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  updateHeaderState();
+
+  // Close mobile menu via overlay
+  const overlay = document.querySelector('.mobile-overlay');
+  if (overlay) {
+    overlay.addEventListener('click', () => {
+      if (toggle) {
+        toggle.checked = false;
+        document.body.classList.remove('menu-open');
+      }
+    });
+  }
+
+  // Esc closes mobile menu
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && toggle && toggle.checked) {
+      toggle.checked = false;
+      document.body.classList.remove('menu-open');
+    }
+  });
+
+  // Smooth scrolling for anchors
+  const anchorLinks = document.querySelectorAll('a[href^="#"]');
+  anchorLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      if (href === '#' || href === '#top') {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        const headerHeight = header.offsetHeight;
+        const y = target.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // A11y: reflect hover state for keyboard users (no inline styles)
+  const dropdowns = document.querySelectorAll('.dropdown');
+  dropdowns.forEach((dd) => {
+    const btn = dd.querySelector('.dropdown-toggle');
+    if (!btn) return;
+    btn.setAttribute('aria-haspopup', 'true');
+    btn.setAttribute('aria-expanded', 'false');
+
+    dd.addEventListener('mouseenter', () => btn.setAttribute('aria-expanded', 'true'));
+    dd.addEventListener('mouseleave', () => btn.setAttribute('aria-expanded', 'false'));
+
+    // Space/Enter open via class (helps keyboard users)
+    btn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        dd.classList.toggle('open');
+        btn.setAttribute(
+          'aria-expanded',
+          dd.classList.contains('open') ? 'true' : 'false'
+        );
+      }
+    });
+
+    // Esc closes
+    dd.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        dd.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.focus();
+      }
+    });
+  });
+
+  console.log('✅ Sticky header initialized (hover mega menu).');
+})();
+
+// captcha code
+
+ function refreshCaptcha() {
+            document.getElementById("captcha-img").src = "captcha.php?rand=" + Date.now();
+          }
+
+          document.getElementById('trialForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const captcha = document.getElementById('captcha').value.trim();
+            if (captcha.length !== 6) {
+              alert('Please enter the complete 6-character CAPTCHA code.');
+              return false;
+            }
+
+            // Validate CAPTCHA with server
+            fetch('validate_captcha.php', {
+              method: 'POST',
+              headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+              body: 'captcha=' + encodeURIComponent(captcha)
+            })
+            .then(response => response.json())
+            .then(data => {
+              if (data.valid) {
+                this.submit();
+              } else {
+                alert('CAPTCHA code is incorrect. Please try again.');
+                refreshCaptcha();
+                document.getElementById('captcha').value = '';
+              }
+            })
+            .catch(() => {
+              alert('Error validating CAPTCHA. Please try again.');
+            });
+          });
+// header code ends
