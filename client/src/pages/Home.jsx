@@ -3,6 +3,8 @@ import { FaGraduationCap, FaBriefcase, FaFlask, FaCode, FaChartLine, FaRocket } 
 import { useNavigate } from "react-router-dom";
 import About from "./About";
 import Footer from "./Footer";
+import Testimonials from "./Testimonials";
+import AnimatedHeading from "./AnimatedHeading";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -22,9 +24,10 @@ const Home = () => {
       {/* Fixed Header */}
       <header className="fixed top-0 left-0 w-full bg-white shadow-sm z-50 transition-all duration-500">
         <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
-          <h1 className="text-xl sm:text-2xl font-bold cursor-pointer" onClick={() => navigate("/")}>
-            PLAYWRIGHT ACADEMY
-          </h1>
+          
+          <div onClick={() => navigate("/")} className="cursor-pointer">
+            <AnimatedHeading />
+          </div>
 
           {/* Desktop Menu */}
           <nav className="hidden sm:flex items-center gap-6 text-lg relative">
@@ -274,6 +277,7 @@ const Home = () => {
       </div>
 
       <About />
+      <Testimonials />
       <Footer />
     </>
   );

@@ -15,8 +15,8 @@ const About = () => {
       </h1>
 
       {/* Video */}
-      <div className="w-full flex justify-center mb-10">
-  <div className="w-full sm:w-3/4 md:w-2/3 lg:w-4/5 aspect-video">
+      <div className="w-full flex justify-center mb-10 px-4">
+  <div className="w-full sm:w-3/4 md:w-2/3 lg:w-4/7 aspect-video">
     <video
       src="/Fish.mp4"
       controls
@@ -24,6 +24,7 @@ const About = () => {
     />
   </div>
 </div>
+
 
       
       
@@ -46,21 +47,21 @@ const About = () => {
         </p>
 
         {/* Continuous Loop Sliding Images */}
-        <div className="overflow-hidden w-full bg-blue-970 py-1">
+        <div className="overflow-hidden w-full bg-blue-970 py-4">
   <motion.div
-    className="flex w-max gap-10"
+    className="flex gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14"
     animate={{ x: ["0%", "-50%"] }}
     transition={{
       repeat: Infinity,
       repeatType: "loop",
-      duration: 40,
+      duration: 25,
       ease: "linear",
     }}
   >
     {images.concat(images).map((src, i) => (
       <div
         key={i}
-        className="w-60 h-40 flex-shrink-0 rounded-xl overflow-hidden shadow-lg"
+        className="flex-shrink-0 w-36 sm:w-48 md:w-56 lg:w-64 xl:w-72 2xl:w-80 aspect-[4/3] rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-300"
       >
         <img
           src={src}
@@ -71,6 +72,7 @@ const About = () => {
     ))}
   </motion.div>
 </div>
+
 
       </div>
       {/* --------------------------------------------------- */}
@@ -85,112 +87,99 @@ const About = () => {
 
            <div className="w-full px-4 py-10">
   {/* Responsive Grid */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-    {/* CARD 1 */}
-    <div className="bg-white rounded-xl shadow-lg p-5 w-full">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+  {/* CARD 1 */}
+  <div className="bg-white rounded-xl shadow-lg p-5 w-full max-w-md mx-auto hover:shadow-[0_0_25px_#22c55e] hover:scale-105 transition-all duration-300">
+    <div className="w-full h-64 rounded-lg overflow-hidden mb-4">
       <img
         src="/playwright-logo.svg"
-        alt=""
-        className="w-full h-63 object-cover rounded-lg mb-4"
+        alt="Playwright"
+        className="w-full h-full object-contain"
       />
-
-      <h1 className="text-2xl font-bold mb-2">Playwrights</h1>
-
-      <p className="text-gray-700 text-sm leading-relaxed mb-4">
-        Master full stack web development with Python. Learn backend with Django,
-        frontend with React, database management, REST APIs, and deployment.
-        Includes real-world projects and internship.
-      </p>
-
-      <div className="flex justify-between text-sm text-gray-600 mb-2">
-        <span className="font-medium">3 Month Internship</span>
-        <span className="font-medium">Live Session</span>
-      </div>
-
-      <div className="flex justify-between text-sm text-gray-600 mb-4">
-        <span className="font-medium">⭐ 4.9 (210 reviews)</span>
-        <span className="font-medium">Lesson 10</span>
-      </div>
-
-      <div className="flex justify-between items-center mt-3">
-        <div className="text-xl font-bold text-green-600">$4000</div>
-        <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold">
-          Enroll Now
-        </button>
-      </div>
     </div>
+    <h1 className="text-2xl font-bold mb-2">Playwrights</h1>
+    <p className="text-gray-700 text-sm leading-relaxed mb-4">
+      Master full stack web development with Python. Learn backend with Django,
+      frontend with React, database management, REST APIs, and deployment.
+      Includes real-world projects and internship.
+    </p>
+    <div className="flex justify-between text-sm text-gray-600 mb-2">
+      <span className="font-medium">3 Month Internship</span>
+      <span className="font-medium">Live Session</span>
+    </div>
+    <div className="flex justify-between text-sm text-gray-600 mb-4">
+      <span className="font-medium">⭐ 4.9 (210 reviews)</span>
+      <span className="font-medium">Lesson 10</span>
+    </div>
+    <div className="flex justify-between items-center mt-3">
+      <div className="text-xl font-bold text-green-600">$4000</div>
+      <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold">
+        Enroll Now
+      </button>
+    </div>
+  </div>
 
-    {/* CARD 2 */}
-    <div className="bg-white rounded-xl shadow-lg p-5 w-full">
+  {/* CARD 2 */}
+  <div className="bg-white rounded-xl shadow-lg p-5 w-full max-w-md mx-auto hover:shadow-[0_0_25px_#22c55e] hover:scale-105 transition-all duration-300">
+    <div className="w-full h-64 rounded-lg overflow-hidden mb-4">
       <img
         src="/stackm.png"
-        alt=""
-        className="w-full h-63 object-cover rounded-lg mb-4"
+        alt="MERN STACK"
+        className="w-full h-full object-contain"
       />
-
-      <h1 className="text-2xl font-bold mb-2">MERN STACK</h1>
-
-      <p className="text-gray-700 text-sm leading-relaxed mb-4">
-        Master MERN development with MongoDB, Express, React and Node.js.
-        Includes real-world projects, deployment and internship.
-      </p>
-
-      <div className="flex justify-between text-sm text-gray-600 mb-2">
-        <span className="font-medium">3 Month Internship</span>
-        <span className="font-medium">Live Session</span>
-      </div>
-
-      <div className="flex justify-between text-sm text-gray-600 mb-4">
-        <span className="font-medium">⭐ 4.9 (210 reviews)</span>
-        <span className="font-medium">Lesson 10</span>
-      </div>
-
-      <div className="flex justify-between items-center mt-3">
-        <div className="text-xl font-bold text-green-600">$4000</div>
-        <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold">
-          Enroll Now
-        </button>
-      </div>
     </div>
-
-    {/* CARD 3 */}
-    <div className="bg-white rounded-xl shadow-lg p-5 w-full">
-  <div className="w-full h-64 rounded-lg overflow-hidden mb-4">
-    <img
-      src="/cypress.png"
-      alt="Cypress Course"
-      className="w-full h-full object-contain"
-    />
+    <h1 className="text-2xl font-bold mb-2">MERN STACK</h1>
+    <p className="text-gray-700 text-sm leading-relaxed mb-4">
+      Master MERN development with MongoDB, Express, React and Node.js.
+      Includes real-world projects, deployment and internship.
+    </p>
+    <div className="flex justify-between text-sm text-gray-600 mb-2">
+      <span className="font-medium">3 Month Internship</span>
+      <span className="font-medium">Live Session</span>
+    </div>
+    <div className="flex justify-between text-sm text-gray-600 mb-4">
+      <span className="font-medium">⭐ 4.9 (210 reviews)</span>
+      <span className="font-medium">Lesson 10</span>
+    </div>
+    <div className="flex justify-between items-center mt-3">
+      <div className="text-xl font-bold text-green-600">$4000</div>
+      <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold">
+        Enroll Now
+      </button>
+    </div>
   </div>
 
-  <h1 className="text-2xl font-bold mb-2">Cypress</h1>
-
-  <p className="text-gray-700 text-sm leading-relaxed mb-4">
-    Learn automation testing using Selenium WebDriver, TestNG, frameworks,
-    CI/CD and real-world projects with internship.
-  </p>
-
-  <div className="flex justify-between text-sm text-gray-600 mb-2">
-    <span className="font-medium">3 Month Internship</span>
-    <span className="font-medium">Live Session</span>
-  </div>
-
-  <div className="flex justify-between text-sm text-gray-600 mb-4">
-    <span className="font-medium">⭐ 4.9 (210 reviews)</span>
-    <span className="font-medium">Lesson 10</span>
-  </div>
-
-  <div className="flex justify-between items-center mt-3">
-    <div className="text-xl font-bold text-green-600">$4000</div>
-    <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold">
-      Enroll Now
-    </button>
+  {/* CARD 3 */}
+  <div className="bg-white rounded-xl shadow-lg p-5 w-full max-w-md mx-auto hover:shadow-[0_0_25px_#22c55e] hover:scale-105 transition-all duration-300">
+    <div className="w-full h-64 rounded-lg overflow-hidden mb-4">
+      <img
+        src="/cypress.png"
+        alt="Cypress"
+        className="w-full h-full object-contain"
+      />
+    </div>
+    <h1 className="text-2xl font-bold mb-2">Cypress</h1>
+    <p className="text-gray-700 text-sm leading-relaxed mb-4">
+      Learn automation testing using Selenium WebDriver, TestNG, frameworks,
+      CI/CD and real-world projects with internship.
+    </p>
+    <div className="flex justify-between text-sm text-gray-600 mb-2">
+      <span className="font-medium">3 Month Internship</span>
+      <span className="font-medium">Live Session</span>
+    </div>
+    <div className="flex justify-between text-sm text-gray-600 mb-4">
+      <span className="font-medium">⭐ 4.9 (210 reviews)</span>
+      <span className="font-medium">Lesson 10</span>
+    </div>
+    <div className="flex justify-between items-center mt-3">
+      <div className="text-xl font-bold text-green-600">$4000</div>
+      <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold">
+        Enroll Now
+      </button>
+    </div>
   </div>
 </div>
 
-
-  </div>
 </div>
 
 
