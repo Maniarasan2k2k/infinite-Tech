@@ -74,7 +74,7 @@ const Home = () => {
                 className="cursor-pointer hover:text-green-600 transition-all duration-300"
                 onClick={() => navigate("/contact")}
               >
-                Conduct us
+                Contact us
               </li>
               <li
                 className="cursor-pointer hover:text-green-600 transition-all duration-300"
@@ -245,34 +245,24 @@ const Home = () => {
         </div>
 
         {/* Right Side */}
-        <div className="right flex-1 bg-white/40 backdrop-blur-md rounded p-6 flex flex-col gap-4 shadow-xl border border-white/30">
+        <div className="right flex-1 bg-white/5 backdrop-blur-md rounded p-4 flex flex-col gap-3 shadow-xl border border-white/30 h-130">
           <h1 className="text-xl sm:text-2xl font-bold text-gray-800">Apply Now to Unlock Offers</h1>
-          <div className="flex justify-between text-gray-700 font-medium">
-            <span className="text-xs sm:text-sm border px-2 py-1 rounded-full">Limited Seats</span>
-            <span className="text-xs sm:text-sm border px-2 py-1 rounded-full">Take 30 seconds</span>
-            <span className="text-xs sm:text-sm border px-2 py-1 rounded-full">No Spam</span>
-          </div>
-          <select className="border rounded px-3 py-2 w-full">
-            <option value="">HTML</option>
-            <option value="">CSS</option>
-            <option value="">JS</option>
-          </select>
+          
           <div className="flex flex-col sm:flex-row gap-2">
             <input type="text" placeholder="Name" className="border rounded px-3 py-2 flex-1"/>
             <input type="text" placeholder="Email" className="border rounded px-3 py-2 flex-1"/>
           </div>
           <input type="text" placeholder="Number" className="border rounded px-3 py-2 w-full"/>
-          <p className="font-medium text-gray-700 text-sm">Security Verification</p>
-          <div className="flex gap-2 items-center">
-            <h1 className="bg-gray-300 px-4 py-2 rounded font-bold text-sm">68909</h1>
-            <input type="text" placeholder="Enter Captcha Code" className="border rounded px-3 py-2 flex-1"/>
-          </div>
+          <select className="border rounded px-3 py-2 w-full">
+            <option value="">HTML</option>
+            <option value="">CSS</option>
+            <option value="">JS</option>
+          </select>
+          
           <button className="bg-green-600 text-white px-5 py-2 rounded-lg mt-2 hover:bg-green-700 transition-all duration-300">
-            Apply Now
+            Submit
           </button>
-          <p className="text-gray-600 text-xs sm:text-sm mt-2">
-            By registering, I agree to be contacted via phone, SMS, or email for offers & products, even if I am on a DNC/NDNC list.
-          </p>
+        
         </div>
       </div>
 

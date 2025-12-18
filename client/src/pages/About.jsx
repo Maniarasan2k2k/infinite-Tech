@@ -29,52 +29,7 @@ const About = () => {
       
       
       {/* Blue Section */}
-      <div className="w-full max-w-4xl mx-auto p-6 bg-blue-950 rounded-lg text-white text-center shadow-xl">
-        <h1 className="text-2xl sm:text-3xl font-bold mb-4">
-          Trained 50,000+ professionals across 12 countries
-        </h1>
-
-        <div className="flex justify-center gap-2 mb-4 text-yellow-400 text-2xl">
-          <IoStarSharp />
-          <IoStarSharp />
-          <IoStarSharp />
-          <IoStarSharp />
-          <IoStarSharp />
-        </div>
-
-        <p className="text-white text-base sm:text-lg mb-6">
-          Excellence & dedication in training QA professionals globally.
-        </p>
-
-        {/* Continuous Loop Sliding Images */}
-        <div className="overflow-hidden w-full bg-blue-970 py-4">
-  <motion.div
-    className="flex gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14"
-    animate={{ x: ["0%", "-50%"] }}
-    transition={{
-      repeat: Infinity,
-      repeatType: "loop",
-      duration: 25,
-      ease: "linear",
-    }}
-  >
-    {images.concat(images).map((src, i) => (
-      <div
-        key={i}
-        className="flex-shrink-0 w-36 sm:w-48 md:w-56 lg:w-64 xl:w-72 2xl:w-80 aspect-[4/3] rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-300"
-      >
-        <img
-          src={src}
-          alt={`img-${i}`}
-          className="w-full h-full object-cover"
-        />
-      </div>
-    ))}
-  </motion.div>
-</div>
-
-
-      </div>
+      
       {/* --------------------------------------------------- */}
       
           <h1
@@ -97,7 +52,7 @@ const About = () => {
         className="w-full h-full object-contain"
       />
     </div>
-    <h1 className="text-2xl font-bold mb-2">Playwrights</h1>
+    <h1 className="text-2xl font-bold mb-2">Playwrights + Javascript</h1>
     <p className="text-gray-700 text-sm leading-relaxed mb-4">
       Master full stack web development with Python. Learn backend with Django,
       frontend with React, database management, REST APIs, and deployment.
@@ -128,7 +83,7 @@ const About = () => {
         className="w-full h-full object-contain"
       />
     </div>
-    <h1 className="text-2xl font-bold mb-2">MERN STACK</h1>
+    <h1 className="text-2xl font-bold mb-2">Playwright + Typescript</h1>
     <p className="text-gray-700 text-sm leading-relaxed mb-4">
       Master MERN development with MongoDB, Express, React and Node.js.
       Includes real-world projects, deployment and internship.
@@ -158,7 +113,37 @@ const About = () => {
         className="w-full h-full object-contain"
       />
     </div>
-    <h1 className="text-2xl font-bold mb-2">Cypress</h1>
+    <h1 className="text-2xl font-bold mb-2">Playwright + Python</h1>
+    <p className="text-gray-700 text-sm leading-relaxed mb-4">
+      Learn automation testing using Selenium WebDriver, TestNG, frameworks,
+      CI/CD and real-world projects with internship.
+    </p>
+    <div className="flex justify-between text-sm text-gray-600 mb-2">
+      <span className="font-medium">3 Month Internship</span>
+      <span className="font-medium">Live Session</span>
+    </div>
+    <div className="flex justify-between text-sm text-gray-600 mb-4">
+      <span className="font-medium">⭐ 4.9 (210 reviews)</span>
+      <span className="font-medium">Lesson 10</span>
+    </div>
+    <div className="flex justify-between items-center mt-3">
+      <div className="text-xl font-bold text-green-600">$4000</div>
+      <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold">
+        Enroll Now
+      </button>
+    </div>
+  </div>
+
+
+  <div className="bg-white rounded-xl shadow-lg p-5 w-full max-w-md mx-auto hover:shadow-[0_0_25px_#22c55e] hover:scale-105 transition-all duration-300">
+    <div className="w-full h-64 rounded-lg overflow-hidden mb-4">
+      <img
+        src="/cypress.png"
+        alt="Cypress"
+        className="w-full h-full object-contain"
+      />
+    </div>
+    <h1 className="text-2xl font-bold mb-2">Playwright + C#</h1>
     <p className="text-gray-700 text-sm leading-relaxed mb-4">
       Learn automation testing using Selenium WebDriver, TestNG, frameworks,
       CI/CD and real-world projects with internship.

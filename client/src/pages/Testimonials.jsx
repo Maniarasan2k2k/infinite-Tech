@@ -9,7 +9,7 @@ const testimonialsData = [
     name: "Divya R.",
     role: "QA Engineer",
     feedback:
-      "This course completely transformed my automation testing skills. Highly recommend!",
+      `This course completely transformed  my automation testing skills. Highly recommend!`,
     img: "https://randomuser.me/api/portraits/women/65.jpg",
   },
   {
