@@ -2,50 +2,55 @@ import React, { useState } from "react";
 
 const faqs = [
   {
-    question: "How Will I Get The Course After Purchase?",
+    question: "Who can join this Playwright + JavaScript course?",
     answer:
-      "After successful payment, you will receive login details via email. You can access the course anytime from your dashboard.",
+      "Freshers, manual testers, and professionals with Selenium or Cypress experience can join. No prior automation knowledge is required..",
   },
   {
-    question: "Which language is the course available in?",
+    question: "Do I need JavaScript knowledge before joining?",
     answer:
-      "The course is available in both Hindi and English for better understanding.",
+      "No. We cover JavaScript from basics to advanced as part of the course.",
   },
   {
-    question: "Is it an online class or recorded training?",
+    question: "What tools and technologies will I learn?",
     answer:
-      "This is a pre-recorded course with lifetime access. Some live doubt-clearing sessions may also be included.",
+      "You will learn Playwright with JavaScript, POM, BDD, CI/CD, and real-time automation frameworks",
   },
   {
-    question: "How will my doubts be cleared?",
+    question: "Is this course suitable for freshers?",
     answer:
-      "You can ask questions in the discussion forum or during live doubt-clearing sessions.",
+      "Yes. This course is fresher-friendly and designed to build skills from scratch.",
   },
   {
-    question: "How is the course beneficial?",
+    question: "Will I get hands-on experience?",
     answer:
-      "The course helps you gain real-world skills, hands-on experience, and confidence to work on real projects.",
+      "Yes. You will work on real-time projects, practical assignments, and framework-based automation",
   },
   {
-    question: "Do you provide certificates?",
+    question: "Does the course include interview preparation?",
     answer:
-      "Yes, you will receive a course completion certificate after finishing the course.",
+      "Yes. We provide HR interview preparation, resume building, and LinkedIn/Naukri profile optimization.",
   },
   {
-    question: "What is the validity of the course?",
+    question: "Will I learn CI/CD integration?",
     answer:
-      "You will get lifetime access once you enroll in the course.",
+      "Yes. The course includes CI/CD integration using tools like Azure DevOps and GitHub Actions..",
   },
   {
-    question: "What are the payment modes accepted?",
+    question: "Is this a recorded or live course?",
     answer:
-      "We accept UPI, Credit Card, Debit Card, Net Banking, and Wallet payments.",
+      "This course includes live instructor-led sessions along with recorded videos for revision and lifetime access.",
   },
   {
-    question: "I made the payment but didn’t receive any email",
+    question: "Do you provide placement support?",
     answer:
-      "Please check your spam folder. If you still didn’t receive it, contact our support team for help.",
+      "Yes. We offer 100% placement assistance with interview guidance and job referrals.",
   },
+  {
+    question: "Why choose Playwright Mastery Academy?",
+    answer:
+      "We are a dedicated academy for Playwright, offering structured learning, expert trainers, and job-focused training.",
+  }
 ];
 
 const FAQ = () => {
@@ -60,7 +65,7 @@ const FAQ = () => {
       <div className="max-w-4xl mx-auto">
         
         {/* Heading */}
-        <h1 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold mb-10">
+        <h1 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold mb-10 text-black">
           Frequently Asked Questions
         </h1>
 

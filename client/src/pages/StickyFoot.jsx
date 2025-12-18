@@ -1,11 +1,29 @@
+import { useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
 
 const StickyCTA = () => {
+  // 10 minutes = 600 seconds
+  const [timeLeft, setTimeLeft] = useState(600);
+
+  // Countdown logic
+  useEffect(() => {
+    if (timeLeft <= 0) return;
+
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => prev - 1);
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [timeLeft]);
+
+  // Convert seconds to mm:ss
+  const minutes = Math.floor(timeLeft / 60);
+  const seconds = timeLeft % 60;
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
 
@@ -26,14 +44,18 @@ const StickyCTA = () => {
 
           {/* Countdown */}
           <div className="flex justify-center gap-4 text-center">
-            <div className="bg-blue-800 px-3 py-2 rounded">
+            <div className="bg-blue-800 px-4 py-2 rounded">
               <p className="text-xs">Price Increase In</p>
-              <p className="font-bold text-lg">00</p>
+              <p className="font-bold text-lg">
+                {String(minutes).padStart(2, "0")}
+              </p>
               <p className="text-xs">Minutes</p>
             </div>
 
-            <div className="bg-blue-800 px-3 py-2 rounded">
-              <p className="font-bold text-lg">00</p>
+            <div className="bg-blue-800 px-4 py-2 rounded">
+              <p className="font-bold text-lg">
+                {String(seconds).padStart(2, "0")}
+              </p>
               <p className="text-xs">Seconds</p>
             </div>
           </div>
@@ -42,7 +64,8 @@ const StickyCTA = () => {
           <div className="text-center md:text-right">
             <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold
                                px-6 py-3 rounded-full shadow-lg transition">
-              Enroll Now ₹599.00
+              Enroll Now <strike className="ml-1">₹14,999</strike>{" "}
+              <span className="ml-1">₹9,999</span>
             </button>
           </div>
 

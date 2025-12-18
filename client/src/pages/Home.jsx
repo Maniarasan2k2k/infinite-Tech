@@ -185,10 +185,12 @@ const Home = () => {
       </header>
 
       {/* Hero Section */}
+
       <div
         className="bg_div container mx-auto mt-24 rounded transition-all duration-500 bg-cover bg-center flex flex-col lg:flex-row gap-6 p-6"
         style={{ backgroundImage: "url('/web.webp')" }}
       >
+
         {/* Left Side */}
         <div className="left flex-1 bg-opacity-40 rounded p-6 flex flex-col gap-4 text-white">
           <div className="flex gap-4">
@@ -211,11 +213,15 @@ const Home = () => {
 
           {/* Reviews Card */}
           <div className="flex items-center bg-black rounded-full px-5 shadow-md w-max gap-2 p-1 text-gray-800">
+           
+           
             <img
               src="/google.webp"
               alt="Google"
               className="w-12 h-12 sm:w-10 sm:h-10 object-cover rounded-full"
             />
+
+
             <div className="flex flex-col text-white">
               <span className="font-semibold text-sm sm:text-base">Rate 4.7/5.0</span>
               <span className="text-xs sm:text-sm">More than 3000+ reviews</span>
