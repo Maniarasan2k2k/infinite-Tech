@@ -135,7 +135,7 @@ const About = () => {
   </div>
 
 
-  <div className="bg-white rounded-xl shadow-lg p-5 w-full max-w-md mx-auto hover:shadow-[0_0_25px_#22c55e] hover:scale-105 transition-all duration-300">
+  {/* <div className="bg-white rounded-xl shadow-lg p-5 w-full max-w-md mx-auto hover:shadow-[0_0_25px_#22c55e] hover:scale-105 transition-all duration-300">
     <div className="w-full h-64 rounded-lg overflow-hidden mb-4">
       <img
         src="/cypress.png"
@@ -162,7 +162,7 @@ const About = () => {
         Enroll Now
       </button>
     </div>
-  </div>
+  </div> */}
 </div>
 
 </div>

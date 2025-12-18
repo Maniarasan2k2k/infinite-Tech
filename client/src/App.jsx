@@ -5,6 +5,8 @@ import HTML from "./pages/Html";
 import CSS from "./pages/Css";
 import JS from "./pages/js";
 import About from "./pages/About";
+import FAQ from "./pages/Faq";
+import Stickyfooot from './pages/StickyFoot'
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Route path="/css" element={<CSS />} />
       <Route path="/js" element={<JS />} />
       <Route path="/about" element={<About />} />
+      <Route path="/faq" element={<FAQ/>} />
+      <Route path="/foot" element={<Stickyfooot/>} />
     </Routes>
   );
 }
