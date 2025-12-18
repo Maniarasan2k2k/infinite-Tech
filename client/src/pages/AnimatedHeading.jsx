@@ -3,16 +3,16 @@ import { motion } from "framer-motion";
 
 const Logo = () => {
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center ">
       <motion.img
-        src="/log.png"
+        src="/logs-10.png"
         alt="Playwright Academy Logo"
         className="
           w-24
           sm:w-28
           md:w-32
           lg:w-36
-          xl:w-40
+          xl:w-70
           h-auto
           object-contain
           bg-white

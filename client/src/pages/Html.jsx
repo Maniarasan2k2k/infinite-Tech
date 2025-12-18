@@ -3,6 +3,8 @@ import FAQ from "../pages/Faq";
 import Stickyfoot from '../pages/StickyFoot'
 import { useNavigate } from "react-router-dom";
 import AnimatedHeading from "./AnimatedHeading";
+import '../App.css'
+import Image from '../pages/ImageCarousel'
 
 
 
@@ -179,31 +181,27 @@ const Html = () => {
       </header>
 
 
-        <div className="bg-blue-600 text-white py-10 px-4">
+        <div className="bg-color text-white py-10 px-4 mt-35">
       {/* Main Heading */}
-      <h1 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold mb-10">
-        Course lessons updated with strategies for 2025
-      </h1>
+
 
       {/* Content Wrapper */}
-      <div className="max-w-6xl mx-auto bg-white text-gray-800 rounded-xl shadow-lg p-6 sm:p-8 lg:p-12">
+      <div className="max-w-7xl mx-auto bg-white text-gray-800 rounded-xl shadow-lg p-6 sm:p-8 lg:p-12">
         
         {/* Pre Recorded */}
-        <h1 className="text-center text-xl sm:text-2xl font-semibold mb-6">
-          Pre-Recorded
+        <h1 className="live text-center text-xl sm:text-2xl font-semibold mb-6">
+          Live-Classes
         </h1>
 
-        <h2 className="text-center text-lg sm:text-xl lg:text-2xl font-bold mb-4">
-          READY TO TAKE YOUR CAREER TO THE NEXT LEVEL? JOIN PLAYWRIGHT MASTERY ACADEMY AND BECOME A HIGH-PAYING AUTOMATION TESTER / PLAYWRIGHT
+        <h2 className="main-headline text-center text-lg sm:text-xl lg:text-2xl font-bold mb-4">
+          READY TO TAKE YOUR CAREER TO THE NEXT LEVEL? JOIN PLAYWRIGHT MASTERY ACADEMY AND BECOME A HIGH-PAYING AUTOMATION TESTER / PLAYWRIGHT EXPERT
         </h2>
 
-        <p className="text-center text-sm sm:text-base mb-2">
+        <p className="text-center text-sm sm:text-base mb-2 text-color font-bold">
           (NO PRIOR AUTOMATION, PROGRAMMING, OR TESTING KNOWLEDGEMENT NEEDED)
         </p>
 
-        <p className="text-center text-sm sm:text-base mb-8">
-          (No Prior AI, Coding, Or Marketing Knowledge Needed)
-        </p>
+
 
         {/* Image Section */}
         <div className="flex justify-center mb-10">
@@ -222,7 +220,7 @@ const Html = () => {
 
         {/* Enroll Button */}
         <div className="flex justify-center mb-10">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition">
+          <button className="bg-colors hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition">
             Enroll Now – <strike>$14999</strike> - $9999
           </button>
         </div>
@@ -291,7 +289,7 @@ const Html = () => {
       </div>
 
 
-     <div className="bg-blue-600 py-10 px-4">
+     <div className="bg-color bg-blue-600 py-10 px-4">
   <div
     className="
       max-w-6xl mx-auto
@@ -311,7 +309,7 @@ const Html = () => {
         hover:shadow-xl transition
       "
     >
-      <h3 className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">
+      <h3 className="text-colors text-2xl sm:text-3xl font-bold text-blue-600 mb-2">
         120+ Hrs
       </h3>
       <p className="text-gray-700 font-medium text-sm sm:text-base">
@@ -329,8 +327,8 @@ const Html = () => {
         hover:shadow-xl transition
       "
     >
-      <h3 className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">
-        20
+      <h3 className="text-colors text-2xl sm:text-3xl font-bold text-blue-600 mb-2">
+        20+
       </h3>
       <p className="text-gray-700 font-medium text-sm sm:text-base">
         Modules
@@ -349,6 +347,7 @@ const Html = () => {
     >
       <h3
         className="
+        text-colors
           text-lg sm:text-xl lg:text-2xl
           font-bold
           text-blue-600
@@ -374,7 +373,7 @@ const Html = () => {
         hover:shadow-xl transition
       "
     >
-      <h3 className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">
+      <h3 className="text-colors text-2xl sm:text-3xl font-bold text-blue-600 mb-2">
         Lifetime
       </h3>
       <p className="text-gray-700 font-medium text-sm sm:text-base">
@@ -545,7 +544,7 @@ const Html = () => {
 </div>
 
 
- <div className="bg-blue-600 py-14 px-4">
+ <div className="bg-color bg-blue-600 py-14 px-4">
   <div className="max-w-7xl mx-auto bg-white rounded-2xl shadow-xl p-6 sm:p-10">
     
     {/* Heading */}
@@ -560,15 +559,15 @@ const Html = () => {
     </h1>
 
     {/* Sub Heading */}
-    <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-10">
-      After finishing the course, you will get a Certificate of Completion.
+    <p className="text-sm sm:text-base lg:text-lg text-gray-600 font-bold mb-10">
+      Our Alumni Works At
     </p>
 
     {/* Certificate Image */}
     <div className="flex justify-center">
       <div
   className="
-    relative overflow-hidden rounded-2xl shadow-xl
+    relative overflow-hidden rounded-2xl
     w-64 h-40
     sm:w-72 sm:h-44
     md:w-96 md:h-56
@@ -576,16 +575,9 @@ const Html = () => {
     mx-auto
   "
 >
-  <img
-    src="/cert-3.jpeg"
-    alt="Certificate"
-    className="
-      w-full h-full
-      object-contain
-      transition-transform duration-300
-      hover:scale-105
-    "
-  />
+
+
+   <Image />
 </div>
 
     </div>
@@ -596,19 +588,19 @@ const Html = () => {
 
     {/* CTA */}
     <div className="flex justify-center mt-12">
-      <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold text-lg transition">
-        Start Learning & Get Certified
+      <button className="bg-colors hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold text-lg transition">
+        Start Learning & Get High Paying Jobs
       </button>
     </div>
 
   </div>
 </div>
 
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 py-14 px-4">
+      <div className="bg-color py-14 px-4">
   <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-xl p-8 sm:p-12 text-center">
 
     {/* Headings */}
-    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-blue-600 mb-3">
+    <h1 className="text-colors text-3xl sm:text-4xl lg:text-5xl font-extrabold text-blue-600 mb-3">
       Hurry Up!
     </h1>
     <h2 className="text-lg sm:text-xl lg:text-2xl text-gray-700 mb-10">
@@ -618,7 +610,7 @@ const Html = () => {
     {/* Stats */}
     <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
       <div className="bg-blue-50 px-10 py-6 rounded-xl shadow-md">
-        <p className="text-4xl sm:text-5xl font-bold text-blue-600 mb-2">
+        <p className="text-colors text-4xl sm:text-5xl font-bold text-blue-600 mb-2">
           8,450+
         </p>
         <p className="text-gray-700 font-medium text-base sm:text-lg">

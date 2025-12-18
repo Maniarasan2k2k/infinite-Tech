@@ -22,7 +22,7 @@ const Home = () => {
       </div>
 
       {/* Fixed Header */}
-      <header className="fixed top-0 left-0 w-full bg-white shadow-sm z-50 transition-all duration-500">
+      <header className="fixed top-0 left-0 w-full bg-white shadow-sm my-auto z-50 transition-all duration-500">
         <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
           
           <div onClick={() => navigate("/")} className="cursor-pointer">

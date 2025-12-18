@@ -1,0 +1,35 @@
+.text-color{
+    color:#2c2e0a;
+}
+.text-colors{
+    color:#1F4E79;
+}
+
+
+.bg-color{
+    background-color: #FBF7F2;
+}
+.bg-colors{
+ background-color: #1F4E79; 
+
+}
+.live{
+    color:red;
+    font-size: 43px;
+    font-weight: 600;
+}
+.main-headline {
+  color: #1d568b; /* Primary Navy Blue */
+  font-weight: 700;
+}
+
+body {
+  background-color: #FBF7F2;
+}
+
+
+
+ /* color: #1F4E79;  */
+ 
+ /* Secondary Blue */
+  /* font-weight: 600; */

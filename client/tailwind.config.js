@@ -4,7 +4,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        dancing: ["'Dancing Script'", "cursive"],  // 🚀 FINAL FIX
+        dancing: ["'Dancing Script'", "cursive"],
+         brand: ["Poppins", "sans-serif"],
+      nav: ["Inter", "sans-serif"],  // 🚀 FINAL FIX
       },
     },
   },
