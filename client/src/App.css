@@ -11,8 +11,12 @@
 }
 .bg-colors{
  background-color: #1F4E79; 
-
 }
+
+.bg-colorss{
+ background-color: #487dad; 
+}
+
 .live{
     color:red;
     font-size: 43px;
@@ -28,6 +32,10 @@ body {
 }
 
 
+.bgpl{
+   background-color: #1F4E79; 
+  
+}
 
  /* color: #1F4E79;  */
  

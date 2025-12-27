@@ -9,7 +9,7 @@ const About = () => {
     <div className="p-6 flex flex-col items-center bg-gray-50 min-h-screen font-sans">
       {/* Main Title */}
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-6 leading-snug">
-        <span className="text-green-600 animate-pulse drop-shadow-xl">
+        <span className="text-colors animate-pulse drop-shadow-xl">
           PLAYWRIGHT <br /> ACADEMY
         </span>{" "}
       </h1>
@@ -33,7 +33,7 @@ const About = () => {
       {/* --------------------------------------------------- */}
       
           <h1
-  className="mt-30 text-4xl font-extrabold tracking-wide text-center green-silver-glow light-sweep"
+  className="mt-30 text-4xl font-extrabold tracking-wide text-center text-colors green-silver-glow light-sweep"
 >
   COURSES
 </h1>

@@ -5,6 +5,7 @@ import About from "./About";
 import Footer from "./Footer";
 import Testimonials from "./Testimonials";
 import AnimatedHeading from "./AnimatedHeading";
+import '../App.css'
 
 const Home = () => {
   const navigate = useNavigate();
@@ -15,14 +16,14 @@ const Home = () => {
   return (
     <>
       {/* Top Banner */}
-      <div className="bg-green-500 hover:bg-green-200 transition-all duration-500 p-2 text-center">
+      <div className="bg-colorss hover:bg-green-200 transition-all duration-500 p-2 text-center">
         <h1 className="font-semibold text-sm sm:text-base">
           Need assistance? Call @ (+91) 9751688447 Or Request Call Back
         </h1>
       </div>
 
       {/* Fixed Header */}
-      <header className="fixed top-0 left-0 w-full bg-white shadow-sm my-auto z-50 transition-all duration-500">
+      <header className="fixed top-10 left-0 w-full bgpl shadow-sm my-auto z-50 transition-all duration-500">
         <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
           
           <div onClick={() => navigate("/")} className="cursor-pointer">
@@ -30,66 +31,68 @@ const Home = () => {
           </div>
 
           {/* Desktop Menu */}
-          <nav className="hidden sm:flex items-center gap-6 text-lg relative">
-            <ul className="flex items-center gap-6">
-              <li
-                className="cursor-pointer hover:text-green-600 transition-all duration-300"
-                onClick={() => navigate("/")}
-              >
-                Home
-              </li>
+          <nav className="hidden sm:flex items-center gap-6 text-lg text-white relative">
+  <ul className="flex items-center gap-6">
+    <li
+      className="cursor-pointer hover:text-green-400 transition-all duration-300"
+      onClick={() => navigate("/")}
+    >
+      Home
+    </li>
 
-              {/* Desktop Course Dropdown */}
-              <li
-                className="relative cursor-pointer hover:text-green-600 transition-all duration-300"
-                onMouseEnter={() => setDropdownOpen(true)}
-                onMouseLeave={() => setDropdownOpen(false)}
-              >
-                Course
-                {dropdownOpen && (
-                  <ul className="absolute top-full left-0 mt-1 w-28 bg-white shadow-lg rounded border border-gray-200 z-50">
-                    <li
-                      className="px-4 py-2 hover:bg-green-100 cursor-pointer"
-                      onClick={() => navigate("/html")}
-                    >
-                      HTML
-                    </li>
-                    <li
-                      className="px-4 py-2 hover:bg-green-100 cursor-pointer"
-                      onClick={() => navigate("/css")}
-                    >
-                      CSS
-                    </li>
-                    <li
-                      className="px-4 py-2 hover:bg-green-100 cursor-pointer"
-                      onClick={() => navigate("/js")}
-                    >
-                      JS
-                    </li>
-                  </ul>
-                )}
-              </li>
+    {/* Desktop Course Dropdown */}
+    <li
+      className="relative cursor-pointer hover:text-green-400 transition-all duration-300"
+      onMouseEnter={() => setDropdownOpen(true)}
+      onMouseLeave={() => setDropdownOpen(false)}
+    >
+      Course
+      {dropdownOpen && (
+        <ul className="absolute top-full left-0 mt-1 w-28 bg-white text-gray-800 shadow-lg rounded border border-gray-200 z-50">
+          <li
+            className="px-4 py-2 hover:bg-green-100 cursor-pointer"
+            onClick={() => navigate("/html")}
+          >
+            HTML
+          </li>
+          <li
+            className="px-4 py-2 hover:bg-green-100 cursor-pointer"
+            onClick={() => navigate("/css")}
+          >
+            CSS
+          </li>
+          <li
+            className="px-4 py-2 hover:bg-green-100 cursor-pointer"
+            onClick={() => navigate("/js")}
+          >
+            JS
+          </li>
+        </ul>
+      )}
+    </li>
 
-              <li
-                className="cursor-pointer hover:text-green-600 transition-all duration-300"
-                onClick={() => navigate("/contact")}
-              >
-                Contact us
-              </li>
-              <li
-                className="cursor-pointer hover:text-green-600 transition-all duration-300"
-                onClick={() => navigate("/qa")}
-              >
-                Q&A
-              </li>
+    <li
+      className="cursor-pointer hover:text-green-400 transition-all duration-300"
+      onClick={() => navigate("/contact")}
+    >
+      Contact us
+    </li>
 
-              <li>
-                <button className="bg-green-600 text-white px-5 py-2 rounded-lg transition-all duration-300 hover:bg-green-700 hover:shadow-lg">
-                  Login
-                </button>
-              </li>
-            </ul>
-          </nav>
+    <li
+      className="cursor-pointer hover:text-green-400 transition-all duration-300"
+      onClick={() => navigate("/qa")}
+    >
+      Q&A
+    </li>
+
+    <li>
+      <button className="bg-green-600 text-white px-5 py-2 rounded-lg transition-all duration-300 hover:bg-green-700 hover:shadow-lg">
+        Login
+      </button>
+    </li>
+  </ul>
+</nav>
+
 
           {/* Mobile Hamburger */}
           <div className="sm:hidden">
@@ -187,17 +190,15 @@ const Home = () => {
       {/* Hero Section */}
 
       <div
-        className="bg_div container mx-auto mt-24 rounded transition-all duration-500 bg-cover bg-center flex flex-col lg:flex-row gap-6 p-6"
+        className="bg_div container mx-auto mt-34 rounded transition-all duration-500 bg-cover bg-center flex flex-col lg:flex-row gap-6 p-6 w-308 h-170"
         style={{ backgroundImage: "url('/web.webp')" }}
       >
 
         {/* Left Side */}
         <div className="left flex-1 bg-opacity-40 rounded p-6 flex flex-col gap-4 text-white">
           <div className="flex gap-4">
-            <span className="bg-green-600 text-white px-3 py-1 rounded">
-              TeastLeaf
-            </span>
-            <span className="bg-blue-600 text-white px-3 py-1 rounded">
+            
+            <span className=" bgpl text-white px-3 py-1 rounded">
               #-1 Course
             </span>
           </div>
@@ -265,7 +266,7 @@ const Home = () => {
             <option value="">JS</option>
           </select>
           
-          <button className="bg-green-600 text-white px-5 py-2 rounded-lg mt-2 hover:bg-green-700 transition-all duration-300">
+          <button className="bg-colors text-white px-5 py-2 rounded-lg mt-2 hover:bg-green-700 transition-all duration-300">
             Submit
           </button>
         

@@ -17,7 +17,7 @@ const Html = () => {
 
     
 
-     <>
+     <div className="bgpl">
       <header className="fixed top-0 left-0 w-full bg-white shadow-sm z-50 transition-all duration-500">
         <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
           
@@ -206,7 +206,7 @@ const Html = () => {
         {/* Image Section */}
         <div className="flex justify-center mb-10">
           <img
-            src="/course-1.png"
+            src="/htmlBanner.png"
             alt="Course"
             className="w-full sm:w-3/4 md:w-1/2 lg:w-3/3 rounded-lg shadow-md object-contain"
           />
@@ -550,7 +550,7 @@ const Html = () => {
     {/* Heading */}
    
 
-          <div className="bg-white py-14 px-4">
+          <div className="bg-white py-14 px-4 h-100">
   <div className="max-w-6xl mx-auto text-center">
 
     {/* Heading */}
@@ -559,7 +559,7 @@ const Html = () => {
     </h1>
 
     {/* Sub Heading */}
-    <p className="text-sm sm:text-base lg:text-lg text-gray-600 font-bold mb-10">
+    <p className=" lg:text-[30px]  sm:text-base   text-gray-600  font-bold mb-10">
       Our Alumni Works At
     </p>
 
@@ -589,7 +589,7 @@ const Html = () => {
     {/* CTA */}
     <div className="flex justify-center mt-12">
       <button className="bg-colors hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold text-lg transition">
-        Start Learning & Get High Paying Jobs
+        Start Learning & <br /> Get High Paying Jobs
       </button>
     </div>
 
@@ -685,7 +685,7 @@ const Html = () => {
         <Stickyfoot />
        </footer>
     </div>
-     </>
+     </div>
   );
 };
 
