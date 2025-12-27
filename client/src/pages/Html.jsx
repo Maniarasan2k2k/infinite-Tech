@@ -18,7 +18,7 @@ const Html = () => {
     
 
      <div className="bgpl">
-      <header className="fixed top-0 left-0 w-full bg-white shadow-sm z-50 transition-all duration-500">
+      <header className="fixed bgpl top-0 left-0 w-full bg-white shadow-sm z-50 transition-all duration-500">
         <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
           
           <div onClick={() => navigate("/")} className="cursor-pointer">
@@ -26,64 +26,38 @@ const Html = () => {
           </div>
 
           {/* Desktop Menu */}
-          <nav className="hidden sm:flex items-center gap-6 text-lg relative">
+          <nav className="hidden sm:flex items-center gap-6 text-lg text-white">
             <ul className="flex items-center gap-6">
-              <li
-                className="cursor-pointer hover:text-green-600 transition-all duration-300"
-                onClick={() => navigate("/")}
-              >
+              <li onClick={() => navigate("/")} className="cursor-pointer hover:text-green-400 transition">
                 Home
               </li>
 
-              {/* Desktop Course Dropdown */}
               <li
-                className="relative cursor-pointer hover:text-green-600 transition-all duration-300"
+                className="relative cursor-pointer hover:text-green-400 transition"
                 onMouseEnter={() => setDropdownOpen(true)}
                 onMouseLeave={() => setDropdownOpen(false)}
               >
                 Course
                 {dropdownOpen && (
-                  <ul className="absolute top-full left-0 mt-1 w-28 bg-white shadow-lg rounded border border-gray-200 z-50">
-                    <li
-                      className="px-4 py-2 hover:bg-green-100 cursor-pointer"
-                      onClick={() => navigate("/html")}
-                    >
-                      HTML
-                    </li>
-                    <li
-                      className="px-4 py-2 hover:bg-green-100 cursor-pointer"
-                      onClick={() => navigate("/css")}
-                    >
-                      CSS
-                    </li>
-                    <li
-                      className="px-4 py-2 hover:bg-green-100 cursor-pointer"
-                      onClick={() => navigate("/js")}
-                    >
-                      JS
-                    </li>
+                  <ul className="absolute top-full left-0 mt-1 w-28 bg-white text-gray-800 shadow-lg rounded border z-50">
+                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/html")}>HTML</li>
+                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/css")}>CSS</li>
+                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/js")}>JS</li>
                   </ul>
                 )}
               </li>
 
-              <li
-                className="cursor-pointer hover:text-green-600 transition-all duration-300"
-                onClick={() => navigate("/contact")}
-              >
+              <li onClick={() => navigate("/contact")} className="cursor-pointer hover:text-green-400 transition">
                 Contact us
               </li>
-              <li
-                className="cursor-pointer hover:text-green-600 transition-all duration-300"
-                onClick={() => navigate("/qa")}
-              >
+
+              <li onClick={() => navigate("/qa")} className="cursor-pointer hover:text-green-400 transition">
                 Q&A
               </li>
 
-              <li>
-                <button className="bg-green-600 text-white px-5 py-2 rounded-lg transition-all duration-300 hover:bg-green-700 hover:shadow-lg">
-                  Login
-                </button>
-              </li>
+              <button className="bg-colorss bg-green-600 text-white px-5 py-2 rounded-lg hover:bg-green-700 transition">
+                Login
+              </button>
             </ul>
           </nav>
 
