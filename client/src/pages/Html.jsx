@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import AnimatedHeading from "./AnimatedHeading";
 import '../App.css'
 import Image from '../pages/ImageCarousel'
+import Module from '../pages/ModulePython'
 
 
 
@@ -39,10 +40,10 @@ const Html = () => {
               >
                 Course
                 {dropdownOpen && (
-                  <ul className="absolute top-full left-0 mt-1 w-28 bg-white text-gray-800 shadow-lg rounded border z-50">
-                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/html")}>HTML</li>
-                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/css")}>CSS</li>
-                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/js")}>JS</li>
+                  <ul className="absolute top-full left-0 mt-1 w-70 bg-white text-gray-800 shadow-lg rounded border z-50">
+                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/html")}>Playwright + Python</li>
+                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/css")}>Playwright + JavaScript</li>
+                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/js")}>Playwright + TypeScript</li>
                   </ul>
                 )}
               </li>
@@ -359,12 +360,16 @@ const Html = () => {
 
 
 
+<Module />
+
+        
+   
 
          <div className="bg-gray-100 py-14 px-4">
   {/* Heading */}
   <div className="text-center mb-12">
     <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 text-black">
-      What Are People Saying
+      What People Saying
     </h1>
     <p className="text-gray-600 text-sm sm:text-base">
       Read These Life-Changing Stories From People Just Like You!
