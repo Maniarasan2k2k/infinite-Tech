@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const modules = [
   {
@@ -107,38 +107,60 @@ const modules = [
   },
 ];
 
-const CourseModules = () => {
+const CourseModulesFAQ = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   return (
-    <section className="bg-gray-50 py-14 px-4 sm:px-10">
+    <section className="bg-gray-50 py-16 px-4 sm:px-10">
       {/* Heading */}
       <div className="text-center mb-12">
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-800">
           Playwright + Python Course Modules
         </h1>
         <p className="text-gray-600 mt-3 text-base sm:text-lg">
-          Industry-ready Automation Testing syllabus with real-time project
+          Click each module to view detailed syllabus
         </p>
       </div>
 
-      {/* Modules Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* FAQ Container */}
+      <div className="max-w-4xl mx-auto space-y-4">
         {modules.map((module, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6 border border-gray-200"
+            className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden"
           >
-            <h2 className="text-xl font-semibold text-green-700 mb-4">
-              {module.title}
-            </h2>
+            {/* Question */}
+            <button
+              onClick={() => toggleFAQ(index)}
+              className="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none"
+            >
+              <h2 className="text-base sm:text-lg font-semibold text-gray-800">
+                {module.title}
+              </h2>
+              <span className="text-2xl text-green-600 font-bold">
+                {activeIndex === index ? "−" : "+"}
+              </span>
+            </button>
 
-            <ul className="space-y-2 text-gray-700 text-sm">
-              {module.points.map((point, i) => (
-                <li key={i} className="flex items-start gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
+            {/* Answer */}
+            <div
+              className={`transition-all duration-300 ease-in-out ${
+                activeIndex === index ? "max-h-[500px] p-6 pt-0" : "max-h-0 overflow-hidden"
+              }`}
+            >
+              <ul className="space-y-2 text-gray-700 text-sm sm:text-base">
+                {module.points.map((point, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-green-600 font-bold">✔</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         ))}
       </div>
@@ -146,4 +168,4 @@ const CourseModules = () => {
   );
 };
 
-export default CourseModules;
+export default CourseModulesFAQ;

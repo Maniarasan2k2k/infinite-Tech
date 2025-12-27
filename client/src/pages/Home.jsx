@@ -30,14 +30,14 @@ const Home = () => {
       </div>
 
       {/* Header */}
-      <header className="fixed top-10 left-0 w-full bgpl shadow-sm z-50">
+      <header className="fixed top-10 left-0 w-full bg-white shadow-sm z-50">
         <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
           <div onClick={() => navigate("/")} className="cursor-pointer">
             <AnimatedHeading />
           </div>
 
           {/* Desktop Menu */}
-          <nav className="hidden sm:flex items-center gap-6 text-lg text-white">
+          <nav className="hidden sm:flex items-center gap-6 text-lg text-black font-bold">
             <ul className="flex items-center gap-6">
               <li onClick={() => navigate("/")} className="cursor-pointer hover:text-green-400 transition">
                 Home
@@ -129,7 +129,7 @@ const Home = () => {
         <div className="flex-1 rounded p-4 sm:p-6 flex flex-col gap-4">
           <span className="bgpl text-white px-3 py-1 rounded w-fit">#-1 Course</span>
 
-          <h1 className="text-4xl sm:text-5xl font-bold text-black font-outfit">
+          <h1 className="text-4xl text-colors sm:text-5xl font-bold text-black font-outfit">
             Build your skills & Upgrade your Career ✦
           </h1>
 
@@ -171,7 +171,7 @@ const Home = () => {
 
         {/* Right */}
         <div className="flex-1 bg-white/5 backdrop-blur-md rounded p-4 sm:p-6 flex flex-col gap-3 shadow-xl border border-white/30">
-          <h1 className="text-xl sm:text-2xl font-bold text-gray-800">
+          <h1 className="text-xl text-colors sm:text-2xl font-bold text-gray-800">
             Apply Now to Unlock Offers
           </h1>
 

@@ -19,7 +19,7 @@ const Html = () => {
     
 
      <div className="bgpl">
-      <header className="fixed bgpl top-0 left-0 w-full bg-white shadow-sm z-50 transition-all duration-500">
+      <header className="fixed  top-0 left-0 w-full bg-white shadow-sm z-50 transition-all duration-500">
         <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
           
           <div onClick={() => navigate("/")} className="cursor-pointer">
@@ -27,7 +27,7 @@ const Html = () => {
           </div>
 
           {/* Desktop Menu */}
-          <nav className="hidden sm:flex items-center gap-6 text-lg text-white">
+          <nav className="hidden sm:flex items-center gap-6 text-lg text-black font-bold">
             <ul className="flex items-center gap-6">
               <li onClick={() => navigate("/")} className="cursor-pointer hover:text-green-400 transition">
                 Home
@@ -369,7 +369,7 @@ const Html = () => {
   {/* Heading */}
   <div className="text-center mb-12">
     <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 text-black">
-      What People Saying
+      What People are Saying
     </h1>
     <p className="text-gray-600 text-sm sm:text-base">
       Read These Life-Changing Stories From People Just Like You!

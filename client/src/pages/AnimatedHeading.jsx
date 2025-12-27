@@ -5,7 +5,7 @@ const Logo = () => {
   return (
     <div className="flex justify-center items-center ">
       <motion.img
-        src="/logs-10.png"
+        src="/svlogo.svg"
         alt="Playwright Academy Logo"
         className="
           w-24
