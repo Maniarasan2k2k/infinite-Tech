@@ -1,14 +1,15 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
+import '../App.css'
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-10 mt-20">
+    <footer className="bg-colorss text-gray-300 py-10 mt-20">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
 
         {/* Logo + About */}
         <div>
-          <h1 className="text-3xl font-bold text-green-400">Playwrights Acadamy</h1>
+          <h1 className="text-3xl font-bold text-colors">Playwrights Acadamy</h1>
           <p className="mt-3 text-sm leading-relaxed">Playwrights Acadamy is a leading online | offline learning platform focused on skill transformation. We empower learners to become job-ready through hands-on, mentor-led training. 
           </p>
         </div>

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import AnimatedHeading from "./AnimatedHeading";
 import '../App.css'
 import Image from '../pages/ImageCarousel'
-
+import Module from "../pages/ModuleTs"
 
 
 const Html = () => {
@@ -180,7 +180,7 @@ const Html = () => {
         {/* Image Section */}
         <div className="flex justify-center mb-10">
           <img
-            src="/htmlBanner.png"
+            src="/banTs.png"
             alt="Course"
             className="w-full sm:w-3/4 md:w-1/2 lg:w-3/3 rounded-lg shadow-md object-contain"
           />
@@ -358,7 +358,7 @@ const Html = () => {
 </div>
 
 
-
+        <Module />
 
          <div className="bg-gray-100 py-14 px-4">
   {/* Heading */}
@@ -608,7 +608,7 @@ const Html = () => {
 
        <footer>
 
-           <footer className="bg-gray-900 text-gray-300 px-6 py-12">
+           <footer className="bg-colors text-gray-300 px-6 py-12">
   <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
     {/* Disclaimer */}

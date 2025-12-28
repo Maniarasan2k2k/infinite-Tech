@@ -48,19 +48,19 @@ const About = () => {
   <div className="bg-white rounded-xl shadow-lg p-5 w-full max-w-md mx-auto hover:shadow-[0_0_25px_#22c55e] hover:scale-105 transition-all duration-300">
     <div className="w-full h-64 rounded-lg overflow-hidden mb-4">
       <img
-        src="/en3.png"
+        src="/en1.png"
         alt="Playwright"
         className="w-full h-full object-contain"
       />
     </div>
-    <h1 className="text-2xl font-bold mb-2">Playwrights + Python</h1>
+    <h1 className="text-2xl font-bold mb-2">Playwrights + JavaScript</h1>
     <p className="text-gray-700 text-sm leading-relaxed mb-4">
      
-      Includes real-world projects and internship.Playwright + Python course helps you master modern automation testing using Python from scratch.
-You will learn to build powerful end-to-end automation frameworks with Playwright and Pytest.
-This course covers real-time UI, API automation, and framework design using Python best practices.
-You will work on industry-level projects with Page Object Model and BDD concepts.
-By the end of this course, you’ll be fully prepared for QA automation roles and interview
+      Playwright + JavaScript course is designed to help you master modern end-to-end automation testing from scratch.
+You will learn how to automate real-world web applications using Playwright with JavaScript.
+This course covers UI automation, handling dynamic elements, waits, assertions, and browser interactions.
+You will also work on real-time projects and industry-standard automation frameworks.
+By the end of the course, you’ll be confident to crack automation interviews and work on live testing projects.
     </p>
     <div className="flex justify-between text-sm text-gray-600 mb-2">
       <span className="font-medium">3 Month Internship</span>
@@ -115,18 +115,18 @@ By completing this course, you’ll be well-prepared for automation roles and hi
   <div className="bg-white rounded-xl shadow-lg p-5 w-full max-w-md mx-auto hover:shadow-[0_0_25px_#22c55e] hover:scale-105 transition-all duration-300">
     <div className="w-full h-64 rounded-lg overflow-hidden mb-4">
       <img
-        src="/en1.png"
+        src="/en3.png"
         alt="Cypress"
         className="w-full h-full object-contain"
       />
     </div>
-    <h1 className="text-2xl font-bold mb-2">Playwright + JavaScript</h1>
+    <h1 className="text-2xl font-bold mb-2">Playwright + Python</h1>
     <p className="text-gray-700 text-sm leading-relaxed mb-4">
-      Playwright + JavaScript course is designed to help you master modern end-to-end automation testing from scratch.
-You will learn how to automate real-world web applications using Playwright with JavaScript.
-This course covers UI automation, handling dynamic elements, waits, assertions, and browser interactions.
-You will also work on real-time projects and industry-standard automation frameworks.
-By the end of the course, you’ll be confident to crack automation interviews and work on live testing projects.
+Includes real-world projects and internship.Playwright + Python course helps you master modern automation testing using Python from scratch.
+You will learn to build powerful end-to-end automation frameworks with Playwright and Pytest.
+This course covers real-time UI, API automation, and framework design using Python best practices.
+You will work on industry-level projects with Page Object Model and BDD concepts.
+By the end of this course, you’ll be fully prepared for QA automation roles and interview
     </p>
     <div className="flex justify-between text-sm text-gray-600 mb-2">
       <span className="font-medium">3 Month Internship</span>

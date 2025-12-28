@@ -30,7 +30,7 @@ const StickyCTA = () => {
   return (
     <>
       {/* FIXED CTA BAR */}
-      <div className="fixed bottom-0 left-0 w-full bg-blue-900 text-white px-4 py-4 z-50 shadow-2xl">
+      <div className="fixed bottom-0 left-0 w-full bg-colors text-white px-4 py-4 z-50 shadow-2xl">
         <div className="max-w-6xl mx-auto flex flex-col gap-4
                         md:flex-row md:items-center md:justify-between">
 
