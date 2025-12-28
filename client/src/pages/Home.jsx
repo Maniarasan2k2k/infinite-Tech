@@ -23,14 +23,14 @@ const Home = () => {
   return (
     <>
       {/* Top Banner */}
-      <div className="bg-colorss hover:bg-green-200 transition-all duration-500 p-2 text-center">
+      {/* <div className="bg-colorss hover:bg-green-200 transition-all duration-500 p-2 text-center">
         <h1 className="font-semibold text-sm sm:text-base">
           Need assistance? Call @ (+91) 9751688447 Or Request Call Back
         </h1>
-      </div>
+      </div> */}
 
       {/* Header */}
-      <header className="fixed top-10 left-0 w-full bg-white shadow-sm z-50">
+      <header className="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
         <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
           <div onClick={() => navigate("/")} className="cursor-pointer">
             <AnimatedHeading />
@@ -51,9 +51,9 @@ const Home = () => {
                 Course
                 {dropdownOpen && (
                   <ul className="absolute top-full left-0 mt-1 w-70 bg-white text-gray-800 shadow-lg rounded border z-50">
-                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/html")}>Playwright + Python</li>
-                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/css")}>Playwright + JavaScript</li>
-                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/js")}>Playwright + TypeScript</li>
+                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/html")}>Playwright + JavaScript</li>
+                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/css")}>Playwright + TypeScript</li>
+                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/js")}>Playwright + Python</li>
                   </ul>
                 )}
               </li>

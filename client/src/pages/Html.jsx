@@ -41,9 +41,9 @@ const Html = () => {
                 Course
                 {dropdownOpen && (
                   <ul className="absolute top-full left-0 mt-1 w-70 bg-white text-gray-800 shadow-lg rounded border z-50">
-                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/html")}>Playwright + Python</li>
-                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/css")}>Playwright + JavaScript</li>
-                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/js")}>Playwright + TypeScript</li>
+                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/html")}>Playwright + JavaScript</li>
+                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/css")}>Playwright + TypeScript</li>
+                    <li className="px-4 py-2 hover:bg-green-100 cursor-pointer" onClick={() => navigate("/js")}>Playwright + Python</li>
                   </ul>
                 )}
               </li>
@@ -181,7 +181,7 @@ const Html = () => {
         {/* Image Section */}
         <div className="flex justify-center mb-10">
           <img
-            src="/htmlBanner.png"
+            src="/banPy.jpeg"
             alt="Course"
             className="w-full sm:w-3/4 md:w-1/2 lg:w-3/3 rounded-lg shadow-md object-contain"
           />
